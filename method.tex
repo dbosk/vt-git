@@ -32,11 +32,12 @@ and recorded with full provenance; the protocol and queries are in
 \cref{app:protocol}.
 The second phase is a systematic, tool-supported multi-database search
 with the \texttt{scholar} tool, as in the companion papers
-\autocite{VTProgMisconceptions,VTDebug}.
-% TODO(#1): The systematic phase has not yet run. Its queries must cover:
-% version-control misconceptions beyond the seed sources, Git in
-% CS-education venues (GitKit and related), repository-data studies of
-% student Git usage, and Git visualisation tools as interventions.
+\autocite{VTProgMisconceptions,VTDebug}; it covered version-control
+misconceptions beyond the seed sources, Git in CS-education venues (the
+GitKit line and related), repository-data studies of student Git usage, and
+Git visualisation tools as interventions.
+Both rounds, with every query and what it retained, are documented in
+\cref{app:protocol}.
 
 \subsection{Variation-theory analysis}
 \label{sec:method-vt-analysis}
@@ -52,3 +53,37 @@ exploit \autocite{Svensson2020Affordances,ThuneEckerdal2009Variation,
 ThuneEckerdal2018Lab}: the same command against different repository
 states, or different commands against the same state, with
 \texttt{git status}/\texttt{git log} as the observation instruments.
+
+\subsection{Course instruments}
+\label{sec:method-instruments}
+
+The answers to \cref{rq:aspects,rq:patterns} are validated here by argument,
+not yet empirically.
+To enable a future empirical validation, we prepare a pre/post-test: a pair
+of quizzes that measure whether students discern the candidate critical
+aspects (\cref{sec:model,sec:staging,sec:branches,sec:remotes}) before and
+after the course module that teaches against the misconceptions.
+Each item targets one candidate aspect, and its distractors express the
+documented misconceptions, so that a shift from a distractor to the key
+across the pre- and post-test is evidence that the aspect became discernible.
+The instrument is defined, item by item, as a literate program in
+\cref{app:quiz}; running it and analysing the results is left to the
+empirical follow-up.
+
+The pre/post-test is one of two data sources the follow-up will have.
+The other is the course's own assessment: the grading pipeline clones
+every student's repository and runs per-repository checks, and each
+check operationalises one of the candidate critical aspects---so each
+check failure is an observation of an undiscerned aspect, collected by
+the assessment the course already runs.
+The pushed histories additionally carry process data (commit
+granularity and timing, message content, branch use), the
+repository-data perspective of \textcite{Cochez2013DVCSUsage} applied
+to our own course.
+The two sources are kept methodologically separate to avoid
+circularity: misconception codes derived from the assessment traces are
+never correlated with those same traces; the pre/post-test is the
+independent measure of discernment.
+Participation is opt-in through the consent item of the pre-test, which
+covers course submissions; grading runs for all students regardless,
+and research extraction filters by consent afterwards.

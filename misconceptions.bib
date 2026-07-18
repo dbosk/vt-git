@@ -30,21 +30,45 @@
 % CLAIM: Students learning Git confuse its concepts -- e.g., conceptualize
 %   branches as directories and try to `cd` into them -- and this difficulty
 %   is partly attributable to the command-line client; visual diagrams of the
-%   commit graph help.
+%   commit graph help.  The same source documents further command-level
+%   confusions: `git add file' read as *creating* a file rather than staging
+%   an existing one; a preference for `git add .'/`git commit -a' that hides
+%   which files are tracked; remote-prefix confusion (origin/branch vs origin
+%   branch); and a "blind-testing" effect in which, lacking a mental model,
+%   learners just try commands out.
 % FOUND-VIA: scholar search "challenges confusions version control" -p dblp
 % PICKED: the standard reference for Git learning difficulties in a course
 %   setting (survey + teacher observations across several courses); primary
-%   source for the branch-as-directory misconception.
-% QUOTE (p.10 of author copy): "if asked to checkout a particular branch,
-%   learners might try to move into a branch with the cd command. In order to
-%   avoid this confusion, the topic should be explicitly discussed. This
-%   challenge can be in part attributed to the use of the command line
+%   source for the branch-as-directory misconception and for several
+%   command-level confusions (Secs. 5.1--5.7).
+% QUOTE (Sec. 5.2, p.10 of author copy): "if asked to checkout a particular
+%   branch, learners might try to move into a branch with the cd command. In
+%   order to avoid this confusion, the topic should be explicitly discussed.
+%   This challenge can be in part attributed to the use of the command line
 %   client---hence, in such a setting we stress the importance of showing
 %   visual diagrams of branching and explicitly explaining branches as
 %   pointers in the commit history."
-% VERIFIED: full text read (open author copy, JYU repository,
+% QUOTE (Sec. 5.3): "We have noticed a tendency where the command git add
+%   file is, however, associated with creating a new file, while it stages the
+%   file for the commit. [...] Considered together with the git commit
+%   command, which usually ensues the add commands, it is admittedly easy to
+%   think that `one creates a new file and then commits it'."
+% QUOTE (Sec. 5.1): "Student with little previous command line (unix)
+%   experience easily confuse Git commands with Bash commands, and the other
+%   way around."
+% QUOTE (Sec. 5.4): "In referring to remote branches, this `with and without
+%   prefix' conventions confuses learners until they have used the system long
+%   enough and grasped the need for specifying the remote context with a
+%   prefix".
+% QUOTE (Sec. 5.7): "The absence of a proper mental model seems to cause the
+%   blind-testing effect [...] learners do not think about the Git commands,
+%   but `just try them out', which makes it very difficult to interpret the
+%   responses and error messages by the Git client."
+% VERIFIED: full text re-read (open author copy, JYU repository,
 %   https://jyx.jyu.fi/bitstreams/71186a3c-fc91-4a00-b3e2-990dade59464/download);
-%   quote entails all three parts of the claim.
+%   each quote entails the specific claim it backs (branch-as-directory,
+%   add-as-create-file, Git/Bash mixing, remote-prefix, blind-testing).
+%   Resolves introtools #3.
 % DATE: 2026-07-18
 @inproceedings{IsomottonenCochez2014,
   title={Challenges and Confusions in Learning Version Control with {Git}},
@@ -80,6 +104,130 @@
   year={2016},
   pages={292--310},
   doi={10.1145/2983990.2984018},
+}
+
+% === provenance: Cochez2013DVCSUsage ===
+% CLAIM: Repository-data analysis of students' Git use finds that students
+%   treat the version control system as plain file storage / an answer
+%   submission system, commit too rarely, and write meaningless commit
+%   messages.
+% FOUND-VIA: scholar search "mining student version control repositories novices" -p dblp -p openalex
+%   (title confirmed via Crossref bibliographic query; OA copy read at CEUR-WS Vol-1000)
+% PICKED: primary repository-data study of student Git usage across three
+%   courses -- the gap-(b) source; the open-access CEUR copy is fully readable
+%   (the Springer sibling chapter's abstract was inaccessible this session).
+% QUOTE (abstract): "students do not use the system in an optimal way; they do
+%   not commit changes often enough and regard the version control system as
+%   file storage. They also often write commit messages which are
+%   meaningless."
+% QUOTE (Sec. 4.5, p.231): "The presence of files which do not belong in the
+%   version control system, such as executable programs, temporary compilation
+%   files and copied documentation, suggests that the students used the VCS as
+%   plain file storage."
+% VERIFIED: full text read (open-access CEUR-WS PDF,
+%   https://ceur-ws.org/Vol-1000/ICTERI-2013-p-221-235.pdf); quotes entail the
+%   file-storage / submission-system misconception at repository-data strength.
+% DATE: 2026-07-18
+@inproceedings{Cochez2013DVCSUsage,
+  title={The Use of Distributed Version Control Systems in Advanced Programming Courses},
+  author={Cochez, Michael and Isom{\"o}tt{\"o}nen, Ville and Tirronen, Ville and Itkonen, Jonne},
+  booktitle={Proceedings of the 9th International Conference on ICT in Education, Research and Industrial Applications ({ICTERI} 2013)},
+  series={CEUR Workshop Proceedings},
+  volume={1000},
+  publisher={CEUR-WS},
+  pages={221--235},
+  year={2013},
+  url={https://ceur-ws.org/Vol-1000/ICTERI-2013-p-221-235.pdf},
+  doi={10.55056/ceur-ws.org/vol-1000/icteri-2013-p-221-235.pdf},
+}
+
+% === provenance: Yang2022GitCommands ===
+% CLAIM: Even experienced developers frequently struggle with Git commands; a
+%   large-scale Stack Overflow study characterises the difficulty, and a
+%   companion survey finds developers learn Git mostly by self-teaching.
+% FOUND-VIA: scholar search "learning git version control difficulties" -p dblp -p openalex
+% PICKED: the largest repository/Q&A-data study of Git command difficulty
+%   (80,370 Stack Overflow questions); complements course-side observations
+%   with population-scale evidence that the difficulty is intrinsic to Git,
+%   not only a novice problem.
+% QUOTE (abstract): "despite its widespread use, developers still frequently
+%   face difficulties when using various Git commands to manage projects and
+%   collaborate. [...] we conducted a survey to understand how developers learn
+%   Git commands in practice, showing that self-learning is the primary
+%   learning approach."
+% VERIFIED: abstract read (OpenAlex); entails both the command-difficulty and
+%   the self-learning claim. Scope: developers on Stack Overflow (not
+%   specifically students) -- cited only at that scope.
+% DATE: 2026-07-18
+@article{Yang2022GitCommands,
+  title={Do Developers Really Know How to Use {Git} Commands? A Large-scale Study Using {Stack Overflow}},
+  author={Yang, Wenhua and Zhang, Chong and Pan, Minxue and Xu, Chang and Zhou, Yu and Huang, Zhiqiu},
+  journal={ACM Transactions on Software Engineering and Methodology},
+  volume={31},
+  number={3},
+  pages={47:1--47:29},
+  year={2022},
+  doi={10.1145/3494518},
+}
+
+% === provenance: Braught2024GitKit ===
+% CLAIM: The GitKit packages an authentic Free/Open-Source project so students
+%   learn Git and GitHub workflows in a real-world context; teaching these
+%   distributed, asynchronous tools in an educational setting poses distinctive
+%   challenges for students and faculty.
+% FOUND-VIA: scholar search "GitKit free open source software learning git" -p dblp -p openalex
+% PICKED: the full SIGCSE 2024 paper of the GitKit line (the seed round had
+%   only the 2026 one-page poster \autocite{Postner2026GitMisconceptions});
+%   describes the intervention and a pilot study, so it carries more evidence
+%   weight than the poster.
+% QUOTE (abstract): "Since these tools and processes were created for
+%   distributed, asynchronous collaboration on large scale projects, teaching
+%   them in an authentic context that makes clear their utility and design
+%   presents myriad challenges for both faculty and students. [...] A pilot
+%   study of student experiences with the GitKit is promising".
+% VERIFIED: abstract read (OpenAlex); OA PDF at ACM
+%   (https://dl.acm.org/doi/pdf/10.1145/3626252.3630864). Entails the
+%   authentic-context and teaching-challenge claims at pilot strength.
+% DATE: 2026-07-18
+@inproceedings{Braught2024GitKit,
+  title={{GitKit}: Learning Free and Open Source Collaboration in Context},
+  author={Braught, Grant and Jackson, Stoney and Macdonell, Cam and Postner, Lori and Shumar, Wesley and Wurst, Karl R.},
+  booktitle={Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1},
+  series={SIGCSE 2024},
+  publisher={ACM},
+  pages={144--150},
+  year={2024},
+  doi={10.1145/3626252.3630864},
+}
+
+% === provenance: Bucher2026GitTakesTwo ===
+% CLAIM: Git is challenging for newcomers, and a learning tool that visualises
+%   distributed state -- showing a partner's actions on a shared remote in real
+%   time -- can scaffold learners' awareness of Git's distributed, collaborative
+%   nature.
+% FOUND-VIA: scholar search "GitKit free open source software learning git" -p dblp -p openalex
+%   (surfaced alongside the GitKit line)
+% PICKED: recent (CHI 2026) within-subjects study of a Git-visualisation
+%   learning tool (GitAcademy split-view) -- the clearest gap-(d)
+%   visualisation-as-intervention source, not merely a tool description.
+% QUOTE (abstract): "Git is widely used for collaborative software development,
+%   but it can be challenging for newcomers. [...] a split-view collaborative
+%   mode: learners work on their own local repositories connected to a shared
+%   remote repository, while simultaneously seeing their partner's actions
+%   mirrored in real time. [...] a training simulator to build awareness of
+%   distributed states, coordination, and collaborative troubleshooting."
+% VERIFIED: abstract read (OpenAlex); entails the newcomer-difficulty and the
+%   distributed-state-visualisation claims. Performance gains were "mixed" --
+%   no learning-outcome effect is claimed.
+% DATE: 2026-07-18
+@inproceedings{Bucher2026GitTakesTwo,
+  title={{Git} Takes Two: Split-View Awareness for Collaborative Learning of Distributed Workflows in {Git}},
+  author={Bucher, Joel and Goswami, Lahari and Thorgeirsson, Sverrir and Wang, April Yi},
+  booktitle={Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  series={CHI '26},
+  publisher={ACM},
+  year={2026},
+  doi={10.1145/3772318.3791254},
 }
 
 % === provenance: Winder2024ShellTutor ===

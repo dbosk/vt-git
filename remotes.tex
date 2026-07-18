@@ -10,14 +10,21 @@ collaboration workflows built on top (GitHub, pull requests).
 
 Course observations document confusion about the distributed nature of the
 system and about collaborating through a shared remote
-\autocite{IsomottonenCochez2014}, and the GitKit multi-institution data
-targets exactly the basic GitHub workflows
-\autocite{Postner2026GitMisconceptions}.
-The Shell Tutor also covers Git in its shell-based tutoring
+\autocite{IsomottonenCochez2014}; a concrete instance is the
+remote-tracking-name confusion:
+\textcquote[Sec.~5.4]{IsomottonenCochez2014}{this `with and without prefix'
+conventions confuses learners until they have used the system long enough and
+grasped the need for specifying the remote context with a prefix}
+(\texttt{origin/master} when listing, \texttt{origin master} when pushing).
+The GitKit line catalogues misconceptions in the basic GitHub workflows
+across institutions \autocite{Postner2026GitMisconceptions,Braught2024GitKit},
+and the Shell Tutor covers Git in its shell-based tutoring
 \autocite{Winder2024ShellTutor}.
-% TODO(#1): The systematic phase should add studies of student GitHub use in
-% courses (the seed round found, but did not retain, Feliciano et al. 2016
-% -- re-evaluate it) and of pull-request workflows in teaching.
+Because the distributed state is what learners cannot see, visualising it is a
+natural intervention: a recent split-view learning tool mirrors a partner's
+actions on a shared remote in real time to build
+\textcquote{Bucher2026GitTakesTwo}{awareness of distributed states,
+coordination, and collaborative troubleshooting}.
 
 \subsection{Candidate critical aspects}
 

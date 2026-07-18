@@ -1,0 +1,661 @@
+\section{Setting up the pre/post-test, literately}
+\label{app:quiz}
+
+This appendix is a literate program \autocite{LiterateProgramming}: the prose
+and the code are one and the same source, woven into the text you are reading
+and tangled into the files the computer runs.
+It implements the pre/post-test of \cref{sec:method-instruments}: a pair of
+quizzes that measure whether students discern the candidate critical aspects
+of \cref{sec:model,sec:staging,sec:branches,sec:remotes} before and after the
+course module, and it prepares their results for analysis.
+Three files are tangled from this section: [[quiz-knowledge-start.json]] and
+[[quiz-knowledge-end.json]], the descriptions of the two quizzes that the
+[[canvaslms]] tool pushes to Canvas, and [[analyze_quiz.py]], which fetches
+the results back and summarises them.
+
+\subsection{The two quizzes for Canvas}
+
+The learning platform of the course is Canvas, and the [[canvaslms]]
+command-line tool creates the quizzes from their JSON descriptions:
+\begin{minted}{bash}
+canvaslms quizzes create -c datintro26 -f quiz-knowledge-start.json
+canvaslms quizzes create -c datintro26 -f quiz-knowledge-end.json
+\end{minted}
+There are two quizzes because the same knowledge questions are asked twice:
+once at the start of the module, to measure what students discern before it
+(\cref{sec:method-instruments}), and once at the end, to measure the gain.
+The knowledge items are therefore defined once and appear in both quizzes;
+the two differ only in what opens them and in their instructions.
+The titles name the two administrations so that students and analysis alike
+can tell them apart.
+
+The start quiz opens with a consent item---participation in the study is
+opt-in, so we ask before collecting anything---and then the shared knowledge
+items.
+
+<<[[quiz-knowledge-start.json]]>>=
+{
+  "quiz_type": "new",
+  "settings": {
+    "title": "Git quiz: what you know already",
+    "instructions": "<p>This quiz checks what you already know about Git, so that we can adapt the course. The questions show git commands and their output; if you have not used Git before, answer as well as you can&mdash;guessing is fine, and a low score is expected and completely okay. You will see your score afterwards, but not the correct answers&mdash;the course will teach you those. The score does not affect your grade. Please answer on your own, without help from others or from tools.</p>",
+    "points_possible": 10,
+    <<scheduling settings>>
+    "quiz_settings": {
+      <<interaction settings>>
+      <<graded result view>>
+    }
+  },
+  "items": [
+    <<item: consent>>,
+    <<knowledge items>>
+  ]
+}
+@
+
+The end quiz opens instead with a question of its own: whether the student
+prepared for the quiz.
+We ask because preparation would confound the gain measure---a student who
+reviews the material the night before measures preparation, not what the
+course left behind.
+
+<<[[quiz-knowledge-end.json]]>>=
+{
+  "quiz_type": "new",
+  "settings": {
+    "title": "Git quiz: what you know now",
+    "instructions": "<p>This quiz repeats the Git questions from the start-of-course quiz, so that we can see what you have learned during the course. You will see your score afterwards, but not the correct answers. The score does not affect your grade. Please answer on your own, without preparation, help or tools.</p>",
+    "points_possible": 10,
+    <<scheduling settings>>
+    "quiz_settings": {
+      <<interaction settings>>
+      <<graded result view>>
+    }
+  },
+  "items": [
+    <<item: preparation>>,
+    <<knowledge items>>
+  ]
+}
+@
+
+Both quizzes are diagnostics: there is no time limit, a single attempt
+suffices, and answers are never shuffled---the order of the choices is
+meaningful in several items, and the order of the items is fixed so that the
+two administrations line up.
+The shared settings come in two chunks---scheduling and interaction---and
+each chunk is a flat list of keys, so every brace opens and closes in the
+chunk that uses it: the [[quiz_settings]] object opens and closes in the quiz
+descriptions above.
+
+<<scheduling settings>>=
+"time_limit": null,
+"due_at": null,
+"unlock_at": null,
+"lock_at": null,
+@
+
+<<interaction settings>>=
+"shuffle_answers": false,
+"shuffle_questions": false,
+"has_time_limit": false,
+"one_at_a_time_type": "none",
+"allow_backtracking": true,
+"multiple_attempts_enabled": false,
+"result_view_restricted": true,
+"display_items": true,
+"display_item_response": true,
+@
+
+Both quizzes show the points awarded---how well the student did---but neither
+per-item correctness nor the correct answers: the same questions must measure
+the gain at the end of the course, so they have to stay fresh.
+
+<<graded result view>>=
+  "display_item_response_correctness": false,
+  "display_item_correct_answer": false,
+  "display_points_awarded": true,
+  "display_points_possible": true
+@
+
+\subsection{The consent and preparation items}
+
+The consent item opens the start quiz and carries no points.
+Its wording must follow the study's ethics application; the item body below
+is a placeholder to be replaced once that application is decided.
+
+% XXX The consent wording must follow the approved ethics application;
+% update it when the application is decided.
+
+<<item: consent>>=
+{
+  "position": 1,
+  "points_possible": 0,
+  "entry": {
+    "title": "Consent",
+    "item_body": "<p>I consent to my answers in these quizzes, and my submissions in the course, being used pseudonymised in computing education research. My participation is voluntary and does not affect my grade.</p>",
+    "interaction_type_slug": "true-false",
+    "interaction_data": {"true_choice": "Yes", "false_choice": "No"},
+    "scoring_data": {"value": true},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+The preparation item opens the end quiz, before the knowledge items, and is
+likewise unscored: it is a control, not a measure.
+
+<<item: preparation>>=
+{
+  "position": 1,
+  "points_possible": 0,
+  "entry": {
+    "title": "Preparation",
+    "item_body": "<p>Did you prepare for this quiz&mdash;for example, review the course material&mdash;before taking it?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>No</p>"},
+        {"position": 2, "item_body": "<p>Yes, briefly</p>"},
+        {"position": 3, "item_body": "<p>Yes, thoroughly</p>"}
+      ]
+    },
+    "scoring_data": {"value": 1},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+\subsection{The knowledge items}
+
+Each knowledge item tests one candidate critical aspect from
+\cref{sec:model,sec:staging,sec:branches,sec:remotes}, and each is worth one
+point: we measure discernment by counting correct answers.
+Every item is a single-answer choice question whose distractors are, wherever
+the literature documents one, an actual misconception---so a student who has
+not yet discerned the aspect is drawn to the distractor that expresses the
+model they are substituting instead.
+Following \citeauthor{NCOL}'s discussion of assessment, the stems do not point
+out the aspect under test; discerning it is exactly what we measure
+\autocite[p.~91]{NCOL}.
+
+The items are numbered from position 11 so that their placement is
+independent of the quiz they appear in: Canvas orders by position, gaps are
+fine, and the numbering leaves room for the quiz-specific opening item
+(consent or preparation) at position 1.
+
+<<knowledge items>>=
+<<item: what a commit keeps>>,
+<<item: after you save>>,
+<<item: where earlier versions live>>,
+<<item: what git add does>>,
+<<item: two versions at once>>,
+<<item: seeing another branch>>,
+<<item: deleting a branch>>,
+<<item: what merging does>>,
+<<item: what git push does>>,
+<<item: why they cannot see it>>
+@
+
+\subsubsection{The commit model}
+
+The first item tests that a commit is a \emph{snapshot} of the whole tree,
+not a stored \emph{difference} (\cref{sec:model}).
+The key distractor is the commit-as-diff reading---that a commit records only
+the changed lines---together with a partial-snapshot reading that only the
+edited file is kept.
+
+<<item: what a commit keeps>>=
+{
+  "position": 11,
+  "points_possible": 1,
+  "entry": {
+    "title": "What a commit keeps",
+    "item_body": "<p>A project has many files. You edit one of them and then make a commit. What does that commit record?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>Only the lines you changed&mdash;the difference from the previous version</p>"},
+        {"position": 2, "item_body": "<p>Only the single file you edited; the other files are not part of this commit</p>"},
+        {"position": 3, "item_body": "<p>A snapshot of the whole project as it stood, every file included</p>"},
+        {"position": 4, "item_body": "<p>Nothing is recorded until you push the commit to the server</p>"}
+      ]
+    },
+    "scoring_data": {"value": 3},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+The second item tests that recording a version is a separate act from saving
+a file (\cref{sec:model}).
+The key distractor is the commit-as-save conflation---that saving the file has
+already stored the version---which repository-data studies find students hold,
+treating the system as file storage \autocite{Cochez2013DVCSUsage}.
+
+<<item: after you save>>=
+{
+  "position": 12,
+  "points_possible": 1,
+  "entry": {
+    "title": "After you save",
+    "item_body": "<p>You edit a file in your editor and click Save. You have run no git commands. What is true of your project's history in Git?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>The history is unchanged; Git records a version only when you commit</p>"},
+        {"position": 2, "item_body": "<p>The new version is now stored in the history automatically</p>"},
+        {"position": 3, "item_body": "<p>The old version is lost, because saving overwrote it in Git</p>"},
+        {"position": 4, "item_body": "<p>Git saved a draft that becomes a version automatically at the end of the day</p>"}
+      ]
+    },
+    "scoring_data": {"value": 1},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+The third item tests that history is a graph of commits linked to their
+parents, not a folder of versions (\cref{sec:model}).
+The key distractor is exactly the folder-of-versions picture---one sub-folder
+per saved version---the file-storage model documented from repository data
+\autocite{Cochez2013DVCSUsage}.
+
+<<item: where earlier versions live>>=
+{
+  "position": 13,
+  "points_possible": 1,
+  "entry": {
+    "title": "Where earlier versions live",
+    "item_body": "<p>You have made several commits. How does Git hold the earlier versions of your project?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>As a folder containing one sub-folder per saved version</p>"},
+        {"position": 2, "item_body": "<p>As a single file that Git rewrites completely on every commit</p>"},
+        {"position": 3, "item_body": "<p>It does not&mdash;Git keeps only the most recent version</p>"},
+        {"position": 4, "item_body": "<p>As commits, each pointing to the one before it, forming a history you can walk</p>"}
+      ]
+    },
+    "scoring_data": {"value": 4},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+\subsubsection{The staging area}
+
+The fourth item tests what [[git add]] does: it stages an existing change for
+the next commit, moving it from the working tree into the index
+(\cref{sec:staging}).
+Two distractors are documented misconceptions: that [[git add file]] creates a
+file rather than staging it \autocite[Sec.~5.3]{IsomottonenCochez2014}, and
+the add-as-commit reading that it already records the version.
+
+<<item: what git add does>>=
+{
+  "position": 14,
+  "points_possible": 1,
+  "entry": {
+    "title": "What git add does",
+    "item_body": "<p>The file notes.txt already exists and you have just edited it. You run:</p><pre>git add notes.txt</pre><p>What does this command do?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>It creates a new file called notes.txt</p>"},
+        {"position": 2, "item_body": "<p>It records your edit permanently in the project history</p>"},
+        {"position": 3, "item_body": "<p>It marks your current edit to be included in the next commit</p>"},
+        {"position": 4, "item_body": "<p>It uploads notes.txt to the shared server</p>"}
+      ]
+    },
+    "scoring_data": {"value": 3},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+The fifth item tests that the same file can differ in the working tree and in
+the index at once---the three-places aspect (\cref{sec:staging}).
+The [[git status]] output shows [[README.md]] as both staged and unstaged; the
+key distractor denies that this is possible, the model of a file as either
+saved or not.
+
+<<item: two versions at once>>=
+{
+  "position": 15,
+  "points_possible": 1,
+  "entry": {
+    "title": "Two versions at once",
+    "item_body": "<p>Running git status shows this:</p><pre>Changes to be committed:\n        modified:   README.md\n\nChanges not staged for commit:\n        modified:   README.md</pre><p>How can the same file, README.md, appear in both lists at once?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>It cannot happen; git status is showing an error</p>"},
+        {"position": 2, "item_body": "<p>You staged one version of README.md, then edited it again, so the staged and working versions now differ</p>"},
+        {"position": 3, "item_body": "<p>README.md has already been committed twice</p>"},
+        {"position": 4, "item_body": "<p>Git has made a copy of README.md in another folder</p>"}
+      ]
+    },
+    "scoring_data": {"value": 2},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+\subsubsection{Branches}
+
+The sixth item tests that a branch is a movable pointer into the commit graph,
+not a place you move into (\cref{sec:branches}).
+The key distractor is the branch-as-directory misconception---trying to
+[[cd]] into a branch---the best-documented Git misconception in the literature
+\autocite[Sec.~5.2]{IsomottonenCochez2014}; switching a branch instead
+repoints the working tree in place.
+
+<<item: seeing another branch>>=
+{
+  "position": 16,
+  "points_possible": 1,
+  "entry": {
+    "title": "Seeing another branch",
+    "item_body": "<p>Your repository has a branch named feature. Which of these lets you see and work on the files as they are on feature?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>Run cd feature, to move into the feature directory</p>"},
+        {"position": 2, "item_body": "<p>Open the feature folder inside the .git directory</p>"},
+        {"position": 3, "item_body": "<p>Copy the feature branch's folder into your project</p>"},
+        {"position": 4, "item_body": "<p>Run git switch feature, and the working tree updates in place to show feature</p>"}
+      ]
+    },
+    "scoring_data": {"value": 4},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+The seventh item tests that the commit graph outlives the pointers into it: a
+branch is just a name, and deleting it does not delete the commits
+(\cref{sec:branches}).
+The key distractor treats the branch as the container of its commits---the
+same directory-shaped picture as before.
+
+<<item: deleting a branch>>=
+{
+  "position": 17,
+  "points_possible": 1,
+  "entry": {
+    "title": "Deleting a branch",
+    "item_body": "<p>You finished work on branch feature and merged it into main. You then delete feature with git branch -d feature. What happens to the commits you made on feature?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>They remain in the history; deleting the branch only removes the name that pointed at them</p>"},
+        {"position": 2, "item_body": "<p>They are deleted along with the branch</p>"},
+        {"position": 3, "item_body": "<p>They move to a trash area and can be restored for 30 days</p>"},
+        {"position": 4, "item_body": "<p>The files you changed on feature are removed from the project</p>"}
+      ]
+    },
+    "scoring_data": {"value": 1},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+The eighth item tests that merging joins two histories rather than copying one
+directory into another (\cref{sec:branches}).
+The key distractor is the copy-the-directory reading of a merge.
+
+<<item: what merging does>>=
+{
+  "position": 18,
+  "points_possible": 1,
+  "entry": {
+    "title": "What merging does",
+    "item_body": "<p>You are on branch main and you run git merge feature. What does Git do?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>It copies the feature branch's directory into your main directory</p>"},
+        {"position": 2, "item_body": "<p>It replaces main's files with feature's files</p>"},
+        {"position": 3, "item_body": "<p>It combines the two lines of history into one, bringing feature's commits together with main's</p>"},
+        {"position": 4, "item_body": "<p>It creates a new folder named feature-main</p>"}
+      ]
+    },
+    "scoring_data": {"value": 3},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+\subsubsection{Remotes and collaboration}
+
+The ninth item tests that push moves your local commits to another copy of the
+repository---there is no single cloud original, only copies by convention
+(\cref{sec:remotes}).
+The key distractor is push-as-save-to-cloud: saving files to the one true copy
+on a server, the main-copy thinking that the basic-workflow misconception
+catalogue targets \autocite{Postner2026GitMisconceptions}.
+
+<<item: what git push does>>=
+{
+  "position": 19,
+  "points_possible": 1,
+  "entry": {
+    "title": "What git push does",
+    "item_body": "<p>You run git push. What does it do?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>It saves your files to a cloud drive that holds the one true copy of the project</p>"},
+        {"position": 2, "item_body": "<p>It sends the commits you have made locally to another copy of the repository, the remote</p>"},
+        {"position": 3, "item_body": "<p>It backs up your working files, including changes you have not committed</p>"},
+        {"position": 4, "item_body": "<p>It makes your latest edits appear on your teammates' screens instantly</p>"}
+      ]
+    },
+    "scoring_data": {"value": 2},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+The tenth item tests that local commits are invisible to others until pushed
+(\cref{sec:remotes}).
+The key distractor is the expectation that a commit is visible to everyone as
+soon as it is made---confusion about the distributed nature of the system that
+course observations document \autocite{IsomottonenCochez2014}.
+
+<<item: why they cannot see it>>=
+{
+  "position": 20,
+  "points_possible": 1,
+  "entry": {
+    "title": "Why they cannot see it",
+    "item_body": "<p>You committed your work an hour ago. A teammate cloned the shared repository just now and says your work is not there. You have not run git push. Why can't they see it?</p>",
+    "interaction_type_slug": "choice",
+    "interaction_data": {
+      "choices": [
+        {"position": 1, "item_body": "<p>Because your commit is only in your local repository until you push it to the shared one</p>"},
+        {"position": 2, "item_body": "<p>Because a commit is visible to everyone as soon as it is made</p>"},
+        {"position": 3, "item_body": "<p>Because your teammate cloned the wrong repository</p>"},
+        {"position": 4, "item_body": "<p>Because commits expire after an hour if they are not opened</p>"}
+      ]
+    },
+    "scoring_data": {"value": 1},
+    "scoring_algorithm": "Equivalence"
+  }
+}
+@
+
+\subsection{Analysing the results}
+\label{app:quiz-analysis}
+
+Canvas compiles the responses into a student-analysis report: a CSV file with
+one row per student and one column per item, keyed by the item titles above.
+The analysis program fetches that report itself---we know the course and the
+quiz titles, so nothing needs to be clicked or downloaded by hand---using the
+same [[canvaslms]] machinery as the command-line tool.
+It then tabulates the two unscored control items and summarises the score
+distribution of the graded knowledge items.
+All items here are closed choices, so there is nothing to code by hand and no
+coding sheet to prepare.
+
+<<[[analyze_quiz.py]]>>=
+"""Fetch and summarise the Git pre/post-test results.
+
+The two quizzes are defined in quiz-knowledge-start.json and
+quiz-knowledge-end.json, both tangled from the same literate source (the
+appendix of the paper).  The results come straight from Canvas via
+canvaslms; the item titles are the column keys.
+
+Requires canvaslms (and its configured credentials).
+"""
+
+import argparse
+import collections
+import csv
+import os
+import statistics
+import sys
+
+<<the course and the item titles are the keys>>
+<<fetch the results from Canvas>>
+<<tabulate the closed items>>
+<<analysis main>>
+
+if __name__ == "__main__":
+    main()
+@
+
+The course name and the item titles are the join keys between the tangled
+files: if a title changes in a quiz, this dictionary is the only other place
+to change---and they live in the same source, side by side.
+Canvas prefixes the report's columns with item identifiers, so we match
+columns by containment rather than equality.
+
+<<the course and the item titles are the keys>>=
+COURSE = "datintro26"  # TODO: confirm the actual course instance
+QUIZ_TITLES = {
+    "start": "Git quiz: what you know already",
+    "end": "Git quiz: what you know now",
+}
+STUDENT = "name"
+CLOSED_ITEMS = ["Consent", "Preparation"]
+
+
+def column_for(title, fieldnames):
+    """Return the report column whose name contains the item title."""
+    return next((name for name in fieldnames if title in name), None)
+@
+
+\subsubsection{Fetching the report from Canvas}
+
+Just as we create the quizzes with [[canvaslms]], we extract the results with
+it: the same package provides the credentials, the course lookup and the
+report machinery, so the program reuses them instead of reimplementing the
+Canvas API calls.
+The report is generated on demand by Canvas, so we request it, wait for it,
+and download the CSV it points to.
+
+<<fetch the results from Canvas>>=
+def fetch_results(which):
+    """Download the student-analysis rows for the start or end quiz."""
+    import appdirs
+    import requests
+    import canvaslms.cli
+    import canvaslms.cli.login
+    from canvasapi import Canvas
+    from canvaslms.cli.quizzes import (
+        create_new_quiz_report,
+        filter_quizzes,
+        is_new_quiz,
+        poll_progress,
+    )
+
+    config_file = os.path.join(
+        appdirs.user_config_dir("canvaslms"), "config.json"
+    )
+    config = canvaslms.cli.read_configuration(config_file)
+    hostname, token = canvaslms.cli.login.load_credentials(config)
+    if not hostname.startswith("http"):
+        hostname = f"https://{hostname}"
+    canvas = Canvas(hostname, token)
+
+    course = next(
+        c for c in canvas.get_courses()
+        if COURSE in (c.name or "") or COURSE in (c.course_code or "")
+    )
+    quiz = next(filter_quizzes([course], QUIZ_TITLES[which]))
+    if not is_new_quiz(quiz):
+        sys.exit(f"quiz {quiz.title!r} is not a New Quiz")
+
+    progress = poll_progress(
+        create_new_quiz_report(course, quiz.id, canvas._Canvas__requester)
+    )
+    url = progress.results.get("url") if progress else None
+    if not url:
+        sys.exit("Canvas did not produce the student-analysis report")
+    response = requests.get(url)
+    response.raise_for_status()
+    return list(csv.DictReader(response.text.splitlines()))
+@
+
+\subsubsection{Summaries}
+
+Tabulating a closed item is counting its answer frequencies; we print one
+table per item present in the report (the consent item exists only in the
+start quiz, the preparation item only in the end quiz).
+The knowledge items are graded, so Canvas reports a score column, which we
+summarise rather than tabulate---the pre/post gain lives in that
+distribution.
+
+<<tabulate the closed items>>=
+def tabulate(rows, item):
+    """Print the answer frequencies for one closed item."""
+    column = column_for(item, rows[0].keys())
+    if column is None:
+        return
+    counts = collections.Counter(row[column] for row in rows)
+    print(f"\n{item}")
+    for answer, count in counts.most_common():
+        print(f"  {answer or '(no answer)'}: {count}")
+
+
+def summarize_scores(rows):
+    """Print the score distribution, if the report has scores."""
+    column = column_for("score", rows[0].keys())
+    if column is None:
+        return
+    scores = [float(row[column]) for row in rows if row[column]]
+    if scores:
+        print(f"\nscores: n={len(scores)}"
+              f", mean={statistics.mean(scores):.1f}"
+              f", median={statistics.median(scores):.1f}"
+              f", max={max(scores):.0f}")
+@
+
+The main function ties the pieces together: fetch (or read) the report for
+the chosen quiz, tabulate its control item, and summarise the knowledge
+scores.
+
+<<analysis main>>=
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--quiz", choices=QUIZ_TITLES, default="start",
+                        help="which quiz to analyse")
+    parser.add_argument("--results",
+                        help="read this CSV instead of fetching from Canvas")
+    args = parser.parse_args()
+
+    if args.results:
+        with open(args.results, newline="") as infile:
+            rows = list(csv.DictReader(infile))
+    else:
+        rows = fetch_results(args.quiz)
+    if not rows:
+        sys.exit("no responses")
+
+    print(f"{len(rows)} students")
+    for item in CLOSED_ITEMS:
+        tabulate(rows, item)
+    summarize_scores(rows)
+@

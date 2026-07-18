@@ -42,9 +42,80 @@ Not yet verified at full text (tracked in the course repository's issues
 Note also that \autocite{Postner2026GitMisconceptions} is a one-page
 poster: low evidence weight, used as a pointer to the GitKit line of work.
 
-\subsection{Phase two: systematic round}
+\subsection{Phase two: systematic round (2026-07-18)}
 
-% TODO(#1): To be run and documented here, mirroring the companion paper's
-% appendix. Priority gaps: repository-data studies of student Git usage,
-% GitHub-in-education studies (re-evaluate Feliciano et al. 2016),
-% visualisation interventions, and the full GitKit paper when it appears.
+The systematic round extended the seed search along the gaps it had left
+open, using the same protocol: the \texttt{scholar} tool against DBLP and
+OpenAlex (Semantic Scholar was rate-limited for part of the session),
+abstracts fetched via the OpenAlex API, and full texts from open repository
+copies where available.
+Screening kept a result only if (i)~it concerned learning, teaching, or
+documented use of Git or version control (not a platform- or tooling-only
+paper), and (ii)~its abstract or full text was accessible so that a verbatim
+supporting quote could be recorded; every retained reference carries a
+provenance block in \texttt{misconceptions.bib}.
+
+The productive queries, by gap:
+\begin{description}
+  \item[Version-control misconceptions] \texttt{scholar search "learning git
+    version control difficulties" -p dblp -p openalex} retained
+    \autocite{Yang2022GitCommands}, a large-scale Stack Overflow study of Git
+    command difficulty.
+  \item[Repository-data studies of student use] \texttt{scholar search
+    "mining student version control repositories novices" -p dblp -p
+    openalex}, with the title confirmed through a Crossref bibliographic
+    query, retained the open-access \autocite{Cochez2013DVCSUsage}.
+  \item[GitHub in education and the GitKit line] \texttt{scholar search
+    "GitKit free open source software learning git" -p dblp -p openalex} and
+    \texttt{scholar search "teaching git" -p dblp} retained the full GitKit
+    paper \autocite{Braught2024GitKit}; the seed round had only the poster
+    \autocite{Postner2026GitMisconceptions}.
+  \item[Visualisation interventions] the same GitKit query surfaced, and we
+    retained, \autocite{Bucher2026GitTakesTwo}, a controlled study of a
+    split-view Git-learning tool.
+  \item[Full-text re-read of the seed source] the open author copy of
+    \autocite{IsomottonenCochez2014} was re-read in full; its
+    Sections~5.1--5.7 supplied precise quotes for the staging-area
+    (\texttt{add}-as-create-file), remote-prefix, Git/Bash-mixing, and
+    blind-testing difficulties, which now back
+    \cref{sec:model,sec:staging,sec:remotes} and are recorded as additional
+    quotes in the entry's provenance block.
+\end{description}
+
+Re-evaluated and \emph{not} retained.
+The seed round's discarded candidate---Feliciano, Storey \& Zagalsky's case
+study of students' GitHub experiences (ICSE-C 2016, DOI
+10.1145/2889160.2889195)---was re-examined as promised: its abstract is
+available only in truncated form and the paper is not open access, so its
+specific findings could not be verified; since the retained GitKit and
+Isomöttönen--Cochez sources already cover GitHub in education, it is left
+uncited rather than cited from an inaccessible abstract.
+Also screened out: the Onward!\ essay \enquote{What's wrong with git?} (2013,
+superseded by the retained Gitless paper \autocite{DeRossoJackson2016Gitless});
+the GitKit tutorial and demo abstracts (2022 and 2025, redundant with
+\autocite{Braught2024GitKit}); the IASGE \enquote{behavioral approach} survey
+(HICSS 2021), whose scope is scholarly researchers and repository
+preservation rather than course misconceptions; and several Git-metrics
+papers on measuring student contributions, which concern grading rather than
+misconceptions.
+
+Unproductive queries, recorded for reproducibility (no new retained
+reference): \texttt{scholar search "teaching version control students"},
+\texttt{"student git commit behavior repository mining"}, \texttt{"git
+visualization tool teaching learning"}, \texttt{"visualizing commit graph
+learning git"}, and \texttt{"pull request workflow teaching students"} (all
+\texttt{-p dblp -p openalex}) returned only off-topic or education-general
+results.
+The research-question mode (\texttt{scholar rq}) could not be driven
+non-interactively in this session---it requires a classification step that
+returned no output---so the round relied on direct \texttt{scholar search}
+queries; the one research-question-generated query that did surface,
+\texttt{GitHub software engineering education students challenges} (DBLP), hit
+a transient server error.
+
+Remaining gaps.
+Pull-request-workflow studies in teaching, and a controlled comparison of
+visualisation interventions, were not found at citable quality; and the
+course's own grading-data misconceptions (\cref{sec:model}, TODO~\#2) are
+still to be added.
+These are carried as open items rather than filled from unverifiable sources.
