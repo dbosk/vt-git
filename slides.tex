@@ -1,0 +1,52 @@
+\documentclass[ignoreframetext]{beamer}
+\input{preamble.tex}
+
+\begin{document}
+
+\title{%
+  Version control through the lens of variation theory:
+  misconceptions and critical aspects of Git%
+}
+\author{%
+  Daniel Bosk
+  \\KTH Royal Institute of Technology, Sweden
+  \\\texttt{dbosk@kth.se}
+}
+\institute{%
+  KTH EECS TCS
+}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed
+
+\mode*
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{abstract}
+  \input{abstract.tex}
+\end{abstract}
+
+\begin{frame}
+  \tableofcontents[subsectionstyle=hide,subsubsectionstyle=hide]
+\end{frame}
+
+\mode<all>{\input{introduction}}
+\mode<all>{\input{background}}
+
+\mode<all>{\input{method}}
+
+\mode<all>{\input{model.tex}}
+\mode<all>{\input{staging.tex}}
+\mode<all>{\input{branches.tex}}
+\mode<all>{\input{remotes.tex}}
+
+\mode<all>{\input{related-work.tex}}
+\mode<all>{\input{conclusions.tex}}
+
+\begin{frame}[allowframebreaks]
+\printbibliography
+\end{frame}
+
+\end{document}

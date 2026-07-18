@@ -329,3 +329,15 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+## Project build outputs (symlinks into ltxobj/) and build machinery
+article.pdf
+slides.pdf
+slides.unq
+didactic.sty
+ltxobj/
+latexmkrc
+pythontex_data.pkl
+py_*.stdout
+didactic_output_*.txt
+__pycache__/

@@ -1,0 +1,50 @@
+\mode*
+\section{Search and verification protocol}
+\label{app:protocol}
+
+This appendix documents the literature searches behind the references, for
+reproducibility, following the protocol of the companion paper
+\autocite[App.~literature protocol]{VTProgMisconceptions}: every reference
+was found by a recorded query, read at least at abstract level, and
+recorded with a provenance block (claim, query, selection rationale,
+verbatim supporting quote, verification level) directly above its entry in
+\texttt{misconceptions.bib}.
+
+\subsection{Phase one: seed round (2026-07-18)}
+
+The seed round was a claim-driven search conducted with the
+\texttt{scholar} tool against DBLP, OpenAlex, and Semantic Scholar
+(Semantic Scholar was rate-limited during part of the session), with
+abstracts fetched via the OpenAlex API and full texts from open repository
+copies (the Isomöttönen \& Cochez author copy at the JYU repository was
+read in full; the Gitless preprint is open at MIT DSpace).
+The queries whose results were retained for this paper:
+
+\begin{itemize}
+  \item \texttt{scholar search "git misconceptions" -p dblp -p openalex}
+  \item \texttt{scholar search "challenges confusions version control" -p dblp}
+  \item \texttt{scholar search "purposes concepts misfits redesign git" -p dblp}
+  \item \texttt{scholar search "shell tutor" -p dblp}
+  \item \texttt{scholar search "black box inside glass box presenting computing concepts" -p openalex -p dblp}
+  \item \texttt{scholar search "Sorva notional machines introductory programming" -p dblp -p openalex}
+  \item \texttt{scholar search "Ben-Ari constructivism" -p dblp}
+  \item \texttt{scholar search "difficulties of learning to program du Boulay" -p openalex}
+  \item \texttt{scholar search '"variation theory" computer programming' -p openalex}
+\end{itemize}
+
+Discarded in this round: Feliciano et al.\ 2016 (student GitHub
+experiences; abstract truncated, redundant next to the retained sources
+--- to be re-evaluated in phase two); \enquote{Teaching Git on the side}
+(ITiCSE 2015; platform paper, not misconceptions).
+Not yet verified at full text (tracked in the course repository's issues
+\#124--\#125): \autocite{DuBoulay1981BlackBox},
+\autocite{BenAri1998Constructivism}.
+Note also that \autocite{Postner2026GitMisconceptions} is a one-page
+poster: low evidence weight, used as a pointer to the GitKit line of work.
+
+\subsection{Phase two: systematic round}
+
+% TODO: To be run and documented here, mirroring the companion paper's
+% appendix. Priority gaps: repository-data studies of student Git usage,
+% GitHub-in-education studies (re-evaluate Feliciano et al. 2016),
+% visualisation interventions, and the full GitKit paper when it appears.

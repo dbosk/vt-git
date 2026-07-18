@@ -1,0 +1,54 @@
+\mode*
+\section{Method}
+
+This study has two parts, mirroring the companion paper
+\autocite{VTProgMisconceptions}.
+The first is a \emph{literature review} that maps learners' misconceptions
+and difficulties with Git, answering \cref{rq:misconceptions}:
+
+\rqmisconceptions*
+
+The second is an \emph{analysis} of those misconceptions through the lens
+of variation theory: the misconceptions are treated as phenomenographic
+observations from which we identify critical aspects (\cref{rq:aspects})
+and construct patterns of variation (\cref{rq:patterns}):
+
+\rqaspects*
+\rqpatterns*
+
+\Cref{rq:misconceptions} is answered by the review directly;
+\cref{rq:aspects,rq:patterns} are answered analytically, and their answers
+are validated by argument (inference to the best explanation), not yet
+empirically.
+
+\subsection{Literature review}
+\label{sec:method-litreview}
+
+The review has two phases.
+The first phase is a seed round: a claim-driven search conducted for the
+course-development work this paper grows out of, with every retained
+reference verified against at least its abstract (full text where open)
+and recorded with full provenance; the protocol and queries are in
+\cref{app:protocol}.
+The second phase is a systematic, tool-supported multi-database search
+with the \texttt{scholar} tool, as in the companion papers
+\autocite{VTProgMisconceptions,VTDebug}.
+% TODO: The systematic phase has not yet run. Its queries must cover:
+% version-control misconceptions beyond the seed sources, Git in
+% CS-education venues (GitKit and related), repository-data studies of
+% student Git usage, and Git visualisation tools as interventions.
+
+\subsection{Variation-theory analysis}
+\label{sec:method-vt-analysis}
+
+For each documented misconception we ask: which aspect had the learner not
+discerned?
+Aspects recurring across misconceptions are candidate critical aspects.
+For each critical aspect we construct patterns of variation---contrast,
+generalisation, fusion---that make the aspect discernible, following the
+companion paper \autocite{VTProgMisconceptions}.
+Git affords the vary-and-observe loop that variation-theory teaching can
+exploit \autocite{Svensson2020Affordances,ThuneEckerdal2009Variation,
+ThuneEckerdal2018Lab}: the same command against different repository
+states, or different commands against the same state, with
+\texttt{git status}/\texttt{git log} as the observation instruments.

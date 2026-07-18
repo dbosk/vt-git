@@ -1,0 +1,59 @@
+\mode*
+\section{Branches}
+\label{sec:branches}
+
+The third educational objective is branching: a branch as a movable pointer
+into the commit graph, switching as repointing the working tree, merging as
+joining histories.
+
+\subsection{Documented misconceptions and difficulties}
+
+This is the best-documented Git misconception in the seed literature:
+learners conceptualise a branch as a directory---\textcquote[p.~10 of the
+author copy]{IsomottonenCochez2014}{if asked to checkout a particular
+branch, learners might try to move into a branch with the cd command}---%
+a difficulty the authors attribute in part to the command-line client, and
+against which they recommend visual diagrams of branching and teaching
+branches explicitly as pointers into the commit history
+\autocite{IsomottonenCochez2014}.
+In variation-theory terms: lacking Git's notional machine, the learner
+substitutes the file-system model they already master (cf.\ the companion
+paper on the terminal \autocite{VTTerminal}).
+
+\mode<presentation>{%
+\begin{frame}
+  \begin{block}{The branch-as-directory misconception}
+    \begin{itemize}
+      \item Learners try to \texttt{cd} into a branch
+        \autocite{IsomottonenCochez2014}.
+      \item Partly attributed to the CLI client; visual commit-graph
+        diagrams recommended.
+      \item The file-system model substitutes for the missing commit-graph
+        model.
+    \end{itemize}
+  \end{block}
+\end{frame}%
+}
+
+\subsection{Candidate critical aspects}
+
+% XXX Preliminary.
+\begin{itemize}
+  \item \emph{A branch is a pointer, not a place}: switching branches
+    changes what the working tree shows \emph{in place}.
+  \item \emph{The graph outlives the pointers}: commits exist regardless
+    of which branch points at them.
+  \item \emph{Merging joins histories}, it does not copy directories.
+\end{itemize}
+
+\subsection{Patterns of variation}
+
+\begin{itemize}
+  \item Contrast (branch varies, location invariant): switch branches and
+    observe \texttt{pwd} unchanged while \texttt{ls} and file contents
+    change---the direct refutation of branch-as-directory.
+  \item Contrast (view varies, state invariant): the same repository state
+    in \texttt{git log --graph} and in a graphical history viewer.
+  \item Fusion: create, switch, commit, merge---while narrating the
+    pointer moves on a drawn commit graph.
+\end{itemize}

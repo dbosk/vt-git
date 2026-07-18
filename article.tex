@@ -1,0 +1,62 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper,10pt,article,oneside,oldfontcommands]{memoir}
+\let\subsubsection\subsection
+\let\subsection\section
+\let\section\chapter
+
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[noamsthm,notheorems]{beamerarticle}
+\setjobnamebeamerversion{slides}
+
+\input{preamble.tex}
+
+\usepackage[inline]{enumitem}
+\setlist[enumerate]{label=(\arabic*)}
+
+\title{%
+  Version control through the lens of variation theory:
+  misconceptions and critical aspects of Git%
+}
+\author{%
+  Daniel Bosk
+  \\KTH Royal Institute of Technology, Sweden
+  \\\texttt{dbosk@kth.se}
+}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+  \input{abstract.tex}
+\end{abstract}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\input{introduction}
+\input{background}
+
+\input{method}
+
+\input{model.tex}
+\input{staging.tex}
+\input{branches.tex}
+\input{remotes.tex}
+
+\input{related-work.tex}
+\input{conclusions.tex}
+
+\printbibliography
+
+\appendix
+
+\input{search-protocol.tex}
+
+\end{document}

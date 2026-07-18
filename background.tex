@@ -1,0 +1,52 @@
+\mode*
+\section{Background: variation theory}
+
+According to variation theory \autocite[Ch.~2]{NCOL}, each educational
+objective can be divided into \emph{aspects}.
+To master the objective, the learner must discern all of them; aspects not
+yet discerned are \emph{critical aspects}, and misconceptions occur when a
+critical aspect remains undiscerned.
+Discernment requires experienced \emph{variation}: an aspect becomes
+visible only when it varies against an invariant background.
+Variation theory names three patterns of variation:
+\emph{contrast} (the aspect varies, the rest is invariant),
+\emph{generalisation} (the aspect is invariant while irrelevant features
+vary), and
+\emph{fusion} (several critical aspects vary together, as they do in real
+use).
+Phenomenography \autocite{Phenomenography,Neuman1987} supplies the
+observational basis: the qualitatively different ways learners experience a
+phenomenon.
+In this paper, as in the companion papers
+\autocite{VTProgMisconceptions,VTDebug,VTTerminal}, the literature's
+documented misconceptions play the role of those phenomenographic
+observations.
+
+\mode<presentation>{%
+\begin{frame}
+  \begin{block}{Variation theory \autocite{NCOL}}
+    \begin{itemize}
+      \item Educational objective \(=\) aspects to discern.
+      \item Undiscerned critical aspect \(\rightarrow\) misconception.
+      \item No discernment without variation.
+      \item Patterns: contrast, generalisation, fusion.
+    \end{itemize}
+  \end{block}
+\end{frame}%
+}
+
+We also rely on the \emph{notional machine}: an abstract model of the
+system that novices need in order to reason about what their actions do.
+The literature identifies the notional machine as a major challenge and
+argues it should be an explicit learning objective
+\autocite{Sorva2013NotionalMachines,DuBoulay1981BlackBox}; novice
+difficulties are tied to inaccurate mental models more generally
+\autocite{QianLehman2017Misconceptions,BenAri1998Constructivism}.
+Git needs a notional machine of its own: the commit graph with its
+pointers---branches as movable references into the history, the staging
+area between working tree and repository.
+The \texttt{cd}-into-a-branch misconception \autocite{IsomottonenCochez2014}
+is precisely what results when that machine is missing and the learner
+substitutes the file-system model they already have.
+% TODO(introtools#124, introtools#125): du Boulay and Ben-Ari full texts
+% still to be verified before quoting specifics; see misconceptions.bib.

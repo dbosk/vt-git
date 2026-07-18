@@ -1,0 +1,44 @@
+\mode*
+\section{The commit model}
+\label{sec:model}
+
+The first educational objective is Git's data model: commits as snapshots
+of the whole tree, linked into a graph; history as that graph, not as a
+sequence of diffs.
+
+\subsection{Documented misconceptions and difficulties}
+
+Learners' challenges with Git's conceptual model are documented from course
+surveys and teaching observations \autocite{IsomottonenCochez2014}, and
+Git's own concepts have been shown to misfit their purposes in analysable
+ways \autocite{DeRossoJackson2016Gitless}.
+% TODO: The systematic phase should add repository-data studies of student
+% Git usage and any misconception inventories beyond the seed sources
+% (GitKit line of work, \autocite{Postner2026GitMisconceptions}).
+% TODO: Add misconceptions observed in our own course's grading data
+% (datintro), clearly separated from literature-derived ones.
+
+\subsection{Candidate critical aspects}
+
+% XXX Preliminary; to be consolidated once the review phase is complete.
+\begin{itemize}
+  \item \emph{A commit is a snapshot, not a diff}: each commit contains the
+    whole tree.
+  \item \emph{History is a graph}: commits point at parents; nothing is a
+    \enquote{folder of versions}.
+  \item \emph{Nothing happens without a commit}: saving a file and
+    recording a version are different acts.
+\end{itemize}
+
+\subsection{Patterns of variation}
+
+\begin{itemize}
+  \item Contrast (recorded vs not): edit a file, observe
+    \texttt{git status}/\texttt{git log} before and after
+    \texttt{git commit}.
+  \item Generalisation (commit invariant, content varies): commits
+    recording one file, many files, a deletion---always the same kind of
+    object, shown by \texttt{git show}.
+  \item Fusion: follow \texttt{git log --graph} while making a small
+    history with a merge.
+\end{itemize}

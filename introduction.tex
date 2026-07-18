@@ -1,0 +1,68 @@
+\mode*
+\section{Introduction}
+
+Version control is a standard part of computing curricula: scholars agree
+that students must be prepared for distributed, collaborative workflows
+\autocite{IsomottonenCochez2014}, and Git is the system they meet.
+Yet Git is famously confusing for learners.
+The confusions are specific and documented: students conceptualise a branch
+as a directory and try to move into it with \texttt{cd}
+\autocite{IsomottonenCochez2014}; multi-institution data from the GitKit
+learning environment catalogues misconceptions in basic GitHub workflows
+\autocite{Postner2026GitMisconceptions}.
+Notably, the difficulty is not only the learner's: an analysis of Git's
+design explains well-known difficulties as \emph{concept
+misfits}---underlying concepts failing to meet their intended purposes
+\autocite{DeRossoJackson2016Gitless}.
+When the tool itself is conceptually crooked, teaching must make the
+underlying model discernible rather than leave students to reverse-engineer
+it from command behaviour.
+
+\mode<presentation>{%
+\begin{frame}
+  \begin{block}{Git is confusing---specifically}
+    \begin{itemize}
+      \item Branch conceptualised as a directory: students try to
+        \texttt{cd} into it \autocite{IsomottonenCochez2014}.
+      \item Misconceptions in basic workflows catalogued across
+        institutions \autocite{Postner2026GitMisconceptions}.
+      \item Partly the tool's fault: concept misfits in Git's design
+        \autocite{DeRossoJackson2016Gitless}.
+    \end{itemize}
+  \end{block}
+\end{frame}%
+}
+
+In this work we apply the approach of our companion paper on introductory
+programming \autocite{VTProgMisconceptions}: we treat documented
+misconceptions as the phenomenographic observations for a variation-theory
+analysis \autocite{NCOL}, identify the critical aspects learners must
+discern, and outline patterns of variation to teach them.
+We cover Git's commit-graph model, the staging area, branches, and remotes.
+
+We ask the following research questions.
+
+\begin{frame}
+\begin{restatable}{question}{rqmisconceptions}\label{rq:misconceptions}
+  Which misconceptions and difficulties with Git---its commit model, the
+  staging area, branches, and remotes---does the literature document?
+\end{restatable}
+
+\begin{restatable}{question}{rqaspects}\label{rq:aspects}
+  Which critical aspects of version control with Git do these
+  misconceptions and difficulties point to?
+\end{restatable}
+
+\begin{restatable}{question}{rqpatterns}\label{rq:patterns}
+  Which patterns of variation can make these critical aspects discernible
+  to learners?
+\end{restatable}
+\end{frame}
+
+Our contributions are:
+a review of the literature on learners' difficulties with Git, answering
+\cref{rq:misconceptions};
+a variation-theory analysis identifying the critical aspects, answering
+\cref{rq:aspects};
+and a set of patterns of variation for teaching Git, answering
+\cref{rq:patterns}.

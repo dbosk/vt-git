@@ -1,0 +1,134 @@
+\usepackage{tikz}
+\usepackage{tikzscale}
+% adapted from https://stackoverflow.com/a/54903109/1305099
+\NewDocumentCommand{\semitransp}{m}{%
+  {\pgfsetfillopacity{0.3}#1}%
+  \pgfsetfillopacity{1}%
+}
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage{multirow}%for tables
+
+% Font/encoding setup, guarded by engine: under pdfLaTeX [T1]{fontenc} is
+% required or monospace silently falls back to a proportional font.  didactic's
+% memoir branch overrides the main fonts (Palatino/Helvetica/Bera); lmodern is
+% the fallback for the beamer build.
+\usepackage{iftex}
+\ifpdftex
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+\usepackage[british]{babel}
+\usepackage{booktabs}
+
+% Verbose citation style (full reference on first use, short form on repeats):
+% \autocite produces a footnote citation, which didactic places in the margin in
+% the memoir article and at the foot of the slide in beamer -- "verbose
+% references in the margin".  Use \autocite for all citations so they adapt to
+% the build; keep \parencite/\textcite out of the document.
+\usepackage[
+  natbib,
+  backend=biber,
+  style=verbose,
+  citestyle=verbose,
+  singletitle=false,
+  maxbibnames=99,
+]{biblatex}
+\addbibresource{misconceptions.bib}
+\addbibresource{theory.bib}
+
+\usepackage[all]{foreign}
+\renewcommand{\foreignfullfont}{}
+\renewcommand{\foreignabbrfont}{}
+
+%\usepackage{newclude}
+\usepackage{import}
+
+\usepackage{subcaption}
+
+\usepackage[noend]{algpseudocode}
+\usepackage{xparse}
+
+\let\email\texttt
+
+% minted v3+ (TeX Live 2024+) auto-detects the output directory; the old
+% [outputdir=ltxobj] option is now an error.
+\usepackage{minted}
+\setminted{autogobble,linenos,breaklines}
+
+\usepackage{pythontex}
+% The build runs pythontex from the project root (latexmk's mylatex fudge), so
+% paths are relative to the project root: keep outputs here and run Python code
+% from the project root.
+\setpythontexoutputdir{.}
+\setpythontexworkingdir{.}
+\setpythontexfv{numbers=left}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{thmtools,thm-restate}
+\usepackage[unq]{unique}
+\DeclareMathOperator{\powerset}{\mathcal{P}}
+
+\usepackage[binary-units]{siunitx}
+
+\usepackage[strict]{csquotes}
+\usepackage[single]{acro}
+
+\usepackage[capitalize]{cleveref}
+% Beamer frames carry a `framenumber` label type; give cleveref a name for it so
+% \cref to a \label'd frame works (and does not error on a cold first compile).
+\crefname{framenumber}{frame}{frames}
+\Crefname{framenumber}{Frame}{Frames}
+
+% Load didactic LAST: it adapts biblatex/csquotes/cleveref (already loaded
+% above) and auto-detects memoir to apply the modern Tufte layout -- wide outer
+% margin, Palatino fonts, footnotes-in-margin, side-captions, \ltnote margin
+% notes -- and footnote citations.
+\usepackage[marginparmargin=right]{didactic}
+
+% A semantic hypothesis environment in the style of didactic's question:
+% numbered theorem in the article, block in the slides.  The translations must
+% be declared before \ProvideSemanticEnv fetches them.
+\DeclareTranslation{English}{Hypothesis}{Hypothesis}
+\DeclareTranslation{English}{hypothesis}{hypothesis}
+\DeclareTranslation{English}{hypotheses}{hypotheses}
+\DeclareTranslation{English}{Hypotheses}{Hypotheses}
+\ProvideSemanticEnv{hypothesis}[block]{Hypothesis}
+  {hypothesis}{hypotheses}{Hypothesis}{Hypotheses}
+
+% Methodological questions get their own environment, and thereby their own
+% counter: they are numbered separately from the substantive research
+% questions.
+\DeclareTranslation{English}{Methodological question}{Methodological question}
+\DeclareTranslation{English}{methodological question}{methodological question}
+\DeclareTranslation{English}{methodological questions}{methodological questions}
+\DeclareTranslation{English}{Methodological questions}{Methodological questions}
+\ProvideSemanticEnv{mquestion}[orangeblock]{Methodological question}
+  {methodological question}{methodological questions}
+  {Methodological question}{Methodological questions}
+
+% The research questions and hypotheses are stated in restatable
+% question/hypothesis environments (thm-restate): stated once in the
+% introduction and the theory section, restated with \rqpatterns* etc. in
+% the method overview, keeping their original numbers.
+%
+% thm-restate assumes theorem environments with counters.  In the slides,
+% didactic's semantic environments are beamer blocks without counters, so
+% we replace restatable there with a transparent wrapper: it just typesets
+% the wrapped environment (passing the optional heading through) and
+% defines the restating command as a star-tolerant no-op---restatements
+% only occur in article-mode prose, which the slides skip.
+\makeatletter
+\@ifclassloaded{beamer}{%
+  \DeclareDocumentEnvironment{restatable}{o m m}{%
+    \expandafter\ProvideDocumentCommand\csname #3\endcsname{s}{\relax}%
+    \IfValueTF{#1}{\begin{#2}[#1]}{\begin{#2}}%
+  }{%
+    \end{#2}%
+  }%
+}{\relax}
+\makeatother

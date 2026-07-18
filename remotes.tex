@@ -1,0 +1,43 @@
+\mode*
+\section{Remotes and collaboration}
+\label{sec:remotes}
+
+The fourth educational objective is distribution: clones as full copies,
+remotes as named other copies, push/pull as synchronisation---and the
+collaboration workflows built on top (GitHub, pull requests).
+
+\subsection{Documented misconceptions and difficulties}
+
+Course observations document confusion about the distributed nature of the
+system and about collaborating through a shared remote
+\autocite{IsomottonenCochez2014}, and the GitKit multi-institution data
+targets exactly the basic GitHub workflows
+\autocite{Postner2026GitMisconceptions}.
+The Shell Tutor also covers Git in its shell-based tutoring
+\autocite{Winder2024ShellTutor}.
+% TODO: The systematic phase should add studies of student GitHub use in
+% courses (the seed round found, but did not retain, Feliciano et al. 2016
+% -- re-evaluate it) and of pull-request workflows in teaching.
+
+\subsection{Candidate critical aspects}
+
+% XXX Preliminary.
+\begin{itemize}
+  \item \emph{Every clone is complete}: there is no \enquote{main} copy by
+    mechanism, only by convention.
+  \item \emph{Push and pull move commits}, not files: synchronisation is
+    between histories.
+  \item \emph{Local commits are invisible to others until pushed} (and
+    vice versa).
+\end{itemize}
+
+\subsection{Patterns of variation}
+
+\begin{itemize}
+  \item Contrast (local vs remote): commit without pushing; observe the
+    repository on GitHub unchanged; push; observe.
+  \item Generalisation (workflow invariant, collaborators vary): the same
+    add--commit--push cycle alone, then with a partner pulling.
+  \item Fusion: a deliberate concurrent edit leading to a conflict,
+    resolved while reading the graph.
+\end{itemize}

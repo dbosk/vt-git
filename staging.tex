@@ -1,0 +1,42 @@
+\mode*
+\section{The staging area}
+\label{sec:staging}
+
+The second educational objective is the three places a change can be:
+working tree, staging area (index), repository---and the commands that move
+changes between them.
+
+\subsection{Documented misconceptions and difficulties}
+
+The staging area is a prime candidate for a concept misfit: the analysis in
+\textcite{DeRossoJackson2016Gitless} redesigns Git largely around
+difficulties of this kind, and course observations report students
+struggling with what \texttt{add} accomplishes
+\autocite{IsomottonenCochez2014}.
+% TODO: Verify against the full texts which specific staging-area
+% difficulties each source documents, and quote them precisely (the
+% Isomöttönen & Cochez author copy is open; re-read its staging section
+% before the analysis round).
+
+\subsection{Candidate critical aspects}
+
+% XXX Preliminary.
+\begin{itemize}
+  \item \emph{Three places, two moves}: tree
+    \(\rightarrow\) index (\texttt{add}), index \(\rightarrow\) history
+    (\texttt{commit}).
+  \item \emph{The same file can differ in all three places} at once.
+  \item \emph{\texttt{git status} reads the three places}, not the file.
+\end{itemize}
+
+\subsection{Patterns of variation}
+
+\begin{itemize}
+  \item Contrast: modify a file; observe \texttt{git status} and
+    \texttt{git diff}/\texttt{git diff --staged} after editing, after
+    \texttt{add}, after a second edit---the same file in three states.
+  \item Generalisation: the add--commit cycle across different kinds of
+    change (new file, modification, deletion).
+  \item Fusion: stage part of the changes and commit while the working
+    tree still differs.
+\end{itemize}
