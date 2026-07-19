@@ -119,3 +119,19 @@ visualisation interventions, were not found at citable quality; and the
 course's own grading-data misconceptions (\cref{sec:model}, TODO~\#2) are
 still to be added.
 These are carried as open items rather than filled from unverifiable sources.
+
+\subsection{Extended-database round (2026-07-19)}
+
+The rounds above searched only the keyless providers (DBLP, OpenAlex,
+Semantic Scholar); Web of Science, Scopus and IEEE~Xplore were configured
+but unused.
+This round repeated the version-control queries across all providers:
+\texttt{scholar search "git version control students misconceptions
+learning" -p wos -p scopus -p ieee} and \texttt{"version control
+misconceptions students" -p wos -p scopus} re-surfaced
+\autocite{IsomottonenCochez2014} and teaching-platform papers but no
+misconception study beyond those already retained --- evidence that the
+retained set covers what the added databases index.
+Natural-language queries rank noticeably worse in Web of Science and
+Scopus than in the CS-specific indexes; a future round should use their
+field-tagged syntax (\texttt{scholar syntax}).
