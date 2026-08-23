@@ -98,7 +98,12 @@ per candidate critical aspect, in chapter order; item 11 — the closed
 twin of open item 4 — is in the end quiz only, so the start quiz has 11
 closed items and the end quiz 12). `multiple_attempts` and
 `result_view_settings` are nested objects (Canvas ignores the keys written
-flat). The two JSONs carry canvaslms `modules` specs: each quiz is the
+flat). Every item except the openers carries `feedback.neutral` — for
+closed items a short account of why the key is right, for open items a
+*provisional* outcome space (3–4 ordered levels; to be replaced by the
+empirical one after cohort 1, issue #8) — shown only in the end quiz via
+`display_item_feedback` (false in the start quiz); `analyze_quiz.py`
+ignores feedback so the coder and the LLM pre-coding never see it. The two JSONs carry canvaslms `modules` specs: each quiz is the
 sole, must-submit item of its own datintro26 module ("Git pre-test" /
 "Git post-test"), and the appendix prose gives the `modules
 create`/`modules edit --prerequisite` commands that chain pre-test →

@@ -198,10 +198,17 @@ neither per-item correctness nor the correct answers: the same questions
 must measure the gain at the end of the module, so they have to stay
 fresh.
 The end quiz has nothing left to protect, and the students have earned
-the answers: it shows, item by item, whether the answer was right and
-which alternative was, so that the diagnostic also teaches---the
-distractor a student chose is the misconception they can now read against
-the correct account.
+the answers: it shows, item by item, whether the answer was right, which
+alternative was, and a short account of why---the item's
+\emph{feedback}, written with each item below---so that the diagnostic
+also teaches: the distractor a student chose is the misconception they
+can now read against the correct account.
+For the open items the feedback is a provisional outcome space
+(\cref{app:open-items}), shown for the same reason.
+The feedback travels with the items into both quizzes, since the item
+chunks are shared; one flag, [[display_item_feedback]], hides it in the
+start quiz and shows it in the end quiz, exactly as for correctness and
+the correct answer.
 
 <<start result view>>=
 "result_view_settings": {
@@ -210,6 +217,7 @@ the correct account.
   "display_item_response": true,
   "display_item_response_correctness": false,
   "display_item_correct_answer": false,
+  "display_item_feedback": false,
   "display_points_awarded": true,
   "display_points_possible": true
 }
@@ -220,6 +228,7 @@ the correct account.
   "display_item_response": true,
   "display_item_response_correctness": true,
   "display_item_correct_answer": true,
+  "display_item_feedback": true,
   "display_points_awarded": true,
   "display_points_possible": true
 }
@@ -366,7 +375,8 @@ that supplies either would be doing the discerning
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
-    "scoring_algorithm": "None"
+    "scoring_algorithm": "None",
+    <<feedback: what Git is>>
   }
 }
 @
@@ -395,7 +405,8 @@ do; the stem does not say what a commit \emph{is}
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
-    "scoring_algorithm": "None"
+    "scoring_algorithm": "None",
+    <<feedback: what Git has kept>>
   }
 }
 @
@@ -424,7 +435,8 @@ The stem names neither \enquote{stage}, \enquote{index} nor
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
-    "scoring_algorithm": "None"
+    "scoring_algorithm": "None",
+    <<feedback: keeping one of two changes>>
   }
 }
 @
@@ -461,7 +473,8 @@ alternatives make \autocite[p.~91]{NCOL}.
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
-    "scoring_algorithm": "None"
+    "scoring_algorithm": "None",
+    <<feedback: the branch called feature>>
   }
 }
 @
@@ -487,7 +500,8 @@ is an account.
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
-    "scoring_algorithm": "None"
+    "scoring_algorithm": "None",
+    <<feedback: explaining a history>>
   }
 }
 @
@@ -515,9 +529,54 @@ reason.
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
-    "scoring_algorithm": "None"
+    "scoring_algorithm": "None",
+    <<feedback: the teammate's clone>>
   }
 }
+@
+
+
+\subsubsection{What the end quiz shows for an account}
+
+The end quiz shows the student, after submission, an \enquote{answer}
+to every item, the open ones included (\cref{app:quiz}).
+For an open item that answer cannot be a correct account; it is a
+\emph{provisional outcome space}: three or four one-sentence ways of
+seeing the phenomenon, ordered from a first impression to the way of
+seeing the module aims at, each later one discerning something the
+earlier one does not---which is what orders an outcome space
+\autocite[Ch.~2]{NCOL}.
+They are posited from the candidate aspects of the chapters, since no
+student accounts exist yet; after the first cohort they are to be
+replaced by the empirical outcome space that the coding of the accounts
+produces.
+% TODO(#8): replace the provisional outcome spaces with the empirical ones
+% after cohort 1, re-tangle and re-sync the end quiz.
+Two things follow from their purpose.
+They are shown only in the end quiz and only after submission, so no
+account is written with them in view: the start quiz hides item feedback
+(\cref{app:quiz}), and the accounts of the end quiz are in before the
+student sees anything.
+And they are not given to the coder, nor to the pre-coding prompt of
+\cref{app:quiz-analysis}, for the same reason the prompt offers no list:
+the categories are what the analysis is to find, and a list handed to
+the coder would turn finding into confirming.
+Canvas carries the text as the item's \emph{feedback}, the same field
+that holds the account of why for the closed items below, so one
+setting switches all of them.
+
+<<feedback: what Git is>>=
+"feedback": {"neutral": "<p>Different answers to this question show different ways of seeing this. In order, from a first impression to the way of seeing the module aims at:</p><ol><li>Git is a place to store or back up files&mdash;saving to the cloud.</li><li>Git keeps versions of files, so that an old one can be got back.</li><li>Git records the whole project as a series of versions that you choose to record, each a snapshot linked to the one before.</li><li>&hellip;and several people can each hold a complete copy of that history and exchange versions through a shared repository.</li></ol>"}
+<<feedback: what Git has kept>>=
+"feedback": {"neutral": "<p>Different answers to this question show different ways of seeing this. In order, from a first impression to the way of seeing the module aims at:</p><ol><li>Git kept the edit you made&mdash;the changed lines.</li><li>Git kept the new version of method.txt.</li><li>Git kept the whole report as it stood at that moment, all three files; a co-author who gets the commit gets that whole version.</li><li>&hellip;together with the link to the version before, so they can see what changed and go back to it.</li></ol>"}
+<<feedback: keeping one of two changes>>=
+"feedback": {"neutral": "<p>Different answers to this question show different ways of seeing this. In order, from a first impression to the way of seeing the module aims at:</p><ol><li>It cannot be done, since Git records everything that changed&mdash;or you would copy data.csv aside first.</li><li>You tell Git which file to record by naming it when you commit.</li><li>You first mark (stage) the change to notes.txt with git add notes.txt and then commit; the change to data.csv stays in your folder, unrecorded, and git status shows both states.</li></ol>"}
+<<feedback: the branch called feature>>=
+"feedback": {"neutral": "<p>Different answers to this question show different ways of seeing this. In order, from a first impression to the way of seeing the module aims at:</p><ol><li>A branch is a folder or a copy of the project somewhere, and you would go into it or open it.</li><li>A branch is a separate version of the project; you switch to it and your folder shows that version.</li><li>A branch is a name for one of several concurrent lines of the same project's history; switching (git switch feature) makes your one working folder show that line, and the lines can later be joined by a merge.</li></ol>"}
+<<feedback: explaining a history>>=
+"feedback": {"neutral": "<p>Different answers to this question show different ways of seeing this. In order, from a first impression to the way of seeing the module aims at:</p><ol><li>A list of saves, newest at the top.</li><li>Two lines of work happened at the same time and were put together.</li><li>From &ldquo;First draft&rdquo; the project went two ways at once&mdash;one line wrote the results, the other fixed the title&mdash;each commit pointing back at the one before; the merge commit at the top joins the two lines again, and the stars and lines draw exactly that graph.</li></ol>"}
+<<feedback: the teammate's clone>>=
+"feedback": {"neutral": "<p>Different answers to this question show different ways of seeing this. In order, from a first impression to the way of seeing the module aims at:</p><ol><li>Something went wrong&mdash;the wrong repository, or the commit is still on its way.</li><li>The commit has not been uploaded yet; you need to send it.</li><li>Your commit exists only in your own clone until you push it to the shared repository; the teammate's clone is a complete copy of the shared one as it was when they cloned, so they will see it after you push and they pull.</li></ol>"}
 @
 
 \subsection{The knowledge items}
@@ -537,6 +596,10 @@ Each distractor expresses a documented misconception or a plausible
 consequence of leaving the aspect undiscerned; the prose before each
 item names the aspect it tests and why the distractors are the mistakes
 they are, and cites the source of a documented one.
+The same account, in plain words and no longer than the item, follows
+each item as its feedback: the end quiz shows it with the correct
+alternative (\cref{app:quiz}), so the distractor a student chose is the
+misconception they can now read against it.
 The correct alternative is kept about as long as the distractors, since
 the longest alternative is a known cue for test-wise students.
 The files in the stems are the chapters and notes of a report
@@ -614,10 +677,17 @@ gap there.
       ]
     },
     "scoring_data": {"value": 3},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: what a commit keeps>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: what a commit keeps>>=
+"feedback": {"neutral": "<p>A commit records the whole report as it stood&mdash;every file, not only the one you edited and not only the changed lines; the difference between two versions is something Git computes when asked, not what it stores. And a commit exists the moment you make it; pushing only sends it to another copy of the repository.</p>"}
+@
+
 
 Recording a version is a separate act from saving a file
 (\cref{sec:model}).
@@ -649,10 +719,17 @@ the history}, so that the student reads a concrete screen
       ]
     },
     "scoring_data": {"value": 1},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: after you save>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: after you save>>=
+"feedback": {"neutral": "<p>Saving in the editor changes the file on disk; it does not touch the history. Git records a version only when you commit, so git log shows the same one line until you do. There are no automatic versions and no drafts: what is not committed is not in the history.</p>"}
+@
+
 
 History is a graph of commits linked to their parents, not a folder of
 versions (\cref{sec:model}).
@@ -682,10 +759,17 @@ the latest version, or a single backup file.
       ]
     },
     "scoring_data": {"value": 3},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: where earlier versions live>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: where earlier versions live>>=
+"feedback": {"neutral": "<p>Every commit is kept in the repository, each linked to the one before it, so the history is a chain you can walk back along, and Git can put the whole report back as it was at any commit. There is no folder per version to open and no single backup file, and nothing is thrown away when a new version is recorded.</p>"}
+@
+
 
 \subsubsection{The staging area}
 
@@ -715,10 +799,17 @@ last has it upload the file to the shared repository.
       ]
     },
     "scoring_data": {"value": 3},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: what git add does>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: what git add does>>=
+"feedback": {"neutral": "<p>git add marks an existing change to be included in the next commit&mdash;it moves the change into the staging area, the set of changes the next commit will record. It does not create the file, it records nothing in the history yet (that is git commit), and it sends nothing anywhere (that is git push).</p>"}
+@
+
 
 [[git status]] reads the three places---working tree, index,
 history---and reports a file by where it differs, not by whether it is
@@ -753,10 +844,17 @@ discernment.
       ]
     },
     "scoring_data": {"value": 3},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: what status shows after an edit>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: what status shows after an edit>>=
+"feedback": {"neutral": "<p>git status compares three things: the files as they are on disk, what is staged for the next commit, and the last commit. A saved edit differs from the last commit and is not yet staged, so the file is listed under &ldquo;Changes not staged for commit&rdquo;. Saving alone stages nothing, and status reads every file without an add first.</p>"}
+@
+
 
 The same file can differ in the working tree and in the index at
 once---the three-places aspect (\cref{sec:staging}), and the hidden
@@ -783,10 +881,17 @@ a file as either saved or not.
       ]
     },
     "scoring_data": {"value": 2},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: two versions at once>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: two versions at once>>=
+"feedback": {"neutral": "<p>The same file can be in two states at once: the version you staged with git add, and the version on disk that you edited afterwards. git status lists it under both headings because the staged version differs from the last commit and the saved version differs from the staged one. It is not an error, and nothing was committed twice or copied.</p>"}
+@
+
 
 \subsubsection{Branches}
 
@@ -822,10 +927,17 @@ asks the same situation without alternatives.
       ]
     },
     "scoring_data": {"value": 4},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: seeing another branch>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: seeing another branch>>=
+"feedback": {"neutral": "<p>A branch is a name for one line of the project's history, and your working folder shows one branch at a time. git switch feature makes the files in that same folder change to the versions on feature. There is no feature directory to go into, and nothing inside .git is meant to be opened by hand.</p>"}
+@
+
 
 The commit graph outlives the pointers into it: a branch is just a name,
 and deleting it does not delete the commits (\cref{sec:branches}).
@@ -850,10 +962,17 @@ them to a trash area or remove the changed files.
       ]
     },
     "scoring_data": {"value": 1},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: deleting a branch>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: deleting a branch>>=
+"feedback": {"neutral": "<p>A branch is only a name pointing at a commit; the commits are in the repository whether or not a name points at them. Deleting a merged branch removes the name, and the commits stay in the history through main. Nothing goes to a trash area, and the files you changed stay as they are.</p>"}
+@
+
 
 Merging joins two histories rather than copying one directory into
 another (\cref{sec:branches}).
@@ -880,10 +999,17 @@ named after both.
       ]
     },
     "scoring_data": {"value": 3},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: what merging does>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: what merging does>>=
+"feedback": {"neutral": "<p>Merging joins two lines of history: Git makes a new commit on main that has both main's and feature's last commits as parents, with the changes of both. It does not copy a directory, replace one set of files with the other, or create a new folder.</p>"}
+@
+
 
 \subsubsection{Remotes and collaboration}
 
@@ -916,10 +1042,17 @@ one has just established to be two full copies.
       ]
     },
     "scoring_data": {"value": 2},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: offline with a clone>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: offline with a clone>>=
+"feedback": {"neutral": "<p>A clone is a complete copy of the repository, history and all&mdash;that is what distributed means. git log works offline and shows the whole history up to the moment you cloned; nothing is fetched on demand, and your own commits are not the only ones there.</p>"}
+@
+
 
 Push moves commits, not files: what arrives at the other copy is the
 history since the last push, and an uncommitted edit stays behind
@@ -952,10 +1085,17 @@ is a stated learning objective \autocite{Beckman2021GitLearningObjective}.
       ]
     },
     "scoring_data": {"value": 1},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: what git push sends>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: what git push sends>>=
+"feedback": {"neutral": "<p>Push sends commits: the history you have recorded since the last push. An edit you have not committed is not part of any commit, so it stays on your computer. Push is not an upload of your working folder, and it does not replace the remote; it adds your commits to it.</p>"}
+@
+
 
 Local commits are invisible to others until pushed, and vice versa
 (\cref{sec:remotes}).
@@ -987,10 +1127,17 @@ since that sentence names the missing step the student is to supply
       ]
     },
     "scoring_data": {"value": 1},
-    "scoring_algorithm": "Equivalence"
+    "scoring_algorithm": "Equivalence",
+    <<feedback: why they cannot see it>>
   }
 }
 @
+The end quiz shows, with the correct alternative, this account of why:
+
+<<feedback: why they cannot see it>>=
+"feedback": {"neutral": "<p>A commit is made in your own repository, the clone on your computer. Nobody else can see it until you push it to the shared repository, and they see it when they then clone or pull. Commits are not sent automatically, not in batches, and they do not expire.</p>"}
+@
+
 
 \subsection{Analysing the results}
 \label{app:quiz-analysis}
@@ -1116,6 +1263,9 @@ spaces, since Canvas is free to rewrap.
 The graded choice items are the knowledge items (the preparation item is
 a choice item too, but carries no points); the essay items are the open
 items, whose stems the pre-coding prompt quotes.
+The items' feedback is ignored here on purpose: the provisional outcome
+spaces of the open items (\cref{app:open-items}) must not reach the
+coder or the pre-coding prompt.
 
 <<the answer key from the quiz description>>=
 TAGS = re.compile(r"<[^>]+>")
