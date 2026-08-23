@@ -122,6 +122,9 @@ and writes a long-format coding sheet for the accounts (optional `--llm`
 pre-coding in separate `suggested_*` columns). It fetches and pools both
 `COURSES` — datintro26 and the CS programme's progd26 (course code
 unconfirmed, issue #9; the module and quizzes are copied there by hand,
-nothing is deployed) — tagging every row/record with its course; students
-are identified by (course, name). Activate the
+nothing is deployed) — tagging every row/record with its course; students are identified by
+their login ID, attached per row from the course roster (matched by the
+report's `id`, else `sis_id`, else an unambiguous name — ambiguity is
+warned about, never silently resolved), with (course, name) as the
+fallback for saved reports without the column. Activate the
 `literate-programming` skill before editing `quiz.nw`.
