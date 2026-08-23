@@ -1,20 +1,67 @@
 \mode*
 \section{Conclusions}
 
-% XXX Work in progress: conclusions to be written once the systematic
-% review and the analysis rounds are complete. The restatements below keep
-% the question--answer traceability in place from the start.
-
 \rqmisconceptions*
-So far: the seed round documents the branch-as-directory misconception and
-general course-observed confusions \autocite{IsomottonenCochez2014},
-design-level concept misfits \autocite{DeRossoJackson2016Gitless}, and an
-emerging multi-institution misconception catalogue
-\autocite{Postner2026GitMisconceptions}.
+So far: the seed and systematic rounds document the branch-as-directory
+misconception and general course-observed confusions
+\autocite{IsomottonenCochez2014}, design-level concept misfits
+\autocite{DeRossoJackson2016Gitless}, the commit-as-save conflation in
+repository data \autocite{Cochez2013DVCSUsage}, and an emerging
+multi-institution misconception catalogue
+\autocite{Postner2026GitMisconceptions}; the measurement round adds Git's
+hidden dependencies as professionals experience them
+\autocite{Church2014HiddenDependencies} and a teacher-reported error list
+\autocite{Eraslan2020GitErrors}, and finds that learners' understanding
+of Git has never been measured with an instrument built for it nor
+studied phenomenographically (\cref{sec:protocol-measurement}).
 
 \rqaspects*
-Preliminary candidate aspects are listed per objective in
-\cref{sec:model,sec:staging,sec:branches,sec:remotes}.
+Twelve candidate aspects, listed per objective in
+\cref{sec:model-aspects,sec:staging-aspects,sec:branches-aspects,sec:remotes-aspects}
+and summarised in \cref{tab:aspects}.
+Their evidential status is uneven and is stated with each: six are read
+off difficulties documented in the literature, and six are posited from
+the structure of the object of learning; none yet rests on our own
+course data, which is still to be coded (\cref{sec:model}).
+Every aspect has an item in the pre/post-test of \cref{app:quiz} (three
+have open twins as well: \emph{a commit is a snapshot}, since its closed
+form is asked only at the end; \emph{a branch is a pointer} and
+\emph{local commits are invisible until pushed}, so that the account and
+the choice can be compared), which is what will turn \enquote{candidate}
+into \enquote{critical} or not.
+
+\begin{table}
+  \begin{sidecaption}{The candidate critical aspects, what each is read
+    off, and the item of \cref{app:knowledge-items} that tests
+    it.}[tab:aspects]
+    \small
+    \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.36\linewidth}l>{\raggedright\arraybackslash}p{0.34\linewidth}@{}}
+      \toprule
+      Aspect & Read off & Item \\
+      \midrule
+      \multicolumn{3}{@{}l}{\emph{The commit model} (\cref{sec:model-aspects})} \\
+      A commit is a snapshot, not a diff & posited & what a commit keeps (closed, end only; open twin at both) \\
+      History is a graph & literature & where earlier versions live \\
+      Nothing happens without a commit & literature & after you save \\
+      \addlinespace
+      \multicolumn{3}{@{}l}{\emph{The staging area} (\cref{sec:staging-aspects})} \\
+      Three places, two moves & literature & what git add does \\
+      The same file can differ in all three places & posited & two versions at once \\
+      git status reads the three places & posited & what status shows after an edit \\
+      \addlinespace
+      \multicolumn{3}{@{}l}{\emph{Branches} (\cref{sec:branches-aspects})} \\
+      A branch is a pointer, not a place & literature & seeing another branch (closed and open) \\
+      The graph outlives the pointers & posited & deleting a branch \\
+      Merging joins histories & posited & what merging does \\
+      \addlinespace
+      \multicolumn{3}{@{}l}{\emph{Remotes} (\cref{sec:remotes-aspects})} \\
+      Every clone is complete & posited & offline with a clone \\
+      Push and pull move commits & literature & what git push sends \\
+      Local commits are invisible until pushed & literature & why they cannot see it (closed and open) \\
+      \bottomrule
+    \end{tabular}
+  \end{sidecaption}
+\end{table}
 
 \rqpatterns*
 Preliminary patterns accompany each aspect; the branch chapter's

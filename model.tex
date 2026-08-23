@@ -31,16 +31,47 @@ mental model seems to cause the blind-testing effect}, in which learners
 % (datintro), clearly separated from literature-derived ones.
 
 \subsection{Candidate critical aspects}
+\label{sec:model-aspects}
 
-% XXX Preliminary; to be consolidated once the review phase is complete.
-\begin{itemize}
-  \item \emph{A commit is a snapshot, not a diff}: each commit contains the
-    whole tree.
-  \item \emph{History is a graph}: commits point at parents; nothing is a
-    \enquote{folder of versions}.
-  \item \emph{Nothing happens without a commit}: saving a file and
-    recording a version are different acts.
-\end{itemize}
+Reading the difficulties above for the aspect the learner had not
+discerned gives three candidates.
+The literature on Git is richer than on the shell but still thin on
+learners' own conceptions (\cref{sec:protocol-measurement}), so we say
+for each what it rests on: a documented difficulty, an observation from
+our own course, or the structure of the object of learning itself.
+
+\begin{description}
+  \item[A commit is a snapshot, not a diff]
+    Each commit contains the whole tree as it stood; the difference is
+    computed when asked for, not stored.
+    No study documents the opposite conception; the aspect is posited
+    from the object of learning, where it is the first thing the
+    notional machine of \cref{sec:background} has to get right.
+    Tested by the item \emph{what a commit keeps}
+    (\cref{app:knowledge-items}), asked closed at the end only, and by
+    its open twin \emph{what Git has kept} (\cref{app:open-items}) at
+    both administrations.
+  \item[History is a graph]
+    Commits point at their parents; nothing is a \enquote{folder of
+    versions}.
+    This is read off the repository-data finding that students
+    \textcquote{Cochez2013DVCSUsage}{regard the version control system
+    as file storage}: a store of files has versions side by side, a
+    history has them linked.
+    Tested by the item \emph{where earlier versions live}; the open item
+    \emph{explaining a history} shows the graph itself and asks what it
+    shows.
+  \item[Nothing happens without a commit]
+    Saving a file and recording a version are different acts.
+    Read off the same repository data: students who commit too rarely
+    and write meaningless messages \autocite{Cochez2013DVCSUsage} are
+    treating the save as the record and the commit as a formality.
+    Tested by the item \emph{after you save}.
+\end{description}
+
+None of the three rests on a learner's own account of a commit, because
+none has been collected (\cref{app:protocol}); the open accounts of
+\cref{sec:method-instruments} are where one would first show.
 
 \subsection{Patterns of variation}
 

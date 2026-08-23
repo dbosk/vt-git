@@ -27,20 +27,51 @@ actions on a shared remote in real time to build
 coordination, and collaborative troubleshooting}.
 
 \subsection{Candidate critical aspects}
+\label{sec:remotes-aspects}
 
-% XXX Preliminary.
-\begin{itemize}
-  \item \emph{Every clone is complete}: there is no \enquote{main} copy by
-    mechanism, only by convention.
-  \item \emph{Push and pull move commits}, not files: synchronisation is
-    between histories.
-  \item \emph{Local commits are invisible to others until pushed} (and
-    vice versa).
-\end{itemize}
+The distributed state is what learners cannot see, and two of the three
+candidates rest on difficulties the literature documents; the first is
+posited.
+
+\begin{description}
+  \item[Every clone is complete]
+    There is no \enquote{main} copy by mechanism, only by convention;
+    each clone holds the whole history.
+    Posited from the object of learning; the GitKit catalogue's
+    main-copy workflow misconceptions \autocite{Postner2026GitMisconceptions}
+    point the same way, at poster weight.
+    Tested by the item \emph{offline with a clone}
+    (\cref{app:knowledge-items}).
+  \item[Push and pull move commits]
+    Synchronisation is between histories, not files; an uncommitted
+    edit stays behind.
+    Read off the remote-prefix confusion
+    \autocite[Sec.~5.4]{IsomottonenCochez2014}---\texttt{origin/main} names
+    a copy of a history, which a learner who moves files has no use
+    for---and off the fact that where Git is a stated learning objective
+    this is exactly what instructors test, with a pull that modifies
+    the local directory, the remote, both or neither
+    \autocite{Beckman2021GitLearningObjective}.
+    Tested by the item \emph{what \texttt{git push} sends}.
+  \item[Local commits are invisible to others until pushed]
+    And theirs to you until pulled.
+    Read off the documented confusion about the distributed state
+    \autocite{IsomottonenCochez2014}, the hidden dependency between a
+    local branch, its remote-tracking copy and the remote---a status that
+    is \enquote{up-to-date with origin/master} while hundreds of commits
+    behind \autocite{Church2014HiddenDependencies}---and the awareness a
+    split-view tool sets out to build \autocite{Bucher2026GitTakesTwo}.
+    Tested by the item \emph{why they cannot see it} and its open twin
+    \emph{the teammate's clone} (\cref{app:open-items}).
+\end{description}
 
 \subsection{Patterns of variation}
 
 \begin{itemize}
+  \item Contrast (copy varies, history invariant): \texttt{git log} in
+    the clone on the laptop and in the repository on GitHub show the
+    same history; unplug the network, and the laptop's \texttt{git log}
+    still does.
   \item Contrast (local vs remote): commit without pushing; observe the
     repository on GitHub unchanged; push; observe.
   \item Generalisation (workflow invariant, collaborators vary): the same

@@ -24,15 +24,41 @@ The same authors note a habit of \texttt{git add .}\ and \texttt{git commit
 distinction the staging area exists to make \autocite{IsomottonenCochez2014}.
 
 \subsection{Candidate critical aspects}
+\label{sec:staging-aspects}
 
-% XXX Preliminary.
-\begin{itemize}
-  \item \emph{Three places, two moves}: tree
-    \(\rightarrow\) index (\texttt{add}), index \(\rightarrow\) history
-    (\texttt{commit}).
-  \item \emph{The same file can differ in all three places} at once.
-  \item \emph{\texttt{git status} reads the three places}, not the file.
-\end{itemize}
+The staging area is where the documented difficulties and the design
+analysis agree most, so two of the three candidates rest on the
+literature; the third is posited.
+
+\begin{description}
+  \item[Three places, two moves]
+    Working tree, index, history; \texttt{add} moves a change from the
+    first to the second, \texttt{commit} from the second to the third.
+    Read off the documented reading of \texttt{add} as \emph{make}
+    \autocite[Sec.~5.3]{IsomottonenCochez2014}---a learner who has not
+    discerned the index has no second place for \texttt{add} to move
+    anything into, so the command must be doing something else---and
+    off the hidden dependency that an unadded file is unknown to Git
+    \autocite{Church2014HiddenDependencies}.
+    Tested by the item \emph{what \texttt{git add} does}
+    (\cref{app:knowledge-items}); the open item \emph{keeping one of two
+    changes} (\cref{app:open-items}) sets the task the index exists for.
+  \item[The same file can differ in all three places]
+    A file can be staged in one state and edited to another at once.
+    Posited from the object of learning; the \texttt{add .}/\texttt{commit
+    -a} habit that keeps tree and index in lock-step
+    \autocite{IsomottonenCochez2014} is what a learner does who has not
+    discerned it, and the dependency between an edit and the index is
+    among those professionals find hard to hold
+    \autocite{Church2014HiddenDependencies}.
+    Tested by the item \emph{two versions at once}.
+  \item[\texttt{git status} reads the three places]
+    Status reports a file by where it differs, not by whether it is
+    saved.
+    Posited from the object of learning: it is the instrument through
+    which the other two aspects are observed at all.
+    Tested by the item \emph{what status shows after an edit}.
+\end{description}
 
 \subsection{Patterns of variation}
 
