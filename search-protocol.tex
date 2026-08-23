@@ -154,3 +154,286 @@ report being overwhelmed by Git's command surface and recommending
 model-first teaching; it is retained here.
 No further misconception study appeared: the misconception-specific
 retained set remains that of the earlier rounds.
+
+\subsection{Measurement round (2026-08-23): has learners' understanding of
+Git been measured, and which aspects does the literature say are hard?}
+\label{sec:protocol-measurement}
+
+The rounds above asked what the literature says about learners'
+misconceptions of Git; this round asks two prior questions that
+\cref{sec:method-instruments,sec:related} and the aspect lists of
+\cref{sec:model,sec:staging,sec:branches,sec:remotes} rely on.
+First, \emph{has learners' understanding of version control with
+Git---the commit model, the staging area, branches and merging, remotes
+and collaboration---actually been measured}, by a phenomenographic or
+interview study of conceptions, by a diagnostic instrument or concept
+inventory, or by a knowledge test, and what do the existing empirical
+evaluations of Git teaching measure instead?
+Second, \emph{which difficulties per objective does that empirical
+literature document}, so that the candidate critical aspects can be read
+off documented difficulties rather than posited?
+A methodological sub-question is whether the pre-/post-test design of
+\cref{sec:method-instruments} has a precedent in learning-study practice
+and in the diagnostic-instrument literature; this part re-uses the
+companion paper's answer \autocite{VTTerminal}.
+
+\paragraph{Method.}
+Twenty topic queries were run with the \texttt{scholar} tool under the
+session \texttt{vt-git-measurement}, each against OpenAlex, Scopus and
+Web of Science, with IEEE Xplore added to the Git-specific ones and DBLP
+to the shorter ones (DBLP requires every term to match and returned
+nothing for queries of five or more terms, which is recorded in the
+export); Semantic Scholar was unavailable throughout the round
+(\texttt{scholar providers check}: API key rejected, HTTP~403), so its
+coverage is missing.
+Twenty results per provider per query were kept.
+The queries, verbatim:
+\begin{itemize}
+  \item \emph{Measurement of Git understanding.}
+    \texttt{"git version control students misconceptions pre-test
+    post-test"};
+    \texttt{"concept inventory version control git"};
+    \texttt{"phenomenographic study students understanding version
+    control"};
+    \texttt{"students mental model git commit branch interview study"};
+    \texttt{"git knowledge test assessment students learning outcomes"};
+    \texttt{"students conceptions of version control interview study"}.
+  \item \emph{What the existing work measures.}
+    \texttt{"teaching git course evaluation survey confidence students"};
+    \texttt{"git learning tool visualization evaluation students"};
+    \texttt{"novice git errors command usage analysis study"}.
+  \item \emph{Difficulties per objective.}
+    \texttt{"students understanding git commit history snapshot"};
+    \texttt{"git staging area index students confusion"};
+    \texttt{"git branching merging students difficulties
+    misconceptions"};
+    \texttt{"git push pull remote students confusion GitHub
+    collaboration"};
+    \texttt{"merge conflicts novices study version control"}.
+  \item \emph{Method precedents} (the companion paper's queries, re-run so
+    that the shared references are found in this session too):
+    \texttt{"two-tier diagnostic test misconceptions development"};
+    \texttt{"concept inventory computer science development validation
+    interviews"};
+    \texttt{"learning study pre-test post-test critical aspects Marton
+    Pang"}.
+  \item \emph{Counter-searches} (phrased to surface the interview and
+    think-aloud studies that would refute the gap):
+    \texttt{"ways of experiencing version control students conceptions
+    interviews"};
+    \texttt{"git mental models developers qualitative study"};
+    \texttt{"version control think-aloud novices"}.
+\end{itemize}
+Because natural-language queries rank poorly in Web of Science and
+Scopus (the lesson of the extended-database round above), two
+field-tagged twins were run in each:
+\texttt{TS=((git OR "version control") AND (student* OR novice* OR
+learner*) AND (misconception* OR "mental model*" OR conception* OR
+understanding) AND (test OR inventory OR interview* OR phenomenograph* OR
+"pre-test" OR pretest OR "post-test"))} and
+\texttt{TS=((git OR github OR "version control") AND (student* OR
+novice* OR learner*) AND (difficult* OR misconception* OR confus* OR
+barrier* OR error*) AND (commit* OR branch* OR merg* OR staging OR
+remote* OR push OR pull OR clone))} in Web of Science, and their
+\texttt{TITLE-ABS-KEY} counterparts in Scopus; and three short DBLP
+queries, \texttt{"git misconceptions"}, \texttt{"git students"},
+\texttt{"version control novices"}, since DBLP's implicit AND defeats the
+long ones.
+After the first hit lists had been read, eight complementary queries
+widened the net (\texttt{"learning git novices"}; \texttt{"version
+control education students understanding"}; \texttt{'"version control"
+AND (misconception* OR "mental model*")'}; \texttt{"git mental model"};
+\texttt{"novice programmers version control systems difficulties"};
+\texttt{"git tutorial evaluation learning gains"}; \texttt{"hidden
+dependencies version control user experience"}; \texttt{"students commit
+messages behaviour analysis course"}, against OpenAlex with DBLP, IEEE
+Xplore, Scopus or Web of Science as appropriate).
+Their first run was lost from the session when a concurrently running
+\texttt{scholar enrich} wrote the session file back---a tooling hazard
+worth recording: \texttt{scholar} commands on one session must not run
+concurrently---and was re-run; by then OpenAlex was answering
+HTTP~429 (rate limit), so the re-run holds only the DBLP, IEEE, Scopus
+and Web of Science hits, while the OpenAlex hits of the first run
+survive in the saved CSV output and were screened from it by title (one
+retained reference, \textcite{Church2014HiddenDependencies}, came from
+that query and was recovered into the session through DBLP).
+Seven references were not returned by the topic queries and were
+retrieved as known items by title search (Scopus \texttt{TITLE()} or
+DBLP), which their provenance blocks state: the concept-inventory review
+and the operating-systems concept inventory
+\autocite{Taylor2014CI,WebbTaylor2014OSCI} and the virtual-memory study
+\autocite{Pamplona2024VirtualMemory}, shared with the companion paper;
+and three Git-education papers identified through a web search for a
+Git concept inventory---which found none, but surfaced a survey of Git as
+a learning objective in statistics courses
+\autocite{Beckman2021GitLearningObjective}, a pre/post survey evaluation
+of a Git training programme \autocite{Jabrayilzade2022InteractiveGit},
+and an author copy of the GitHub case study the seed round had left
+uncited for want of access \autocite{Feliciano2016GitHubStudents}.
+The session collected 725 distinct papers.
+Abstracts were filled in with \texttt{scholar enrich} (259 added; 598 of
+the 725 have one).
+The 678 papers present at that point were classified zero-shot against a
+written research context with \texttt{scholar llm classify} (GPT-5.4 via
+GitHub Copilot), which kept 94 and discarded 584; the model's pass proved
+a poor first sort for this question---of its 94 keeps only 10 survived
+reading (it kept DevOps courses, think-aloud methodology and Copilot
+studies), it discarded \textcite{IsomottonenCochez2014},
+\textcite{DeRossoJackson2016Gitless} and the learning-study papers, and
+its reason tags were misaligned with the papers on a number of records.
+Every paper's decision and reason was therefore set by hand: the
+Git-, version-control-, computing-education- and method-related titles
+(about two hundred) were read with their abstracts, and the remainder
+were assigned a coarse reason by reading their titles and venues; the
+model's tags and confidences remain in each export record, preceding
+our reason tag (the last tag of a record is ours), and its verdicts are
+kept alongside ours in
+\texttt{literature-review/vt-git-measurement-llm.csv} (reconstructed
+from the model's kept list by title after our decisions had overwritten
+its status field, so duplicate records of a kept title count as kept
+there: 97 rather than 94).
+The final tally is 31 kept (16 on Git, of which 7 were already cited
+from the earlier rounds and are recorded as corroboration; 15 method
+precedents, 7 of them cited) and 694 discarded, each with its reason.
+Decisions were recorded with \texttt{scholar sessions decide}; the export
+(queries, every screened paper with abstract, decision and reason) is in
+\texttt{literature-review/vt-git-measurement.\{bib,csv,tex\}}, and each
+retained reference carries a provenance block in
+\texttt{misconceptions.bib} or \texttt{theory.bib}; the entries shared
+with the companion paper carry their original blocks, with this paper's
+retrieval and re-verification added.
+
+\paragraph{Results.}
+The hit list is dominated by false positives---science-education
+diagnostic tests, nursing and psychology phenomenographies, software
+repositories mined for other ends, and the many papers in which
+\emph{commit}, \emph{branch} or \emph{merge} mean something else---and
+the on-topic residue falls into five groups.
+
+\emph{Conceptions studies.}
+No phenomenographic or interview study of how learners understand Git
+or version control exists; the counter-searches returned none, and the
+phenomenographic work they did surface concerns nursing, mobile learning
+and vectors.
+The closest are three qualitative studies of a different kind:
+interviews and observation of \emph{professional} engineers, who can
+articulate Git's conceptual model yet follow narrow ritual workflows out
+of fear, which the authors trace to Git's \emph{hidden
+dependencies}---between the files on disk and the current branch, between
+a local branch and the remote-tracking copy of the remote (a \texttt{git
+status} reporting \enquote{up-to-date with origin/master} can be
+hundreds of commits behind the remote), and between new files and the
+index \autocite{Church2014HiddenDependencies}; interviews with students
+about GitHub in two courses, in which students name unfamiliarity with
+Git and GitHub as a challenge and ask for version control to be taught
+earlier \autocite{Feliciano2016GitHubStudents}; and the teaching
+observations and survey already cited \autocite{IsomottonenCochez2014}.
+None collects students' own accounts of Git's objects.
+
+\emph{Diagnostic instruments and concept inventories.}
+No validated diagnostic instrument or concept inventory for Git or
+version control was found, by the topic queries, by the field-tagged
+queries or by a web search; the computing concept-inventory review
+\autocite{Taylor2014CI} and the CS1 test items
+\autocite{Vahrenhold2014TestItems} place the field's groundwork in
+CS1 and digital logic, and the nearest instrument is the
+operating-systems concept inventory \autocite{WebbTaylor2014OSCI}, as
+for the shell.
+What does exist is assessment practice: where Git is an explicit
+learning objective, it is assessed through commit histories and rubric
+points, and through in-class exam items of exactly the diagnostic shape
+this paper uses---whether a pull modifies files on the local computer,
+on the remote, both or neither \autocite{Beckman2021GitLearningObjective}.
+The nearest \emph{measurement of conceptions} is again the
+operating-systems study that reads conceptions of virtual memory off
+written tests at the start and end of a course
+\autocite{Pamplona2024VirtualMemory}.
+
+\emph{Documented difficulties per objective}---the feed for the aspect
+lists.
+For the commit model: the commit-as-save conflation read off repository
+data \autocite{Cochez2013DVCSUsage}, the blind-testing effect of a
+missing mental model \autocite{IsomottonenCochez2014}, and the
+\enquote{overwhelmed by commands} report \autocite{Wagner2025RethinkGit}.
+
+For the staging area: \texttt{add} read as \emph{make} and the
+\texttt{add .}/\texttt{commit -a} habit \autocite{IsomottonenCochez2014},
+the index as a hidden dependency in which an unadded file is unknown to
+Git \autocite{Church2014HiddenDependencies}, and the design-level misfit
+analysis \autocite{DeRossoJackson2016Gitless}.
+
+For branches: the branch-as-directory conception
+\autocite{IsomottonenCochez2014} and the files-on-disk-depend-on-the-branch
+dependency \autocite{Church2014HiddenDependencies}.
+
+For remotes: the remote-prefix confusion \autocite{IsomottonenCochez2014},
+the local-branch/remote-tracking/remote dependency and the misleading
+\enquote{up-to-date} \autocite{Church2014HiddenDependencies}, the
+distributed-state awareness a split-view tool sets out to build
+\autocite{Bucher2026GitTakesTwo}, and the workflow misconceptions of the
+GitKit line \autocite{Postner2026GitMisconceptions,Braught2024GitKit}.
+
+A teacher focus group has produced a list of students' Git errors and
+poor practices that is wider than any of these
+\autocite{Eraslan2020GitErrors}; its full text is behind a paywall and
+is cited at abstract scope.
+% TODO(#5): read the Eraslan et al. 2020 full text through the library and
+% add its per-objective items to the catalogue and the aspect lists.
+
+\emph{What the evaluations measure.}
+The rest of the empirical work measures perception, confidence,
+performance or behaviour: pre- and post-surveys of self-assessed
+sufficiency around a Git training programme (67\,\% to 9\,\%
+\enquote{insufficient}) \autocite{Jabrayilzade2022InteractiveGit}, of
+perspectives and engagement in a 319-student GitHub course
+\autocite{Patani2024GitHubImpact}, of perceptions of Git concepts around
+a tutorial \autocite{Sproull2022GitIt}, and a 315-student survey of how
+students use GitHub \autocite{Tiwari2022GitHubSurvey}; a live
+skill checkoff in which students demonstrate Git to a teaching
+assistant, with confidence surveyed alongside
+\autocite{McMahon2026Checkoffs}; the split-view tool's mixed performance
+gains \autocite{Bucher2026GitTakesTwo}; and repository metrics and
+process mining, for grading or for behaviour
+\autocite{Hamer2021GitMetrics,Ardimento2022ProcessMining,Cochez2013DVCSUsage}---the
+many further metrics-for-grading and GitHub-metrics-predict-performance
+papers in the hit list were discarded as measuring contribution, not
+understanding.
+
+\emph{Learning-study precedents.}
+As in the companion paper: the pre-test (written task plus interviews)
+used to identify the critical aspects that separate the qualitatively
+different ways of understanding, the same task repeated as post-test
+\autocite{PangMarton2005}; the procedure as standard learning-study
+practice \autocite{Kullberg2017ZDM}; and interviews and open-ended tests
+as the most common route to students' conceptions in the
+diagnostic-instrument literature
+\autocite{KaltakciGurel2015Diagnostics}.
+
+\paragraph{Conclusion.}
+No: learners' understanding of Git has not been measured with an
+instrument built for it, nor studied phenomenographically.
+No concept inventory or validated diagnostic for Git or version control
+exists, and no study collects students' own accounts of commits,
+branches or remotes; what the empirical work measures is self-assessed
+confidence, perception, skill performance and repository behaviour.
+The difficulties, however, are better documented than for the shell:
+course observation, a teacher focus group, repository data and a
+usability analysis of professionals together name the commit-as-save
+conflation, \texttt{add} as \emph{make} and the hidden index, the branch
+as a directory and the files' dependency on the branch, and the
+local/remote-tracking/remote confusion---so several of the candidate
+aspects of \cref{sec:model,sec:staging,sec:branches,sec:remotes} can be
+read off documented difficulties, which the aspect lists record, while
+none rests on learners' own accounts.
+The qualifications are that diagnostic-shaped exam items for Git exist
+in teaching practice \autocite{Beckman2021GitLearningObjective}, that
+conceptions have been read off written pre- and post-tests in the
+neighbouring operating-systems course \autocite{Pamplona2024VirtualMemory},
+and that the learning-study tradition
+\autocite{PangMarton2005,Kullberg2017ZDM} and the diagnostic-instrument
+typology \autocite{KaltakciGurel2015Diagnostics} give the pre-/post-test
+design of \cref{sec:method-instruments} its precedent.
+Semantic Scholar's absence, OpenAlex's rate limit on the re-run of the
+complementary queries, and the paywalled teacher-focus-group list are the
+round's limitations; the claim rests on OpenAlex, Scopus, Web of
+Science, IEEE Xplore and DBLP.

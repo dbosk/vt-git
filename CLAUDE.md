@@ -69,5 +69,17 @@ etc.), shared with the companion papers.
 
 Scaffold stage: research questions, method skeleton, seeded literature, and
 preliminary aspect/pattern analyses per chapter are in place. The systematic
-literature-search phase (phase two in `search-protocol.tex`) has not run
-yet; `% TODO`/`% XXX` comments mark the open work.
+literature-search phase (`search-protocol.tex`) has run in several rounds,
+including a measurement round (2026-08-23, scholar session
+`vt-git-measurement`, exported to `literature-review/`): has learners'
+Git understanding been measured? — no Git concept inventory, diagnostic
+instrument or phenomenographic study exists; what is measured is
+perception/confidence, skill checkoffs and repository behaviour; the
+difficulties are documented from course observation (Isomöttönen & Cochez),
+a teacher focus group (Eraslan et al. 2020, abstract only), repository data
+and a usability analysis of professionals (Church et al. 2014, hidden
+dependencies). `% TODO`/`% XXX` comments mark the open work.
+
+Tooling hazard learned in that round: never run two `scholar` commands on
+the same session concurrently (`enrich`/`classify` load the session file
+and write it back, dropping searches recorded in between).
