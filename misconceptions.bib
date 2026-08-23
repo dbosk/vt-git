@@ -30,21 +30,45 @@
 % CLAIM: Students learning Git confuse its concepts -- e.g., conceptualize
 %   branches as directories and try to `cd` into them -- and this difficulty
 %   is partly attributable to the command-line client; visual diagrams of the
-%   commit graph help.
+%   commit graph help.  The same source documents further command-level
+%   confusions: `git add file' read as *creating* a file rather than staging
+%   an existing one; a preference for `git add .'/`git commit -a' that hides
+%   which files are tracked; remote-prefix confusion (origin/branch vs origin
+%   branch); and a "blind-testing" effect in which, lacking a mental model,
+%   learners just try commands out.
 % FOUND-VIA: scholar search "challenges confusions version control" -p dblp
 % PICKED: the standard reference for Git learning difficulties in a course
 %   setting (survey + teacher observations across several courses); primary
-%   source for the branch-as-directory misconception.
-% QUOTE (p.10 of author copy): "if asked to checkout a particular branch,
-%   learners might try to move into a branch with the cd command. In order to
-%   avoid this confusion, the topic should be explicitly discussed. This
-%   challenge can be in part attributed to the use of the command line
+%   source for the branch-as-directory misconception and for several
+%   command-level confusions (Secs. 5.1--5.7).
+% QUOTE (Sec. 5.2, p.10 of author copy): "if asked to checkout a particular
+%   branch, learners might try to move into a branch with the cd command. In
+%   order to avoid this confusion, the topic should be explicitly discussed.
+%   This challenge can be in part attributed to the use of the command line
 %   client---hence, in such a setting we stress the importance of showing
 %   visual diagrams of branching and explicitly explaining branches as
 %   pointers in the commit history."
-% VERIFIED: full text read (open author copy, JYU repository,
+% QUOTE (Sec. 5.3): "We have noticed a tendency where the command git add
+%   file is, however, associated with creating a new file, while it stages the
+%   file for the commit. [...] Considered together with the git commit
+%   command, which usually ensues the add commands, it is admittedly easy to
+%   think that `one creates a new file and then commits it'."
+% QUOTE (Sec. 5.1): "Student with little previous command line (unix)
+%   experience easily confuse Git commands with Bash commands, and the other
+%   way around."
+% QUOTE (Sec. 5.4): "In referring to remote branches, this `with and without
+%   prefix' conventions confuses learners until they have used the system long
+%   enough and grasped the need for specifying the remote context with a
+%   prefix".
+% QUOTE (Sec. 5.7): "The absence of a proper mental model seems to cause the
+%   blind-testing effect [...] learners do not think about the Git commands,
+%   but `just try them out', which makes it very difficult to interpret the
+%   responses and error messages by the Git client."
+% VERIFIED: full text re-read (open author copy, JYU repository,
 %   https://jyx.jyu.fi/bitstreams/71186a3c-fc91-4a00-b3e2-990dade59464/download);
-%   quote entails all three parts of the claim.
+%   each quote entails the specific claim it backs (branch-as-directory,
+%   add-as-create-file, Git/Bash mixing, remote-prefix, blind-testing).
+%   Resolves introtools #3.
 % DATE: 2026-07-18
 @inproceedings{IsomottonenCochez2014,
   title={Challenges and Confusions in Learning Version Control with {Git}},
@@ -80,6 +104,130 @@
   year={2016},
   pages={292--310},
   doi={10.1145/2983990.2984018},
+}
+
+% === provenance: Cochez2013DVCSUsage ===
+% CLAIM: Repository-data analysis of students' Git use finds that students
+%   treat the version control system as plain file storage / an answer
+%   submission system, commit too rarely, and write meaningless commit
+%   messages.
+% FOUND-VIA: scholar search "mining student version control repositories novices" -p dblp -p openalex
+%   (title confirmed via Crossref bibliographic query; OA copy read at CEUR-WS Vol-1000)
+% PICKED: primary repository-data study of student Git usage across three
+%   courses -- the gap-(b) source; the open-access CEUR copy is fully readable
+%   (the Springer sibling chapter's abstract was inaccessible this session).
+% QUOTE (abstract): "students do not use the system in an optimal way; they do
+%   not commit changes often enough and regard the version control system as
+%   file storage. They also often write commit messages which are
+%   meaningless."
+% QUOTE (Sec. 4.5, p.231): "The presence of files which do not belong in the
+%   version control system, such as executable programs, temporary compilation
+%   files and copied documentation, suggests that the students used the VCS as
+%   plain file storage."
+% VERIFIED: full text read (open-access CEUR-WS PDF,
+%   https://ceur-ws.org/Vol-1000/ICTERI-2013-p-221-235.pdf); quotes entail the
+%   file-storage / submission-system misconception at repository-data strength.
+% DATE: 2026-07-18
+@inproceedings{Cochez2013DVCSUsage,
+  title={The Use of Distributed Version Control Systems in Advanced Programming Courses},
+  author={Cochez, Michael and Isom{\"o}tt{\"o}nen, Ville and Tirronen, Ville and Itkonen, Jonne},
+  booktitle={Proceedings of the 9th International Conference on ICT in Education, Research and Industrial Applications ({ICTERI} 2013)},
+  series={CEUR Workshop Proceedings},
+  volume={1000},
+  publisher={CEUR-WS},
+  pages={221--235},
+  year={2013},
+  url={https://ceur-ws.org/Vol-1000/ICTERI-2013-p-221-235.pdf},
+  doi={10.55056/ceur-ws.org/vol-1000/icteri-2013-p-221-235.pdf},
+}
+
+% === provenance: Yang2022GitCommands ===
+% CLAIM: Even experienced developers frequently struggle with Git commands; a
+%   large-scale Stack Overflow study characterises the difficulty, and a
+%   companion survey finds developers learn Git mostly by self-teaching.
+% FOUND-VIA: scholar search "learning git version control difficulties" -p dblp -p openalex
+% PICKED: the largest repository/Q&A-data study of Git command difficulty
+%   (80,370 Stack Overflow questions); complements course-side observations
+%   with population-scale evidence that the difficulty is intrinsic to Git,
+%   not only a novice problem.
+% QUOTE (abstract): "despite its widespread use, developers still frequently
+%   face difficulties when using various Git commands to manage projects and
+%   collaborate. [...] we conducted a survey to understand how developers learn
+%   Git commands in practice, showing that self-learning is the primary
+%   learning approach."
+% VERIFIED: abstract read (OpenAlex); entails both the command-difficulty and
+%   the self-learning claim. Scope: developers on Stack Overflow (not
+%   specifically students) -- cited only at that scope.
+% DATE: 2026-07-18
+@article{Yang2022GitCommands,
+  title={Do Developers Really Know How to Use {Git} Commands? A Large-scale Study Using {Stack Overflow}},
+  author={Yang, Wenhua and Zhang, Chong and Pan, Minxue and Xu, Chang and Zhou, Yu and Huang, Zhiqiu},
+  journal={ACM Transactions on Software Engineering and Methodology},
+  volume={31},
+  number={3},
+  pages={47:1--47:29},
+  year={2022},
+  doi={10.1145/3494518},
+}
+
+% === provenance: Braught2024GitKit ===
+% CLAIM: The GitKit packages an authentic Free/Open-Source project so students
+%   learn Git and GitHub workflows in a real-world context; teaching these
+%   distributed, asynchronous tools in an educational setting poses distinctive
+%   challenges for students and faculty.
+% FOUND-VIA: scholar search "GitKit free open source software learning git" -p dblp -p openalex
+% PICKED: the full SIGCSE 2024 paper of the GitKit line (the seed round had
+%   only the 2026 one-page poster \autocite{Postner2026GitMisconceptions});
+%   describes the intervention and a pilot study, so it carries more evidence
+%   weight than the poster.
+% QUOTE (abstract): "Since these tools and processes were created for
+%   distributed, asynchronous collaboration on large scale projects, teaching
+%   them in an authentic context that makes clear their utility and design
+%   presents myriad challenges for both faculty and students. [...] A pilot
+%   study of student experiences with the GitKit is promising".
+% VERIFIED: abstract read (OpenAlex); OA PDF at ACM
+%   (https://dl.acm.org/doi/pdf/10.1145/3626252.3630864). Entails the
+%   authentic-context and teaching-challenge claims at pilot strength.
+% DATE: 2026-07-18
+@inproceedings{Braught2024GitKit,
+  title={{GitKit}: Learning Free and Open Source Collaboration in Context},
+  author={Braught, Grant and Jackson, Stoney and Macdonell, Cam and Postner, Lori and Shumar, Wesley and Wurst, Karl R.},
+  booktitle={Proceedings of the 55th ACM Technical Symposium on Computer Science Education V. 1},
+  series={SIGCSE 2024},
+  publisher={ACM},
+  pages={144--150},
+  year={2024},
+  doi={10.1145/3626252.3630864},
+}
+
+% === provenance: Bucher2026GitTakesTwo ===
+% CLAIM: Git is challenging for newcomers, and a learning tool that visualises
+%   distributed state -- showing a partner's actions on a shared remote in real
+%   time -- can scaffold learners' awareness of Git's distributed, collaborative
+%   nature.
+% FOUND-VIA: scholar search "GitKit free open source software learning git" -p dblp -p openalex
+%   (surfaced alongside the GitKit line)
+% PICKED: recent (CHI 2026) within-subjects study of a Git-visualisation
+%   learning tool (GitAcademy split-view) -- the clearest gap-(d)
+%   visualisation-as-intervention source, not merely a tool description.
+% QUOTE (abstract): "Git is widely used for collaborative software development,
+%   but it can be challenging for newcomers. [...] a split-view collaborative
+%   mode: learners work on their own local repositories connected to a shared
+%   remote repository, while simultaneously seeing their partner's actions
+%   mirrored in real time. [...] a training simulator to build awareness of
+%   distributed states, coordination, and collaborative troubleshooting."
+% VERIFIED: abstract read (OpenAlex); entails the newcomer-difficulty and the
+%   distributed-state-visualisation claims. Performance gains were "mixed" --
+%   no learning-outcome effect is claimed.
+% DATE: 2026-07-18
+@inproceedings{Bucher2026GitTakesTwo,
+  title={{Git} Takes Two: Split-View Awareness for Collaborative Learning of Distributed Workflows in {Git}},
+  author={Bucher, Joel and Goswami, Lahari and Thorgeirsson, Sverrir and Wang, April Yi},
+  booktitle={Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  series={CHI '26},
+  publisher={ACM},
+  year={2026},
+  doi={10.1145/3772318.3791254},
 }
 
 % === provenance: Winder2024ShellTutor ===
@@ -126,12 +274,14 @@
 @article{DuBoulay1981BlackBox,
   title={The black box inside the glass box: presenting computing concepts to novices},
   author={du Boulay, Benedict and O'Shea, Tim and Monk, John},
-  journal={International Journal of Man-Machine Studies},
-  volume={14},
-  number={3},
-  pages={237--249},
-  year={1981},
-  note={Reprinted in Int. J. Human-Computer Studies 51(2):265--277, 1999},
+  journal={International Journal of Human-Computer Studies},
+  volume={51},
+  number={2},
+  pages={265--277},
+  year={1999},
+  note={Reprint; originally published 1981 in Int. J. Man-Machine
+    Studies 14(3):237--249. The DOI and the fields above are the
+    reprint's},
   doi={10.1006/ijhc.1981.0309},
 }
 
@@ -284,10 +434,718 @@
   doi={10.1103/physrevphyseducres.16.010127},
 }
 
+
+% === provenance: Wagner2025RethinkGit ===
+% CLAIM: Students report being overwhelmed by the plethora of Git's
+%   detailed commands and options (including setup and SSH), and teaching
+%   should instead convey the underlying Git model.
+% FOUND-VIA: scholar search 'TITLE-ABS-KEY(ssh AND (teaching OR learning)
+%   AND (student OR novice))' -p scopus (session "vt-terminal-systematic";
+%   surfaced by the SSH query, retained for this paper)
+% PICKED: recent pedagogy piece (JISE Teaching Tip) whose
+%   model-before-commands recommendation aligns with, and independently
+%   corroborates, this paper's notional-machine argument. Teaching-tip
+%   strength, not an empirical study.
+% QUOTE (abstract): "students in IS and other disciplines report themselves
+%   overwhelmed by the plethora of Git's detailed commands and options,
+%   including those involved in local setup and secure shell (SSH)
+%   connections. [...] teaching efforts should convey a solid understanding
+%   of the Git model".
+% VERIFIED: abstract read (OpenAlex).
+% DATE: 2026-07-19
+@article{Wagner2025RethinkGit,
+  title={Teaching Tip Rethinking How We Teach Git: Pedagogical Recommendations and Practical Strategies for the Information Systems Curriculum},
+  volume={36},
+  ISSN={2574-3872},
+  url={http://dx.doi.org/10.62273/BTKM5634},
+  DOI={10.62273/btkm5634},
+  number={1},
+  journal={Journal of Information Systems Education},
+  publisher={Information Systems & Computing Academic Professionals Education Special Interest Group},
+  author={Wagner, Gerit and Thurner, Laureen},
+  year={2025},
+  month=Mar,
+  pages={1–12},
+}
+% === provenance: Hamer2021GitMetrics ===
+% CLAIM: Students' Git repository data (commit metrics) has been used to
+%   measure individual and team contributions in project courses.
+% FOUND-VIA: scholar search 'TITLE-ABS-KEY(("version control" OR git) AND
+%   (student OR novice) AND (misconception OR difficulty OR confusion))'
+%   -p scopus (session "vt-git-systematic")
+% PICKED: journal version (CLEIej; 8 projects, 150 students) of the
+%   repository-data approach to student Git use --- the methodological
+%   precedent for this paper's assignments-as-data design; contribution
+%   measurement, not misconceptions (cited only at that scope).
+% QUOTE (abstract): "The adoption of distributed version control sys-tems
+%   like git enable the measurement of students' and teams' contributions
+%   to the project. In this work, we analyze the contributions within eight
+%   software development projects, with 150 students in total".
+% VERIFIED: abstract read (OpenAlex).
+% DATE: 2026-07-19
+@article{Hamer2021GitMetrics,
+  title={Using git metrics to measure students’ and teams’ code contributions in software development projects},
+  volume={24},
+  ISSN={0717-5000},
+  url={http://dx.doi.org/10.19153/cleiej.24.2.8},
+  DOI={10.19153/cleiej.24.2.8},
+  number={2},
+  journal={CLEI Electronic Journal},
+  publisher={Centro Latino Americano de Estudios en Informatica},
+  author={Hamer, Sivana and Quesada-López, Christian and Martínez, Alexandra and Jenkins, Marcelo},
+  year={2021},
+  month=July,
+}
+% === provenance: Ardimento2022ProcessMining ===
+% CLAIM: Process mining of event logs from development environments and
+%   version-control interaction is an established approach to understanding
+%   students' coding behaviour.
+% FOUND-VIA: scholar search 'TS=(("version control" OR git OR github) AND
+%   (student* OR novice*) AND (misconception* OR difficult* OR confus* OR
+%   barrier*))' -p wos (session "vt-git-systematic")
+% PICKED: methodological precedent for mining VCS interaction logs
+%   (incremental process mining); supports the assignments-as-data method,
+%   not a misconception claim.
+% QUOTE (abstract): "We propose the use of process mining to learn coding
+%   behavior from event logs captured from a customized Integrated
+%   Development Environment, concerning interactions with both such an
+%   environment and a Version Control System."
+% VERIFIED: abstract read (OpenAlex); OA (MDPI Electronics).
+% DATE: 2026-07-19
+@article{Ardimento2022ProcessMining,
+  title={Understanding Coding Behavior: An Incremental Process Mining Approach},
+  volume={11},
+  ISSN={2079-9292},
+  url={http://dx.doi.org/10.3390/electronics11030389},
+  DOI={10.3390/electronics11030389},
+  number={3},
+  journal={Electronics},
+  publisher={MDPI AG},
+  author={Ardimento, Pasquale and Bernardi, Mario Luca and Cimitile, Marta and Redavid, Domenico and Ferilli, Stefano},
+  year={2022},
+  month=Jan,
+  pages={389},
+}
+% --- Measurement round (2026-08-23): has learners' understanding of Git
+% been measured?  Session "vt-git-measurement"; export in
+% literature-review/vt-git-measurement.{bib,csv,tex}.  Semantic Scholar was
+% unavailable (API key rejected, HTTP 403) throughout the round; OpenAlex,
+% Scopus, Web of Science, IEEE Xplore and (for short queries) DBLP carried
+% it.
+
+% === provenance: Church2014HiddenDependencies ===
+% CLAIM: Git's difficulty is not only missing knowledge: its state lives in
+%   hidden dependencies---between the files on disk and the current branch,
+%   between a local branch and the remote-tracking copy of the remote, and
+%   between new files and the index (an unadded file is unknown to Git)---so
+%   even professional engineers who can articulate the conceptual model
+%   follow narrow ritual workflows out of fear; a `git status` that reports
+%   "up-to-date with origin/master" can be hundreds of commits behind the
+%   real remote.  (Used for: the three-places and local-vs-remote aspects,
+%   and for the observation that conceptual understanding alone does not
+%   give confidence.)
+% FOUND-VIA: scholar search "hidden dependencies version control user
+%   experience" -p openalex -p dblp (session "vt-git-measurement",
+%   2026-08-23; OpenAlex W2810176914, DBLP conf/ppig/ChurchSE14).  The
+%   paper has no DOI; full text from the PPIG site,
+%   https://www.ppig.org/files/2014-PPIG-25th-Church.pdf.
+% PICKED: the only empirical (interview + observation) study of version
+%   control users that analyses *why* the conceptual model is hard to hold,
+%   in Cognitive Dimensions terms; primary source, cited by later usability
+%   work on Git.  Its participants are professionals, which is stated where
+%   it is cited: the point is that the hidden state is hard even for them.
+% QUOTE (Sec. 5, Hidden Dependencies): "there is a dependency that files on
+%   the disk are associated with a branch, another dependency between the
+%   local branch and the remote repository and a third that remote branched
+%   depend on other branches. [...] New files that have been created, but
+%   have not been explicitly 'git add'ed, will be unknown to the version
+%   control system."
+% QUOTE (Sec. 5): "$ git status / On branch master / Your branch is
+%   up-to-date with 'origin/master'. [...] This was actually in a working
+%   directory that is hundreds of changes (commits) behind the remote
+%   repository, but is up-to-date with respect to local version of the
+%   remote repository."
+% QUOTE (Sec. 4): "the participants in both studies do understand the VCSs.
+%   During the conceptual probing phase, they are able to clearly and
+%   precisely articulate the entities and relationships in their version
+%   control system. [...] Their conceptual understanding is strong, [...] but
+%   this is not sufficient for them to feel confident in its behaviour"
+% QUOTE (Sec. 5, conclusion of analysis): "the Hidden Dependencies which
+%   leaves the user unclear of the state ('where am I? I'll just reset
+%   everything'), [...] ('is it my local or my remote master that my branch
+%   is up to date with?')"
+% VERIFIED: full text read (pdftotext of the PPIG PDF, 6 pages); entails the
+%   claim at its scope (professional users, observation/interview, work in
+%   progress).  Venue and pages from the PPIG proceedings listing.
+% COUNTER: scholar search "version control think-aloud novices" and "git
+%   mental models developers qualitative study" (same session) returned no
+%   study contradicting the hidden-state analysis; the later design analysis
+%   DeRossoJackson2016Gitless reaches a compatible conclusion by a different
+%   method.
+% DATE: 2026-08-23
+@inproceedings{Church2014HiddenDependencies,
+  author    = {Church, Luke and S{\"o}derberg, Emma and Elango, Elayabharath},
+  title     = {A Case of Computational Thinking: The Subtle Effect of Hidden
+               Dependencies on the User Experience of Version Control},
+  booktitle = {Proceedings of the 25th Annual Workshop of the Psychology of
+               Programming Interest Group (PPIG 2014)},
+  year      = {2014},
+  url       = {https://www.ppig.org/files/2014-PPIG-25th-Church.pdf},
+}
+
+% === provenance: Eraslan2020GitErrors ===
+% CLAIM: A focus-group study with teaching staff produced a list of errors
+%   and poor practices of software-engineering students using Git, wider
+%   in coverage than earlier studies---the nearest thing to a catalogue of
+%   student Git difficulties, collected from teachers rather than from
+%   students, and without an instrument.
+% FOUND-VIA: scholar search "git students" -p dblp (session
+%   "vt-git-measurement", 2026-08-23; DBLP conf/cep/EraslanRKEJPH20).
+%   Abstract via OpenAlex (W2999330604) and Crossref; full text is behind
+%   the ACM paywall (HTTP 403 on dl.acm.org/doi/pdf/10.1145/3372356.3372364;
+%   Unpaywall: not OA), so the paper is cited at the scope of its abstract
+%   only---the list itself is not quoted.
+% PICKED: the one study in the session whose object is students' Git errors
+%   as such (not perceptions, not metrics); primary source for "teacher-
+%   reported error catalogue exists" and for its method (focus group).
+% QUOTE (abstract): "we present a list of errors and poor practices
+%   obtained through a focus group study with teaching staff. This list can
+%   be used to improve the learning experience and to help teach Git in a
+%   more efficient way. The list includes many more items, and has a wider
+%   coverage of the elements of collaborative software development, than
+%   other studies in this field."
+% VERIFIED: abstract read (OpenAlex, Crossref); entails the claim at its
+%   scope.  TODO(#5): read the full text through the library and add the
+%   per-objective items to the catalogue (see the protocol appendix).
+% DATE: 2026-08-23
+@inproceedings{Eraslan2020GitErrors,
+  author    = {Eraslan, Sukru and Cort{\'e}s R{\'\i}os, Julio C{\'e}sar and
+               Kopec-Harding, Kamilla and Embury, Suzanne M. and Jay,
+               Caroline and Page, Christopher and Haines, Robert},
+  title     = {Errors and Poor Practices of Software Engineering Students in
+               Using {Git}},
+  booktitle = {Proceedings of the 4th Conference on Computing Education
+               Practice (CEP '20)},
+  year      = {2020},
+  publisher = {ACM},
+  pages     = {1--4},
+  doi       = {10.1145/3372356.3372364},
+}
+
+% === provenance: Feliciano2016GitHubStudents ===
+% CLAIM: In an interview case study of two software-engineering courses
+%   using GitHub, students named unfamiliarity with Git and GitHub as a
+%   challenge and asked for version control to be taught earlier; the study
+%   measures perceptions (benefits and challenges), not understanding, and
+%   reports no specific misconception.
+% FOUND-VIA: known item from the seed round (then left uncited because only
+%   a truncated abstract was accessible; search-protocol.tex phases one and
+%   two).  Added to session "vt-git-measurement" by title search, scholar
+%   search 'TITLE("Student experiences using GitHub")' -p scopus
+%   (2026-08-23).  Full text from the author copy,
+%   https://alexeyza.com/pdf/icse16seet.pdf (found by WebSearch for the
+%   title).
+% PICKED: the student-perspective companion of the GitHub-in-education
+%   line; primary source for the "students report unfamiliarity" finding.
+% QUOTE (Sec. 4.2, "Challenge: Unfamiliarity with Git and GitHub"): "When
+%   asked about challenges, students mentioned how an unfamiliarity with
+%   Git and GitHub caused difficulties and missed opportunities in taking
+%   advantage of existing features (e.g., pull requests, GitHub issues)
+%   [...] Others [SE1, SE2, SE3] proposed that this challenge could have been
+%   alleviated by a greater focus on version control and version control
+%   tools earlier in the curriculum."
+% VERIFIED: full text read (pdftotext of the author copy); entails the
+%   claim at its scope (perceptions from interviews, two courses).
+% DATE: 2026-08-23
+@inproceedings{Feliciano2016GitHubStudents,
+  author    = {Feliciano, Joseph and Storey, Margaret-Anne and Zagalsky, Alexey},
+  title     = {Student Experiences Using {GitHub} in Software Engineering
+               Courses: A Case Study},
+  booktitle = {Proceedings of the 38th International Conference on Software
+               Engineering Companion (ICSE '16 Companion)},
+  year      = {2016},
+  publisher = {ACM},
+  pages     = {422--431},
+  doi       = {10.1145/2889160.2889195},
+}
+
+% === provenance: Beckman2021GitLearningObjective ===
+% CLAIM: Where Git is an explicit learning objective (statistics and data
+%   science courses), it is assessed through course work---commit histories,
+%   rubric points for commit practice---and in-class exam items such as
+%   whether a pull modifies the local directory, the remote, both or
+%   neither; no instrument is reported, but the exam-item form is that of a
+%   diagnostic item with misconception distractors.
+% FOUND-VIA: WebSearch for '"concept inventory" git OR "version control"
+%   students assessment instrument' (2026-08-23) surfaced the arXiv copy;
+%   added to session "vt-git-measurement" by title search, scholar search
+%   'TITLE("Implementing Version Control With Git and GitHub")' -p scopus.
+%   Full text from arXiv:2001.01988v3.
+% PICKED: the one paper in the round that reports *how* Git understanding
+%   is assessed in courses that treat it as a learning objective; primary
+%   source (six instructors' course descriptions).
+% QUOTE (Sec. 4.5): "students are to expect version control content on
+%   in-class exams. For example, this might include open-ended tasks about
+%   important concepts, selected-response questions (e.g., True/False or
+%   multiple choice) about procedural details such as whether a pull action
+%   modifies files (a) in the directory on their local computer [correct
+%   answer], (b) on the GitHub Remote Server, (c) both, (d) neither, or
+%   another task might prompt students to resolve an apparent merge conflict
+%   presented to them in a screenshot."
+% QUOTE (Sec. 8.7): "instructors should assess how well students are
+%   following recommended workflows in each assignment. [...] These include:
+%   (1) reasonable number of commits, (2) reasonable commit content, and (3)
+%   meaningful commit messages."
+% VERIFIED: full text read (pdftotext of the arXiv PDF; section numbers
+%   from the arXiv version, which matches the published article's
+%   structure); entails the claim.  Journal metadata from Crossref.
+% DATE: 2026-08-23
+@article{Beckman2021GitLearningObjective,
+  author  = {Beckman, Matthew D. and {\c{C}}etinkaya-Rundel, Mine and Horton,
+             Nicholas J. and Rundel, Colin W. and Sullivan, Adam J. and
+             Tackett, Maria},
+  title   = {Implementing Version Control With {Git} and {GitHub} as a
+             Learning Objective in Statistics and Data Science Courses},
+  journal = {Journal of Statistics and Data Science Education},
+  year    = {2021},
+  volume  = {29},
+  number  = {sup1},
+  pages   = {S132--S144},
+  doi     = {10.1080/10691898.2020.1848485},
+}
+
+% === provenance: Jabrayilzade2022InteractiveGit ===
+% CLAIM: Evaluations of Git training measure self-assessed sufficiency:
+%   a four-session Git/GitHub programme for 258 students was evaluated by
+%   surveys before and after, the share of students considering themselves
+%   insufficient to use the tools falling from 67% to 9%.
+% FOUND-VIA: WebSearch for '"concept inventory" git OR "version control"
+%   students assessment instrument' (ResearchGate hit, 2026-08-23);
+%   metadata and abstract via Crossref and OpenAlex (DOI
+%   10.24251/hicss.2022.112); added to session "vt-git-measurement" by
+%   title search, scholar search 'TITLE("Interactive Approach to Teaching
+%   Git")' -p scopus.
+% PICKED: a clean instance of the pre/post *self-assessment* design, with a
+%   large cohort; corroborates that what gets measured is confidence.
+% QUOTE (abstract): "To evaluate the effectiveness of the training sessions,
+%   we have conducted two surveys, before (224 respondents) and after (200
+%   respondents) the program. According to the survey results, the number
+%   of students considering themselves insufficient to use the tools for
+%   their projects decreased from 67% to 9% after the training program."
+% VERIFIED: abstract read (OpenAlex); entails the claim at its scope
+%   (self-assessment, one institution).
+% DATE: 2026-08-23
+@inproceedings{Jabrayilzade2022InteractiveGit,
+  author    = {Jabrayilzade, Elgun and Uyan{\i}k, Fatih Sevban and
+               S{\"u}l{\"u}n, Emre and T{\"u}z{\"u}n, Eray},
+  title     = {An Interactive Approach to Teaching {Git} Version Control
+               System},
+  booktitle = {Proceedings of the 55th Hawaii International Conference on
+               System Sciences (HICSS)},
+  year      = {2022},
+  doi       = {10.24251/hicss.2022.112},
+}
+
+% === provenance: Patani2024GitHubImpact ===
+% CLAIM: The effect of GitHub on software-engineering students has been
+%   measured with pre- and post-surveys of perspectives and experiences
+%   (319 students) together with repository activity---perception and
+%   behaviour, not understanding.
+% FOUND-VIA: scholar search "teaching git course evaluation survey
+%   confidence students" -p openalex -p scopus -p wos -p ieee (session
+%   "vt-git-measurement", 2026-08-23).  Abstract via OpenAlex; full text
+%   not retrievable outside the library (Wiley returned an HTML shell).
+% PICKED: the largest pre/post perception study of GitHub in a course in
+%   the session; primary source, cited at abstract scope.
+% QUOTE (abstract): "We present the results of an experiment conducted with
+%   319 undergraduate students to assess whether using GitHub improves
+%   their engagement in teamwork and subsequently enhances learning. The
+%   study conducted pre- and postsurveys to capture students' perspectives
+%   and experiences."
+% VERIFIED: abstract read (OpenAlex); entails the claim at its scope.
+% DATE: 2026-08-23
+@article{Patani2024GitHubImpact,
+  author  = {Patani, Prutha and Tiwari, Saurabh and Rathore, Santosh Singh},
+  title   = {The Impact of {GitHub} on Students' Learning and Engagement in a
+             Software Engineering Course},
+  journal = {Computer Applications in Engineering Education},
+  year    = {2024},
+  volume  = {32},
+  number  = {5},
+  doi     = {10.1002/cae.22775},
+}
+
+% === provenance: Tiwari2022GitHubSurvey ===
+% CLAIM: Students' use and perception of GitHub has been surveyed at scale
+%   (315 students), yielding benefits and drawbacks as perceived by
+%   students---again a perception measure.
+% FOUND-VIA: scholar search "git students" -p dblp (session
+%   "vt-git-measurement", 2026-08-23; DBLP conf/indiaSE/0001RFP22).
+%   Abstract via OpenAlex; full text behind the ACM paywall (Unpaywall: not
+%   OA).
+% PICKED: the student-side survey companion to Patani2024GitHubImpact;
+%   corroboration for "what is measured is perception".
+% QUOTE (abstract): "We surveyed a total of 315 students, including
+%   undergraduate, postgraduate, and PhD students of computer science
+%   stream. The research method includes a survey and a qualitative
+%   analysis of students' behaviour in the course."
+% VERIFIED: abstract read (OpenAlex); entails the claim at its scope.
+% DATE: 2026-08-23
+@inproceedings{Tiwari2022GitHubSurvey,
+  author    = {Tiwari, Saurabh and Rathore, Santosh Singh and Farooq, Sheikh
+               Umar and Patani, Prutha},
+  title     = {How Students Are Using {GitHub}? A Survey},
+  booktitle = {Proceedings of the 15th Innovations in Software Engineering
+               Conference (ISEC 2022)},
+  year      = {2022},
+  publisher = {ACM},
+  pages     = {1--5},
+  doi       = {10.1145/3511430.3511454},
+}
+
+% === provenance: Sproull2022GitIt ===
+% CLAIM: A lightweight Git tutorial intervention was evaluated with a
+%   survey at the beginning and end of the semester measuring students'
+%   *perceptions* of Git concepts (branching in particular), which improved
+%   significantly---a one-page poster, low evidence weight, but a clean
+%   example of pre/post perception measurement.
+% FOUND-VIA: scholar search "git students" -p dblp (session
+%   "vt-git-measurement", 2026-08-23; DBLP conf/sigcse/Sproull21).  Abstract
+%   via OpenAlex and Crossref; the poster is one page (1148).
+% PICKED: corroboration only; cited as an instance of perception
+%   measurement, with its weight stated.
+% QUOTE (abstract): "The research consists of a survey at the beginning and
+%   end of the semester. From the surveys, we observe that students'
+%   perceptions of major Git concepts increased in both semesters. Also,
+%   when introducing a lightweight intervention of a tutorial, students'
+%   perceptions of concepts of how and why to create a branch in Git
+%   improve in a statistically significant manner."
+% VERIFIED: abstract read (OpenAlex); entails the claim at its scope
+%   (poster abstract).
+% DATE: 2026-08-23
+@inproceedings{Sproull2022GitIt,
+  author    = {Sproull, Todd},
+  title     = {Do Students {Git} It? A Lightweight Intervention to Increase
+               Usage of Advanced {Git} Features},
+  booktitle = {Proceedings of the 53rd ACM Technical Symposium on Computer
+               Science Education V.~2 (SIGCSE 2022)},
+  year      = {2022},
+  publisher = {ACM},
+  pages     = {1148},
+  doi       = {10.1145/3478432.3499053},
+}
+
+% === provenance: KaltakciGurel2015Diagnostics ===
+% CLAIM: Misconceptions are elicited with a small family of diagnostic
+%   instruments -- interviews, open-ended tests, multiple-choice tests and
+%   multiple-tier tests -- with interviews and open-ended tests the most
+%   common route to students' conceptions.
+% FOUND-VIA: scholar search "two-tier diagnostic test misconceptions
+%   development" -p openalex -p scopus -p wos (session
+%   "vt-terminal-measurement"); entry and block copied verbatim from the
+%   companion paper's misconceptions.bib (vt-prog-misconceptions), where it
+%   was found by scholar search 'student misconceptions AND mental models
+%   AND instructional design AND conceptual change AND concept inventories'
+%   -p openalex --limit 40 (session "related-work-misconception-instruction").
+% FOUND-VIA (this paper):
+%   Entry and provenance block copied from the companion paper vt-
+%   terminal; in session "vt-git-measurement" (2026-08-23) the paper was
+%   returned by the same query, scholar search "two-tier diagnostic test
+%   misconceptions development" -p openalex -p scopus -p wos. Abstract
+%   re-read on 2026-08-23 (OpenAlex record in the session export).
+% PICKED: a review of 273 articles comparing the diagnostic instruments; the
+%   right kind of source for a prevalence claim.
+% QUOTE (abstract): "The study reveals interviews (53%), open-ended tests
+%   (34%), multiple-choice tests (32%) and multiple tier tests (13%) as the
+%   most commonly used diagnostic tools."
+% VERIFIED: abstract read; entails the claim.
+% DATE: 2026-08-23 (original verification 2026-08-21)
+@article{KaltakciGurel2015Diagnostics,
+  author  = {Kaltakci-Gurel, Derya and Eryilmaz, Ali and McDermott, Lillian C.},
+  title   = {A Review and Comparison of Diagnostic Instruments to Identify
+             Students' Misconceptions in Science},
+  journal = {Eurasia Journal of Mathematics, Science and Technology Education},
+  volume  = {11},
+  number  = {5},
+  pages   = {989--1008},
+  year    = {2015},
+  doi     = {10.12973/eurasia.2015.1369a},
+}
+
+% === provenance: Taylor2014CI ===
+% CLAIM: Computer science has no widely used, validated concept inventory
+%   (as of the 2014 review); the groundwork done concerns CS1 and digital
+%   logic, not the shell.
+% FOUND-VIA: the topic query scholar search "concept inventory computer
+%   science development validation interviews" -p openalex -p scopus -p
+%   wos (-p dblp in session "vt-terminal-measurement") returned no
+%   CS-specific concept-inventory review, so a known-item title search was
+%   run against the OpenAlex API (api.openalex.org/works?search=computer
+%   science concept inventories past and future -> DOI
+%   10.1080/08993408.2014.970779); added to the session with scholar search
+%   -n vt-terminal-measurement "computer science concept inventories past
+%   and future" -p openalex -p dblp -p scopus. The same OpenAlex search
+%   surfaced Ali et al. 2023 (ICER, DOI 10.1145/3568813.3600120), a
+%   systematic review of computing concept inventories, whose full text
+%   could not be read (ACM 403); it is noted, not cited.
+% FOUND-VIA (this paper):
+%   Entry and provenance block copied from the companion paper vt-
+%   terminal; not returned by the topic queries of session "vt-git-
+%   measurement" either, and added to it by title search, scholar search
+%   'TITLE("Computer science concept inventories: past and future")' -p
+%   scopus (2026-08-23). Quotes rest on the 2026-08-21 verification
+%   recorded below; the Taylor & Francis full text was not re-read.
+% PICKED: the field's review of concept-inventory work; the right kind of
+%   source for a "none exists" claim (a review, not a single instrument
+%   paper).
+% QUOTE (abstract): "Presently, there are no widely used, validated CIs for
+%   computer science. However, considerable groundwork has been performed
+%   in the form of identifying core concepts, analyzing student
+%   misconceptions, and developing CI assessment questions. Although much
+%   of the work has been focused on CS1 and a CI has been developed for
+%   digital logic, some preliminary work on CIs is underway for other
+%   courses."
+% VERIFIED: abstract read (OpenAlex and Crossref); full text paywalled
+%   (Taylor & Francis).  Claim dated to 2014; later CS1/CS2 inventories
+%   exist but none for the shell (see the COUNTER lines of
+%   WebbTaylor2014OSCI and the session export).
+% COUNTER: scholar search "concept inventory Linux command line" -p openalex
+%   -p scopus -p wos -p dblp (same session) -- no shell or command-line
+%   inventory surfaced; claim stands for the shell.
+% DATE: 2026-08-23 (original verification 2026-08-21)
+@article{Taylor2014CI,
+  author  = {Taylor, Cynthia and Zingaro, Daniel and Porter, Leo and
+             Webb, Kevin C. and Lee, Cynthia Bailey and Clancy, Michael},
+  title   = {Computer science concept inventories: past and future},
+  journal = {Computer Science Education},
+  volume  = {24},
+  number  = {4},
+  pages   = {253--276},
+  year    = {2014},
+  doi     = {10.1080/08993408.2014.970779},
+}
+
+% === provenance: WebbTaylor2014OSCI ===
+% CLAIM: The nearest thing to a diagnostic instrument for the shell is an
+%   operating-systems concept inventory, whose items concern OS internals
+%   (its file-system item is block-map indirection, not the user-level
+%   directory tree), whose distractors come from instructor experience
+%   rather than student interviews, and which its authors describe as not
+%   yet validated.
+% FOUND-VIA: not returned by any of the fifteen topic queries of session
+%   "vt-terminal-measurement" (including "concept inventory Linux command
+%   line" -p openalex -p scopus -p wos -p dblp); known item from background
+%   knowledge, verified by OpenAlex title search
+%   (api.openalex.org/works?search=Developing a pre- and post-course concept
+%   inventory to gauge operating systems learning -> DOI
+%   10.1145/2538862.2538886) and added to the session with scholar search
+%   -n vt-terminal-measurement "operating systems concept inventory pre post
+%   course" -p openalex -p dblp -p scopus. Open PDF located via the
+%   Semantic Scholar API (openAccessPdf):
+%   http://www.cs.swarthmore.edu/~kwebb/papers/OSCI14.pdf.
+% FOUND-VIA (this paper):
+%   Entry and provenance block copied from the companion paper vt-
+%   terminal; not returned by the topic queries of session "vt-git-
+%   measurement" either, and added to it by title search, scholar search
+%   'TITLE("pre- and post-course concept inventory")' -p scopus
+%   (2026-08-23). Quotes re-checked on 2026-08-23 against the same
+%   author copy (pdftotext).
+% PICKED: the only concept inventory in a Unix-adjacent subject that the
+%   searches or the CS concept-inventory review (Taylor2014CI) identify;
+%   cited to delimit the instrument gap precisely.
+% QUOTE (abstract): "we describe the development of a pre- and post-course
+%   concept inventory, which we utilize to explore students' misconceptions
+%   of operating systems and their associated trade-offs."
+% QUOTE (§3): "We identified areas that students frequently have trouble
+%   understanding and developed multiple choice questions with distractor
+%   answers based on our experiences with common student misconceptions.
+%   [...] Moving forward, we intend to rigorously validate our assessment
+%   by consulting with other experts in teaching operating systems,
+%   interviewing students, and collecting additional data by giving our
+%   assessment to more classes of students."
+% QUOTE (§4.1, heading): "Indirection: File System Block Map"
+% VERIFIED: full text read (pdftotext of the author copy); entails the
+%   claim: OS-internals items, instructor-derived distractors, validation
+%   deferred. Table 2 lists the ten topics (none is the shell or the
+%   directory hierarchy as seen by a user).
+% DATE: 2026-08-23 (original verification 2026-08-21)
+@inproceedings{WebbTaylor2014OSCI,
+  author    = {Webb, Kevin C. and Taylor, Cynthia},
+  title     = {Developing a pre- and post-course concept inventory to gauge
+               operating systems learning},
+  booktitle = {Proceedings of the 45th {ACM} Technical Symposium on Computer
+               Science Education},
+  series    = {SIGCSE '14},
+  publisher = {ACM},
+  year      = {2014},
+  pages     = {103--108},
+  doi       = {10.1145/2538862.2538886},
+}
+
+% === provenance: Vahrenhold2014TestItems ===
+% CLAIM: Validated misconception test items in computing exist for
+%   first-year (CS1) courses, developed with think-aloud interviews -- which
+%   locates the field's instrument groundwork in CS1, not the shell, and
+%   shows interviews as the route to items.
+% FOUND-VIA: scholar search "concept inventory computer science development
+%   validation interviews" -p openalex -p scopus -p wos -p dblp (session
+%   "vt-terminal-measurement"); abstract read via OpenAlex/Web of Science.
+% FOUND-VIA (this paper):
+%   Entry and provenance block copied from the companion paper vt-
+%   terminal; in session "vt-git-measurement" (2026-08-23) the paper was
+%   returned by the same query, scholar search "concept inventory
+%   computer science development validation interviews" -p openalex -p
+%   scopus -p wos -p dblp. Abstract re-read on 2026-08-23.
+% PICKED: the CS1 test-item development paper in the same journal issue as
+%   Taylor2014CI; cited as corroboration of where CS instrument work sits.
+% QUOTE (abstract): "We report on the development, validation, and
+%   implementation of a collection of test items designed to detect
+%   misconceptions related to first-year computer science courses. [...]
+%   to simultaneously incorporate think-aloud interviews and flash tests."
+% VERIFIED: abstract read; entails the claim.
+% DATE: 2026-08-23 (original verification 2026-08-21)
+@article{Vahrenhold2014TestItems,
+  author  = {Vahrenhold, Jan and Paul, Wolfgang},
+  title   = {Developing and validating test items for first-year computer
+             science courses},
+  journal = {Computer Science Education},
+  volume  = {24},
+  number  = {4},
+  pages   = {304--333},
+  year    = {2014},
+  doi     = {10.1080/08993408.2014.970782},
+}
+
+% === provenance: Pamplona2024VirtualMemory ===
+% CLAIM: The closest precedent for measuring computing students' conceptions
+%   with written pre- and post-course tests is an operating-systems study
+%   of virtual memory (seven online students); it qualifies the "barely
+%   measured" claim -- the method exists in the OS course next door -- but
+%   it does not measure the shell, the file system as users see it, or SSH.
+% FOUND-VIA: scholar search "phenomenographic study students understanding
+%   command line" -p openalex -p scopus -p wos (session
+%   "vt-terminal-measurement"); abstract read via OpenAlex (the provider
+%   record lacked one); metadata from Crossref.
+% FOUND-VIA (this paper):
+%   Entry and provenance block copied from the companion paper vt-
+%   terminal; not returned by the topic queries of session "vt-git-
+%   measurement", and added to it by title search, scholar search
+%   'TITLE("virtual memory") AND TITLE(conceptions)' -p scopus
+%   (2026-08-23). Abstract re-read on 2026-08-23.
+% PICKED: the only hit in the round that derives students' conceptions of
+%   a computing concept from written tests before and after a course;
+%   retained as qualifying work, and as a method precedent for the
+%   pre/post-test design of this paper.
+% QUOTE (abstract): "Study data were obtained from questions on virtual
+%   memory that were included in two written evaluation tests at the
+%   beginning and end of the course. The questions assessed conceptual
+%   knowledge and meaningful learning of the concept of virtual memory. We
+%   discovered nine accepted conceptions and seven alternative conceptions
+%   related to virtual memory. [...] a methodology for discovering
+%   conceptions that can be applied to other computing topics".
+% VERIFIED: abstract read (OpenAlex); entails the claim (OS concept, seven
+%   students, written pre/post tests). Full text not read.
+% DATE: 2026-08-23 (original verification 2026-08-21)
+@article{Pamplona2024VirtualMemory,
+  author  = {Pamplona, Sonia and Bravo-Agapito, Javier and Seoane, Isaac},
+  title   = {An Approach to Discover Students' Conceptions in Online
+             Computing Education: A Case Study of Students' Understanding
+             of Virtual Memory},
+  journal = {IEEE Access},
+  volume  = {12},
+  pages   = {111546--111564},
+  year    = {2024},
+  doi     = {10.1109/ACCESS.2024.3442440},
+}
+
+% === provenance: McMahon2026Checkoffs ===
+% CLAIM: Where command-line proficiency is assessed at all, it is assessed
+%   as skill performance (live one-on-one checkoffs in which students
+%   demonstrate skills and verbalise concepts to a teaching assistant) with
+%   confidence surveyed alongside -- not with a validated instrument of
+%   understanding; this qualifies the gap: skill checks exist, instruments
+%   do not.
+% FOUND-VIA: known-item search scholar search -n vt-terminal-measurement
+%   "uAssign Unix terminal" -p openalex -p dblp -p scopus (session
+%   "vt-terminal-measurement"; surfaced as a Scopus neighbour of the target);
+%   abstract read via the Semantic Scholar graph API (anonymous); metadata
+%   from Crossref.
+% FOUND-VIA (this paper):
+%   Entry and provenance block copied from the companion paper vt-
+%   terminal; in session "vt-git-measurement" (2026-08-23) the paper was
+%   returned by the field-tagged Web of Science query TS=((git OR github
+%   OR "version control") AND (student* OR novice* OR learner*) AND
+%   (difficult* OR misconception* OR confus* OR barrier* OR error*) AND
+%   (commit* OR branch* OR merg* OR staging OR remote* OR push OR pull
+%   OR clone)) and by the Scopus twin. Abstract re-read on 2026-08-23;
+%   its Git checkoff is what this paper cites.
+% PICKED: the most recent (SIGCSE TS 2026) assessment-of-CLI-skills report
+%   in the screened set; cited as qualifying work for the "barely measured"
+%   claim.
+% QUOTE (abstract): "This experience report presents a practical, scalable
+%   method to assess students' proficiency through checkoffs: one-on-one
+%   sessions where students demonstrate skills and verbalize concepts to a
+%   teaching assistant (TA). [...] we designed and administered three
+%   checkoffs, one each for the CLI, debugging, and Git. Final scores on
+%   each checkoff demonstrated that the vast majority of students achieved
+%   a baseline proficiency with each tool. Additionally, survey results
+%   indicated the checkoff format boosted students' confidence with the
+%   tools".
+% VERIFIED: abstract read; entails the claim (performance checkoff plus
+%   confidence survey). Full text (CC BY) not read.
+% DATE: 2026-08-23 (original verification 2026-08-21)
+@inproceedings{McMahon2026Checkoffs,
+  author    = {McMahon, Connor and Feldman, Lauren},
+  title     = {Assessing Student Proficiency in Foundational Developer Tools
+               Through Live Checkoffs},
+  booktitle = {Proceedings of the 57th {ACM} Technical Symposium on Computer
+               Science Education V.1},
+  series    = {SIGCSE TS 2026},
+  publisher = {ACM},
+  year      = {2026},
+  pages     = {722--728},
+  doi       = {10.1145/3770762.3772618},
+}
+
+% === provenance: SVNBook ===
+% CLAIM: In Subversion a branch is an ordinary directory in the repository
+%   (a copy, conventionally placed under /branches); Subversion has no
+%   internal concept of a branch.  (Cited for the conjecture that the
+%   branch-as-directory conception may be a correct Subversion model
+%   carried over to Git.)
+% FOUND-VIA: known-item verification, not a search: the reviewer's comment
+%   on draft v2 (2026-08-23) named Subversion; the official book was
+%   fetched at https://svnbook.red-bean.com/en/1.7/svn.branchmerge.using.html
+%   and the claim checked there.
+% PICKED: the canonical reference manual for the tool, by its authors; a
+%   statement about how a system works is backed by its documentation, not
+%   by an empirical study.
+% QUOTE (Ch. 4, "Using Branches"): "Subversion has no internal concept of a
+%   branch---it knows only how to make copies."
+% QUOTE (Ch. 4, "Using Branches"): "Subversion's branches exist as normal
+%   filesystem directories in the repository."
+% QUOTE (Ch. 4, "Using Branches"): "Most teams follow a convention of
+%   putting all branches into a /branches directory, but you're free to
+%   invent any policy you wish."
+% VERIFIED: the online book page read (curl, 2026-08-23); entails the
+%   claim.  The carry-over itself is stated as a conjecture in the prose
+%   and is not claimed to be documented.
+% DATE: 2026-08-23
+@book{SVNBook,
+  author    = {Collins-Sussman, Ben and Fitzpatrick, Brian W. and Pilato,
+               C. Michael},
+  title     = {Version Control with {Subversion}: For {Subversion} 1.7},
+  publisher = {O'Reilly Media},
+  year      = {2011},
+  note      = {Online edition; copyright 2002--2011},
+  url       = {https://svnbook.red-bean.com/en/1.7/},
+  urldate   = {2026-08-23},
+}
+
 % Companion papers (self-references; no external verification needed).
 @unpublished{VTProgMisconceptions,
   title={Introductory programming through the lens of variation theory},
-  author={Soori, Araz and Bosk, Daniel},
+  author={Soori, Celina and Bosk, Daniel},
   note={Work in progress},
   year={2026},
 }

@@ -69,5 +69,62 @@ etc.), shared with the companion papers.
 
 Scaffold stage: research questions, method skeleton, seeded literature, and
 preliminary aspect/pattern analyses per chapter are in place. The systematic
-literature-search phase (phase two in `search-protocol.tex`) has not run
-yet; `% TODO`/`% XXX` comments mark the open work.
+literature-search phase (`search-protocol.tex`) has run in several rounds,
+including a measurement round (2026-08-23, scholar session
+`vt-git-measurement`, exported to `literature-review/`): has learners'
+Git understanding been measured? — no Git concept inventory, diagnostic
+instrument or phenomenographic study exists; what is measured is
+perception/confidence, skill checkoffs and repository behaviour; the
+difficulties are documented from course observation (Isomöttönen & Cochez),
+a teacher focus group (Eraslan et al. 2020, abstract only), repository data
+and a usability analysis of professionals (Church et al. 2014, hidden
+dependencies). `% TODO`/`% XXX` comments mark the open work.
+
+Tooling hazard learned in that round: never run two `scholar` commands on
+the same session concurrently (`enrich`/`classify` load the session file
+and write it back, dropping searches recorded in between).
+
+## The instrument (`quiz.nw`)
+
+`quiz.nw` is a literate program (noweb; `make programs` tangles
+`quiz-knowledge-{start,end}.json` and `analyze_quiz.py`, all gitignored).
+Each quiz has an opener (consent / preparation, position 1), six open
+essay items (positions 3–8, the phenomenographic accounts; items 4, 6 and
+8 are the open twins of the closed *what a commit keeps*, *seeing another
+branch* and *why they cannot see it* — placed *before* the closed items
+and shown one at a time without backtracking so the distractors cannot
+seed the accounts) and the closed knowledge items (positions 11–22, one
+per candidate critical aspect, in chapter order; item 11 — the closed
+twin of open item 4 — is in the end quiz only, so the start quiz has 11
+closed items and the end quiz 12). `multiple_attempts` and
+`result_view_settings` are nested objects (Canvas ignores the keys written
+flat). Every item except the openers carries `feedback.neutral` — for
+closed items a short account of why the key is right, for open items a
+*provisional* outcome space (3–4 ordered levels; to be replaced by the
+empirical one after cohort 1, issue #8) — shown only in the end quiz via
+`display_item_feedback` (false in the start quiz); `analyze_quiz.py`
+ignores feedback so the coder and the LLM pre-coding never see it. The two JSONs carry canvaslms `modules` specs: each quiz is the
+sole, must-submit item of its own datintro26 module ("Git pre-test" /
+"Git post-test"), and the appendix prose gives the `modules
+create`/`modules edit --prerequisite` commands that chain pre-test →
+Collaboration (the Git module) → post-test, restating Collaboration's
+existing prerequisite "The terminal". Deployed 2026-08-23 to datintro26
+(modules at positions 5 and 7, Collaboration at 6; quiz ids 394105 /
+394106), unpublished; settings read back from the New Quizzes API and
+confirmed. Test changes in "Sandbox dbosk" first and delete the test
+artefacts afterwards; re-sync item edits with `canvaslms --no-cache quizzes edit -c datintro26 -a <id> -f <json> --replace-items` (the cache does not see freshly created quizzes; canvaslms#425).
+Items are keyed by title in the Canvas report (substring match — no open
+title may be a substring of a closed one); `analyze_quiz.py` reads the
+answer key from the tangled **end**-quiz JSON, skips items a report does
+not carry, filters by consent, prints per-item facility and distractor
+counts, paired pre/post gains (`--quiz both --results start.csv end.csv`)
+and writes a long-format coding sheet for the accounts (optional `--llm`
+pre-coding in separate `suggested_*` columns). It fetches and pools both
+`COURSES` — datintro26 and the CS programme's progd26 (course code
+unconfirmed, issue #9; the module and quizzes are copied there by hand,
+nothing is deployed) — tagging every row/record with its course; students are identified by
+their login ID, attached per row from the course roster (matched by the
+report's `id`, else `sis_id`, else an unambiguous name — ambiguity is
+warned about, never silently resolved), with (course, name) as the
+fallback for saved reports without the column. Activate the
+`literate-programming` skill before editing `quiz.nw`.

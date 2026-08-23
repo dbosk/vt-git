@@ -20,11 +20,15 @@ and construct patterns of variation (\cref{rq:patterns}):
 \cref{rq:aspects,rq:patterns} are answered analytically, and their answers
 are validated by argument (inference to the best explanation), not yet
 empirically.
+The instruments of \cref{sec:method-instruments} prepare the empirical
+turn: they both test the analytically derived aspects and collect the
+students' own accounts, from which aspects can be found rather than
+argued.
 
 \subsection{Literature review}
 \label{sec:method-litreview}
 
-The review has two phases.
+The review has two phases, run in several rounds.
 The first phase is a seed round: a claim-driven search conducted for the
 course-development work this paper grows out of, with every retained
 reference verified against at least its abstract (full text where open)
@@ -32,11 +36,21 @@ and recorded with full provenance; the protocol and queries are in
 \cref{app:protocol}.
 The second phase is a systematic, tool-supported multi-database search
 with the \texttt{scholar} tool, as in the companion papers
-\autocite{VTProgMisconceptions,VTDebug}.
-% TODO(#1): The systematic phase has not yet run. Its queries must cover:
-% version-control misconceptions beyond the seed sources, Git in
-% CS-education venues (GitKit and related), repository-data studies of
-% student Git usage, and Git visualisation tools as interventions.
+\autocite{VTProgMisconceptions,VTDebug}; it covered version-control
+misconceptions beyond the seed sources, Git in CS-education venues (the
+GitKit line and related), repository-data studies of student Git usage, and
+Git visualisation tools as interventions, first with natural-language
+queries and then with field-tagged queries in the databases that need
+them.
+A measurement round then asked a question the instruments of
+\cref{sec:method-instruments} depend on---whether learners' understanding
+of Git has been measured at all, by a phenomenographic study, a
+diagnostic instrument or a knowledge test---and, in the same searches,
+which difficulties per objective the empirical literature documents, so
+that the candidate critical aspects could be read off documented
+difficulties where such exist (\cref{sec:protocol-measurement}).
+All rounds, with every query and what it retained, are documented in
+\cref{app:protocol}.
 
 \subsection{Variation-theory analysis}
 \label{sec:method-vt-analysis}
@@ -47,8 +61,190 @@ Aspects recurring across misconceptions are candidate critical aspects.
 For each critical aspect we construct patterns of variation---contrast,
 generalisation, fusion---that make the aspect discernible, following the
 companion paper \autocite{VTProgMisconceptions}.
+Where no misconception is documented, an aspect is posited from the
+structure of the object of learning; a third source, which can both back
+the posited aspects and find ones we have not thought of, is the history
+of the systems themselves.
+Version control has been designed several times over---CVS, Subversion,
+Mercurial, Git---and what the designs \emph{vary} is what is variable in
+the object of learning: whether a version is stored as a difference or
+as a snapshot, whether there is one repository or every copy is
+complete, whether a branch is a directory or a name, whether an explicit
+index stands between the working files and the history.
+Each such variation across systems is a contrast the history supplies
+for free, and a learner who has met one system carries its answers to
+the next; the branch-as-directory conception of \cref{sec:branches}, a
+correct model of Subversion, is the first instance.
+This is the historical variation \citeauthor{NCOL} describes for
+physics, where a course that contrasted today's optics with the
+historically varying ideas before it left the students with a far better
+understanding of today's than a course that taught the received view
+alone \autocite[p.~58]{NCOL}: the history of a subject is a ready-made
+pattern of variation over its critical aspects.
+Going through the evolution of version control systems with that eye is
+therefore a planned round of this study, expected to add candidate
+aspects to the twelve read off the literature and the object of
+learning, and to give several of the posited ones a documented origin.
+% XXX(#7): the comparative reading of the systems' documentation is a
+% planned known-item round; until it is done, aspects are marked
+% "posited" rather than "read off the design history".
+
 Git affords the vary-and-observe loop that variation-theory teaching can
 exploit \autocite{Svensson2020Affordances,ThuneEckerdal2009Variation,
 ThuneEckerdal2018Lab}: the same command against different repository
 states, or different commands against the same state, with
 \texttt{git status}/\texttt{git log} as the observation instruments.
+
+\subsection{Course instruments}
+\label{sec:method-instruments}
+
+The candidate critical aspects (\cref{rq:aspects}) are, at this stage,
+the product of the analysis, not yet an empirical finding: we argue that
+a learner who has not discerned an aspect will make the corresponding
+mistake, but we have not measured whether discerning it is what the
+module changes.
+To make that future validation possible, and to let the students' own
+ways of seeing correct the analysis, we prepare a pre/post-test that
+collects two kinds of data.
+It is a pair of diagnostic quizzes, run at the start and again at the
+end of the Git module, set up in the learning platform by the literate
+program of \cref{app:quiz}.
+The CS programme's own course runs the same module, with the material,
+quizzes included, copied over by hand; nothing is deployed there, but
+the analysis fetches that course's reports too and pools them with the
+main course's, each row tagged with its course, so the two cohorts can
+be analysed together or apart.
+
+The first kind is closed: one graded item per candidate critical aspect
+(\cref{tab:aspects}), whose distractors express the
+documented misconceptions and the plausible behaviour of a learner who
+has not discerned the aspect.
+This is the usual shape of a diagnostic instrument
+\autocite{KaltakciGurel2015Diagnostics} and of the pre- and post-tests
+with which a learning study checks whether the aspects it taught were
+the critical ones \autocite[Ch.~7]{NCOL}; no Git-specific instrument of
+this kind exists---the nearest is a concept inventory for operating
+systems internals \autocite{WebbTaylor2014OSCI}, and the nearest in
+spirit are the exam items instructors write where Git is a stated
+learning objective \autocite{Beckman2021GitLearningObjective}---so we
+write one (\cref{sec:protocol-measurement}).
+Following the principle that a test of discernment must not point out
+the aspect to be discerned \autocite[p.~91]{NCOL}, each item shows a
+concrete command and its behaviour, or a concrete situation, and leaves
+the interpretation to the student.
+Administered at the start, the closed items measure which aspects the
+students already discern; administered again at the end, the paired
+difference per item measures what the module made discernible, and the
+distractors chosen tell which misconception stood in the way.
+The closed items therefore operationalise the analysis of
+\cref{sec:model,sec:staging,sec:branches,sec:remotes}: they can confirm
+or refute the aspects we argued for, but they cannot find an aspect we
+did not think of, since every alternative was written by us.
+One caveat belongs here: the course module teaches cloning, adding,
+committing and pushing, and touches branching and merging only lightly,
+so the branch items measure what the students bring more than what the
+module changes; they stay, because the aspects are the paper's, and a
+flat pre/post line on them is itself a finding about the module.
+
+The second kind is open, and is there to find the aspects we did not
+think of.
+Six ungraded items ask the students for their own account of a shared
+stimulus---what Git is and what happens when it is asked to keep their
+work; what Git holds after an edit, a \texttt{git add} and a \texttt{git commit}, and
+what a teammate would receive; how they would record the change to one
+file but not another; what they picture a branch to be and how they
+would look at a teammate's; what a small history with a merge in it
+shows; and what has happened when a teammate's fresh clone lacks a
+commit made an hour ago.
+Three are the open twins of closed items, so that the account and the
+choice of the same student can be compared, and so that the commit
+item, whose alternatives would teach the snapshot model, can still be
+asked at the start in open form.
+These accounts are phenomenographic data in the strict sense: the
+students' own descriptions of how they experience the phenomenon
+\autocite{Phenomenography}.
+No phenomenographic study of Git exists to follow
+(\cref{sec:protocol-measurement}); the nearest qualitative work
+interviews professionals, who can state Git's conceptual model yet work
+in ritual workflows out of fear of its hidden state
+\autocite{Church2014HiddenDependencies}, and students about their
+experience of GitHub in a course \autocite{Feliciano2016GitHubStudents},
+neither of which asks what a commit, a branch or a clone \emph{is} to
+the learner.
+We analyse the accounts as the companion paper does for the shell
+\autocite{VTTerminal}: pooled per item and read for qualitatively
+different ways of experiencing the phenomenon, which are sorted into
+categories of description and ordered into an outcome space.
+The critical aspects then fall out of the comparison: what a more
+powerful way of seeing discerns that a less powerful one does not is,
+by definition, an aspect critical for the learners in the lower category
+\autocite[Ch.~2]{NCOL}.
+Accounts from the start and the end of the module show, in addition,
+the movement of individual students between categories.
+The coding is inductive and done by hand; a language model drafts a
+category and a discerned/undiscerned note per account, kept in separate
+columns, to speed the reading of a large cohort (\cref{app:quiz-analysis}).
+
+The end quiz also teaches: after submission it shows, for every item, an
+answer---for a closed item the correct alternative with a short account
+of why, for an open item a \emph{provisional} outcome space, three or
+four ways of seeing the phenomenon ordered from a first impression to
+the way of seeing the module aims at, posited from the candidate aspects
+until the first cohort's accounts supply the empirical one
+(\cref{app:open-items}).
+The start quiz hides all of it, so the accounts are written without it
+in view, and the provisional spaces are kept from the coder and from the
+pre-coding prompt, so that what the analysis finds is not what we put
+in.
+
+The order of inference matters, and so does its separation.
+The open accounts of the first cohort are exploratory: an aspect that
+emerges from them has not been tested by that cohort's closed items,
+which were written from the literature-derived aspects before the
+accounts were read.
+Such an aspect earns a closed item in the next cohort's quiz, where it
+is tested on students whose accounts played no part in finding it; we
+never validate an aspect against the same cohort's closed answers from
+which it was read off.
+For the same reason the open items come before the closed ones in the
+quiz, so that the distractors---which spell out the candidate
+conceptions---cannot seed the accounts (\cref{app:open-items}).
+A later cohort can also be given a two-tier form of the closed items,
+asking the student to justify the chosen alternative, once the categories
+to expect are known; for the first cohort that would only confirm what
+we put into the distractors.
+
+The written accounts have the reach of a whole cohort but not the depth
+of a conversation.
+We therefore plan a small interview sub-study after the module:
+semi-structured phenomenographic interviews with six to ten volunteers,
+whose prompts are the six open stems followed up in conversation, with
+\enquote{what do you understand by a commit, a branch, a remote?} added
+so that the objects of \cref{sec:model,sec:branches,sec:remotes} are
+each asked about directly.
+The transcripts are analysed together with the written accounts into one
+outcome space; the interviews are where a category seen only dimly in the
+accounts is confirmed or dissolved, and they are the counterpart of the
+think-aloud sessions in the companion debugging study \autocite{VTDebug}.
+
+The pre/post-test is one of two data sources the follow-up will have.
+The other is the course's own assessment: the grading pipeline clones
+every student's repository and runs per-repository checks, and each
+check operationalises one of the candidate critical aspects---so each
+check failure is an observation of an undiscerned aspect, collected by
+the assessment the course already runs.
+The pushed histories additionally carry process data (commit
+granularity and timing, message content, branch use), the
+repository-data perspective of \textcite{Cochez2013DVCSUsage} applied
+to our own course; mining student repositories
+\autocite{Hamer2021GitMetrics} and process-mining VCS interaction logs
+\autocite{Ardimento2022ProcessMining} are established approaches we
+build on.
+The two sources are kept methodologically separate to avoid
+circularity: misconception codes derived from the assessment traces are
+never correlated with those same traces; the pre/post-test is the
+independent measure of discernment.
+Participation is opt-in through the consent item of the pre-test, which
+covers course submissions, the end-of-module quiz and the interviews;
+grading runs for all students regardless, and research extraction
+filters by consent afterwards.

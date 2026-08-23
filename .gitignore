@@ -341,3 +341,10 @@ pythontex_data.pkl
 py_*.stdout
 didactic_output_*.txt
 __pycache__/
+
+# woven and tangled from the appendix literate program (quiz.nw)
+quiz.tex
+quiz-knowledge-start.json
+quiz-knowledge-end.json
+analyze_quiz.py
+noweb_lexer.py
