@@ -103,7 +103,11 @@ sole, must-submit item of its own datintro26 module ("Git pre-test" /
 "Git post-test"), and the appendix prose gives the `modules
 create`/`modules edit --prerequisite` commands that chain pre-test →
 Collaboration (the Git module) → post-test, restating Collaboration's
-existing prerequisite "The terminal".
+existing prerequisite "The terminal". Deployed 2026-08-23 to datintro26
+(modules at positions 5 and 7, Collaboration at 6; quiz ids 394105 /
+394106), unpublished; settings read back from the New Quizzes API and
+confirmed. Test changes in "Sandbox dbosk" first and delete the test
+artefacts afterwards; re-sync item edits with `canvaslms quizzes edit`.
 Items are keyed by title in the Canvas report (substring match — no open
 title may be a substring of a closed one); `analyze_quiz.py` reads the
 answer key from the tangled **end**-quiz JSON, skips items a report does
