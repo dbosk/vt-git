@@ -19,6 +19,12 @@ branches explicitly as pointers into the commit history
 In variation-theory terms: lacking Git's notional machine, the learner
 substitutes the file-system model they already master (cf.\ the companion
 paper on the terminal \autocite{VTTerminal}).
+The directory picture need not even be a substitution: in Subversion a
+branch \emph{is} a directory in the repository, conventionally under
+\texttt{branches/} \autocite[Ch.~4]{SVNBook}, so a learner who has met
+that system carries over a model that was correct there; the open
+accounts of \cref{sec:method-instruments} are where the two origins can
+be told apart.
 
 \mode<presentation>{%
 \begin{frame}
@@ -45,7 +51,12 @@ requires.
 
 \begin{description}
   \item[A branch is a pointer, not a place]
-    Switching branches changes what the working tree shows, in place.
+    The project exists in several concurrent versions; a branch names
+    one of them, and switching changes which version the one working
+    tree shows, in place.
+    The essence is the concurrent versions, not the pointer mechanism:
+    a learner who has discerned that the same project is there several
+    times over has discerned the aspect, whatever word they use.
     Read off the documented attempt to \texttt{cd} into a branch
     \autocite{IsomottonenCochez2014}, and off the hidden dependency of
     the files on disk on the current branch

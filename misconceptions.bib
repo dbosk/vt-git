@@ -1107,6 +1107,41 @@
   doi       = {10.1145/3770762.3772618},
 }
 
+% === provenance: SVNBook ===
+% CLAIM: In Subversion a branch is an ordinary directory in the repository
+%   (a copy, conventionally placed under /branches); Subversion has no
+%   internal concept of a branch.  (Cited for the conjecture that the
+%   branch-as-directory conception may be a correct Subversion model
+%   carried over to Git.)
+% FOUND-VIA: known-item verification, not a search: the reviewer's comment
+%   on draft v2 (2026-08-23) named Subversion; the official book was
+%   fetched at https://svnbook.red-bean.com/en/1.7/svn.branchmerge.using.html
+%   and the claim checked there.
+% PICKED: the canonical reference manual for the tool, by its authors; a
+%   statement about how a system works is backed by its documentation, not
+%   by an empirical study.
+% QUOTE (Ch. 4, "Using Branches"): "Subversion has no internal concept of a
+%   branch---it knows only how to make copies."
+% QUOTE (Ch. 4, "Using Branches"): "Subversion's branches exist as normal
+%   filesystem directories in the repository."
+% QUOTE (Ch. 4, "Using Branches"): "Most teams follow a convention of
+%   putting all branches into a /branches directory, but you're free to
+%   invent any policy you wish."
+% VERIFIED: the online book page read (curl, 2026-08-23); entails the
+%   claim.  The carry-over itself is stated as a conjecture in the prose
+%   and is not claimed to be documented.
+% DATE: 2026-08-23
+@book{SVNBook,
+  author    = {Collins-Sussman, Ben and Fitzpatrick, Brian W. and Pilato,
+               C. Michael},
+  title     = {Version Control with {Subversion}: For {Subversion} 1.7},
+  publisher = {O'Reilly Media},
+  year      = {2011},
+  note      = {Online edition; copyright 2002--2011},
+  url       = {https://svnbook.red-bean.com/en/1.7/},
+  urldate   = {2026-08-23},
+}
+
 % Companion papers (self-references; no external verification needed).
 @unpublished{VTProgMisconceptions,
   title={Introductory programming through the lens of variation theory},

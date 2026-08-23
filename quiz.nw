@@ -68,6 +68,11 @@ complete the moment it is opened and the prerequisite would lock
 nothing.
 The modules and the quizzes are created unpublished; the teacher
 releases them when the course opens.
+Later changes to the items are pushed with [[canvaslms quizzes edit -c
+datintro26 -a <quiz id> -f <json> --replace-items]]; the tool's cached
+quiz listing does not see a quiz created by the tool itself until the
+cache is bypassed with [[--no-cache]] (canvaslms issue~425), so that
+flag goes on the command.
 Before the course was touched, the same commands were run against a
 sandbox course and the settings read back through the New Quizzes
 API, which is how a quiz's result view is checked rather than assumed
@@ -369,8 +374,8 @@ that supplies either would be doing the discerning
 The second item is the open twin of the closed item \emph{what a commit
 keeps}, which the start quiz leaves out because its alternatives spell
 out the snapshot model (\cref{app:knowledge-items}).
-It shows a small project, an edit to one file, and the two commands that
-record it, and asks what Git now holds and what a teammate would receive
+It shows a small report, an edit to one file, and the two commands that
+record it, and asks what Git now holds and what a co-author would receive
 with that commit.
 The second question is there to make the account concrete: a student
 who pictures the commit as the changed lines, as the one file, or as the
@@ -386,7 +391,7 @@ do; the stem does not say what a commit \emph{is}
   "points_possible": 0,
   "entry": {
     "title": "What Git has kept",
-    "item_body": "<p>A project has three files: main.py, helpers.py and README.md. You edit helpers.py and then run:</p><pre>$ git add helpers.py\n$ git commit -m \"Fix rounding\"</pre><p>What does Git now hold on to, and what would a teammate receive who later gets that commit from you? Write in your own words; if you do not know the commands, describe what you would expect to happen.</p>",
+    "item_body": "<p>A report has three files: intro.txt, method.txt and results.txt. You edit method.txt and then run:</p><pre>$ git add method.txt\n$ git commit -m \"Describe the sample\"</pre><p>What does Git now hold on to, and what would a co-author receive who later gets that commit from you? Write in your own words; if you do not know the commands, describe what you would expect to happen.</p>",
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
@@ -434,6 +439,14 @@ prompts ask about the shell's objects \autocite{VTTerminal}; the second
 is where the branch-as-directory conception (\cref{sec:branches}) shows
 itself unprompted, as a \texttt{cd}, an \enquote{open the folder}, or a
 search for the files somewhere on disk.
+What the account is read for is the essence of the aspect: whether the
+student sees the project as existing in several concurrent versions, of
+which the branch names one and the working tree shows one at a time.
+A folder picture is one way of not seeing that; it may also be a correct
+picture of another system carried over, since in Subversion a branch
+\emph{is} a directory in the repository \autocite[Ch.~4]{SVNBook}, so
+an account that says \enquote{the branches folder} is a category to
+look for, not only an error.
 The word \emph{directory} and the word \emph{folder} are kept out of the
 stem, since either would hand over the comparison the closed item's
 alternatives make \autocite[p.~91]{NCOL}.
@@ -470,7 +483,7 @@ is an account.
   "points_possible": 0,
   "entry": {
     "title": "Explaining a history",
-    "item_body": "<p>In a project you run git log --oneline --graph and see this:</p><pre>*   7f3e2a1 Merge branch 'feature'\n|\\\n| * 4b1c9d0 Add the plot\n* | 2a8e7f6 Fix the title\n|/\n* c1d0e5b First draft</pre><p>Explain, in your own words, what this shows: what happened in this project, in what order, and what the stars and lines mean.</p>",
+    "item_body": "<p>In a project you run git log --oneline --graph and see this:</p><pre>*   7f3e2a1 Merge branch 'feature'\n|\\\n| * 4b1c9d0 Write the results\n* | 2a8e7f6 Fix the title\n|/\n* c1d0e5b First draft</pre><p>Explain, in your own words, what this shows: what happened in this project, in what order, and what the stars and lines mean.</p>",
     "interaction_type_slug": "essay",
     "interaction_data": {"rce": false, "word_limit_enabled": false},
     "scoring_data": {"value": ""},
@@ -526,6 +539,13 @@ item names the aspect it tests and why the distractors are the mistakes
 they are, and cites the source of a documented one.
 The correct alternative is kept about as long as the distractors, since
 the longest alternative is a known cue for test-wise students.
+The files in the stems are the chapters and notes of a report
+([[intro.txt]], [[method.txt]], [[notes.txt]]), not source code: the
+course teaches Git to students who have not necessarily met a
+programming language, and a stem in Python would ask them to discern
+the commit model through an unfamiliar artefact; a report is what they
+will version in the course.
+The same holds for the open items above.
 All items weigh one point: we measure knowledge by counting correct
 answers, and \cref{app:quiz-analysis} reports them item by item, since
 each item stands for one aspect.
@@ -557,10 +577,10 @@ answerable by comparison, the item that stands on its own comes first.
 
 A commit is a snapshot of the whole project, not a stored difference
 (\cref{sec:model}).
-The item shows a three-file project, an edit to one file, and the
+The item shows a three-file report, an edit to one file, and the
 [[add]]/[[commit]] pair that records it, and asks what the commit
 records.
-The correct answer is the whole project as it stood; the leading
+The correct answer is the whole report as it stood; the leading
 distractor is the commit-as-diff reading---only the changed lines---and
 the next is the partial-snapshot reading that only the edited file is
 kept; the last defers recording to the push.
@@ -583,13 +603,13 @@ gap there.
   "points_possible": 1,
   "entry": {
     "title": "What a commit keeps",
-    "item_body": "<p>A project has three files: main.py, helpers.py and README.md. You edit helpers.py and then run:</p><pre>$ git add helpers.py\n$ git commit -m \"Fix rounding\"</pre><p>What does that commit record?</p>",
+    "item_body": "<p>A report has three files: intro.txt, method.txt and results.txt. You edit method.txt and then run:</p><pre>$ git add method.txt\n$ git commit -m \"Describe the sample\"</pre><p>What does that commit record?</p>",
     "interaction_type_slug": "choice",
     "interaction_data": {
       "choices": [
-        {"position": 1, "item_body": "<p>Only the lines you changed in helpers.py&mdash;the difference from the previous version</p>"},
-        {"position": 2, "item_body": "<p>Only helpers.py; main.py and README.md are not part of this commit</p>"},
-        {"position": 3, "item_body": "<p>The whole project as it stood&mdash;all three files, with helpers.py in its new state</p>"},
+        {"position": 1, "item_body": "<p>Only the lines you changed in method.txt&mdash;the difference from the previous version</p>"},
+        {"position": 2, "item_body": "<p>Only method.txt; intro.txt and results.txt are not part of this commit</p>"},
+        {"position": 3, "item_body": "<p>The whole report as it stood&mdash;all three files, with method.txt in its new state</p>"},
         {"position": 4, "item_body": "<p>Nothing yet; the commit is recorded when you push it to the server</p>"}
       ]
     },
@@ -651,7 +671,7 @@ the latest version, or a single backup file.
   "points_possible": 1,
   "entry": {
     "title": "Where earlier versions live",
-    "item_body": "<p>In a project, git log --oneline shows:</p><pre>c3d4e5f Add the plot\nb2c3d4e Fix the title\na1b2c3d First draft</pre><p>Where is the version &ldquo;First draft&rdquo; kept, and how would you get the project back to it?</p>",
+    "item_body": "<p>In a project, git log --oneline shows:</p><pre>c3d4e5f Write the results\nb2c3d4e Fix the title\na1b2c3d First draft</pre><p>Where is the version &ldquo;First draft&rdquo; kept, and how would you get the project back to it?</p>",
     "interaction_type_slug": "choice",
     "interaction_data": {
       "choices": [
@@ -849,7 +869,7 @@ named after both.
   "points_possible": 1,
   "entry": {
     "title": "What merging does",
-    "item_body": "<p>You are on branch main and run:</p><pre>$ git merge feature\nMerge made by the 'ort' strategy.\n plot.py | 20 ++++++++++++++++++++\n 1 file changed, 20 insertions(+)</pre><p>What has Git done?</p>",
+    "item_body": "<p>You are on branch main and run:</p><pre>$ git merge feature\nMerge made by the 'ort' strategy.\n results.txt | 20 ++++++++++++++++++++\n 1 file changed, 20 insertions(+)</pre><p>What has Git done?</p>",
     "interaction_type_slug": "choice",
     "interaction_data": {
       "choices": [
