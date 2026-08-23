@@ -83,3 +83,32 @@ dependencies). `% TODO`/`% XXX` comments mark the open work.
 Tooling hazard learned in that round: never run two `scholar` commands on
 the same session concurrently (`enrich`/`classify` load the session file
 and write it back, dropping searches recorded in between).
+
+## The instrument (`quiz.nw`)
+
+`quiz.nw` is a literate program (noweb; `make programs` tangles
+`quiz-knowledge-{start,end}.json` and `analyze_quiz.py`, all gitignored).
+Each quiz has an opener (consent / preparation, position 1), six open
+essay items (positions 3–8, the phenomenographic accounts; items 4, 6 and
+8 are the open twins of the closed *what a commit keeps*, *seeing another
+branch* and *why they cannot see it* — placed *before* the closed items
+and shown one at a time without backtracking so the distractors cannot
+seed the accounts) and the closed knowledge items (positions 11–22, one
+per candidate critical aspect, in chapter order; item 11 — the closed
+twin of open item 4 — is in the end quiz only, so the start quiz has 11
+closed items and the end quiz 12). `multiple_attempts` and
+`result_view_settings` are nested objects (Canvas ignores the keys written
+flat). The two JSONs carry canvaslms `modules` specs: each quiz is the
+sole, must-submit item of its own datintro26 module ("Git pre-test" /
+"Git post-test"), and the appendix prose gives the `modules
+create`/`modules edit --prerequisite` commands that chain pre-test →
+Collaboration (the Git module) → post-test, restating Collaboration's
+existing prerequisite "The terminal".
+Items are keyed by title in the Canvas report (substring match — no open
+title may be a substring of a closed one); `analyze_quiz.py` reads the
+answer key from the tangled **end**-quiz JSON, skips items a report does
+not carry, filters by consent, prints per-item facility and distractor
+counts, paired pre/post gains (`--quiz both --results start.csv end.csv`)
+and writes a long-format coding sheet for the accounts (optional `--llm`
+pre-coding in separate `suggested_*` columns). Activate the
+`literate-programming` skill before editing `quiz.nw`.
