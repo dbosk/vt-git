@@ -71,8 +71,8 @@ releases them when the course opens.
 Before the course was touched, the same commands were run against a
 sandbox course and the settings read back through the New Quizzes
 API, which is how a quiz's result view is checked rather than assumed
-(\cref{app:quiz} below explains why that matters); the sandbox copies
-were then deleted.
+(the settings below explain why that matters); the sandbox copies were
+then deleted.
 The two quizzes share their open items and, with one exception explained
 with the item (\cref{app:knowledge-items}), their knowledge items; they
 differ in what opens them.
