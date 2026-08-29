@@ -128,3 +128,17 @@ report's `id`, else `sis_id`, else an unambiguous name — ambiguity is
 warned about, never silently resolved), with (course, name) as the
 fallback for saved reports without the column. Activate the
 `literate-programming` skill before editing `quiz.nw`.
+
+## Ethics
+
+The method section ends with `\subsection{Ethics}` (`method.tex`), and
+`ethics-application-datintro26.md` in the repo root is the English working
+draft of the ethics review application for the datintro26 data collection
+(drafted, **not filed**; no reference number exists yet).  The draft is a
+byte-identical synchronised copy across vt-terminal, vt-git and vt-latex:
+edit one copy, propagate to the others in the same round, and verify with
+`md5sum ../vt-{terminal,git,latex}/ethics-application-datintro26.md`.
+The consent item wording in `quiz.nw` is deliberately identical across the
+three companion quizzes (and the prgi26 instruments) — never edit it in one
+repo alone, and do not change it before the ethics application is decided
+(see the `% XXX` marker at the consent chunk).
