@@ -124,7 +124,7 @@ the one knowledge item the start quiz leaves out
   "quiz_type": "new",
   "settings": {
     "title": "Git quiz: what you know now",
-    "instructions": "<p>This quiz repeats the Git questions from the start-of-course quiz, so that we can see what you have learned during the course. Six questions ask you to write in your own words; there are no wrong answers there, and they carry no points. Afterwards you will see your score and, for each question, the correct answer. The score does not affect your grade. Please answer on your own, without preparation, help or tools.</p>",
+    "instructions": "<p>This quiz repeats the Git questions from the start-of-course quiz, so that we can see what you have learned during the course. Six questions ask you to write in your own words; there are no wrong answers there, and they carry no points. Afterwards you will see your score and, for each question, the correct answer. The score does not affect your grade. Please answer on your own, without preparation, help or tools. Information about the research study these quizzes belong to&mdash;what is collected, how it is handled, and your rights&mdash;is on the page &ldquo;Information om forskningsstudien&rdquo; in the course's Canvas.</p>",
     "points_possible": 12,
     <<end-quiz module>>
     <<scheduling settings>>
@@ -244,9 +244,12 @@ The item titles double as the keys under which Canvas reports the
 answers, so the analysis program (\cref{app:quiz-analysis}) refers to
 the items by these titles.
 
-% XXX(#6) The consent wording must follow the approved ethics application
-% for the datintro data collection; update it when the application is
-% decided.
+The wording below is the one the cohort of autumn 2026 answered.
+The ethics assessment (\cref{sec:ethics}) found no review required, and
+the fuller wording it proposes---naming the assessment record, the
+process data and the interviews, and linking the participant information
+page---is adopted from the next cohort on, identically across the three
+companion quizzes; a deployed item is not edited under a running cohort.
 
 <<start-quiz consent item>>=
 {
@@ -1143,8 +1146,8 @@ The end quiz shows, with the correct alternative, this account of why:
 \label{app:quiz-analysis}
 
 Canvas compiles the responses into a student-analysis report: a CSV file
-with one row per student and one column per item, keyed by the item
-titles above.
+with one row per student, whose item columns the program re-keys by the
+item titles above (\cref{app:reading-the-report}).
 The analysis program fetches that report itself---we know the course and
 the quiz titles, so nothing needs to be clicked or downloaded by
 hand---using the same [[canvaslms]] machinery as the command-line tool.
@@ -1177,8 +1180,9 @@ sheet.
 
 The quizzes are defined in the two quiz-knowledge-*.json files, tangled
 from the same literate source (the appendix of the paper).  The results
-come straight from Canvas via canvaslms; the item titles are the column
-keys, and the answer key is read from the quiz description.
+come straight from Canvas via canvaslms; the report's item columns are
+re-keyed by the item titles, and the answer key is read from the quiz
+description.
 
 Requires canvaslms and its configured credentials; the optional LLM
 pre-coding requires the llm package with a default model.
@@ -1188,6 +1192,7 @@ import argparse
 import collections
 import csv
 import html
+import io
 import json
 import os
 import re
@@ -1196,6 +1201,7 @@ import sys
 
 <<the courses and the item titles are the keys>>
 <<the answer key from the quiz description>>
+<<read the report by item title>>
 <<fetch the results from Canvas>>
 <<the consent filter>>
 <<tabulate the closed items>>
@@ -1227,10 +1233,9 @@ course or a quiz it cannot find.
 The coding columns are the open scheme: a category of description, what
 the account shows the student discerning and not discerning, and notes;
 the suggested columns mirror them and add the model's rationale.
-Canvas prefixes the report's columns with item identifiers, so we match
-columns by containment rather than equality---which is why no open
-item's title may be a substring of a closed item's title, or the other
-way round (\cref{app:open-items}).
+The report does not name its columns by the titles at all; the reader
+below re-keys every row by title, so that everything after it can look
+an item up by its title alone.
 The two unscored opening items are the control items; the knowledge
 items are not listed here but read from the quiz description below.
 
@@ -1242,8 +1247,12 @@ QUIZ_TITLES = {
     "start": "Git quiz: what you know already",
     "end": "Git quiz: what you know now",
 }
-QUIZ_FILE = "quiz-knowledge-end.json"
-STUDENT = "name"
+QUIZ_FILES = {
+    "start": "quiz-knowledge-start.json",
+    "end": "quiz-knowledge-end.json",
+}
+QUIZ_FILE = QUIZ_FILES["end"]
+STUDENT = "Name"
 CONSENT = "Consent"
 CONTROL_ITEMS = [CONSENT, "Preparation"]
 OPEN_ITEMS = ["What Git is", "What Git has kept",
@@ -1255,8 +1264,9 @@ SUGGESTED_COLUMNS = [f"suggested_{key}" for key in CODED_KEYS + ["rationale"]]
 
 
 def column_for(title, fieldnames):
-    """Return the report column whose name contains the item title."""
-    return next((name for name in fieldnames if title in name), None)
+    """Return the column of the titled item, or None if it was not asked."""
+    return next((name for name in fieldnames
+                 if name.strip().lower() == title.lower()), None)
 
 
 def student_of(row):
@@ -1342,6 +1352,200 @@ def asked(rows, title):
     return bool(rows) and column_for(title, rows[0].keys()) is not None
 @
 
+\subsubsection{Reading the report}
+\label{app:reading-the-report}
+
+The student-analysis report is not the table the item titles suggest.
+Canvas writes one row per student---the [[Name]] and [[ID]], the
+sections, the submission time, the elapsed time and the attempt
+number---and then, for every item in position order, a block of five
+columns: [[ItemID]], [[ItemType]], a column named by the item's
+\emph{body text}, the points earned, and a status such as
+\enquote{Graded} or \enquote{No Answer}.
+Two things follow.
+The titles occur nowhere in the report, so the blocks have to be
+matched to the items through their bodies, which the tangled quiz
+descriptions above provide; and the four fixed headers repeat once per
+item, so the report cannot be read with [[csv.DictReader]] at all,
+since a dictionary keeps only the last of the columns that share a
+name---it has to be read positionally.
+
+Canvas flattens the HTML body into that column name without putting a
+space where a block element ended, so the last word of one paragraph
+and the first word of the next arrive joined into one.
+Normalising the whitespace cannot repair that, because the space was
+never written; discarding whitespace altogether can, because both
+sides then lose the same thing.
+The body alone would still not be a safe key---two items may share a
+body and differ only in how they are answered---so the item type joins
+it, and the pair is unique for every item of every quiz here.
+
+The two sides do not arrive equally marked up either: the description
+is HTML, the column is the text Canvas made of it, with the tags gone
+and the entities resolved.
+So the tags are stripped from the description alone, and then both
+sides resolve entities and drop whitespace.
+Stripping tags from the column too would be wrong, not merely
+redundant: an item whose body shows an angle bracket writes it as
+[[&lt;module&gt;]], which the column shows as the bracket itself, and
+the tag pattern would swallow it on that side only, so the item would
+never match.
+
+<<read the report by item title>>=
+SPACES = re.compile(r"\s+")
+
+
+def item_key(kind, text):
+    """Return the key under which a report block matches an item.
+
+    The item type and the text stripped of all whitespace, since Canvas
+    drops the spaces between block elements when it flattens the body
+    into a column name; entities are resolved so that a description and
+    a column that write a character differently still agree.
+    """
+    return kind, SPACES.sub("", html.unescape(text))
+@
+
+The bodies to match against come from the quiz descriptions tangled
+above, which is the
+point of reading them here rather than writing the bodies down a
+second time: an item whose wording is edited is edited in one place,
+and the report can never be re-keyed by a title Canvas was never asked
+about.
+The items are sorted by position because the report's block order is
+the item order, which is what the fallback below leans on.
+Discarding the whitespace costs a little of what tells two items
+apart, so the map is asked whether it still has one key per item: a
+pair that collapsed into one would quietly hand both blocks the same
+title, which is the only way this can go wrong without a block failing
+to match at all.
+
+<<read the report by item title>>=
+def item_titles(path):
+    """Return the item titles of a quiz description file.
+
+    A pair: the map from item key (see item_key) to title, and the
+    titles in position order, the fallback when a block matches none.
+    """
+    with open(path) as infile:
+        items = sorted(json.load(infile)["items"],
+                       key=lambda item: item["position"])
+    order = [item["entry"]["title"] for item in items]
+    keys = {item_key(item["entry"]["interaction_type_slug"],
+                     TAGS.sub(" ", item["entry"]["item_body"])): title
+            for item, title in zip(items, order)}
+    if len(keys) < len(order):
+        print(f"warning: two items of {os.path.basename(path)} share a"
+              f" body and a type; their blocks cannot be told apart")
+    return keys, order
+@
+
+A block whose body matches no item is not a reason to stop: a report
+older than the description, or an item last edited in Canvas rather
+than here, would otherwise cost us the entire analysis.
+Since the blocks come in item order, position answers where the body
+does not---but it answers by assumption, so the program says which
+title it took, and a mismatch stays visible instead of being absorbed
+into a plausible-looking table.
+The type of a block is not in the header but in the rows, where every
+row repeats it, so a block is named from the first row of data.
+
+<<read the report by item title>>=
+def block_title(index, kind, body, titles):
+    """Return the title of the item behind the index-th block."""
+    keys, order = titles
+    title = keys.get(item_key(kind, body))
+    if title is None:
+        title = order[index] if index < len(order) else body
+        print(f"warning: report column {body[:40]!r}... matches no item"
+              f" body; taken as {title!r} by position")
+    return title
+@
+
+An item nobody reached earns an empty cell rather than a zero, and a
+report Canvas has not finished grading can leave a cell that is not a
+number at all.
+Neither contributed anything to the score, so the conversion answers
+with nothing rather than raising: a score is a summary, and refusing
+to compute one because a single student stopped halfway would lose the
+rest of the cohort with it.
+
+<<read the report by item title>>=
+def points(cell):
+    """Return the points a block's cell records, 0 for an empty one."""
+    try:
+        return float(cell)
+    except ValueError:
+        return 0.0
+@
+
+Reading the report is then two steps: settle where the blocks are and
+what each of them is called, which the header and the first row of
+data answer once for the whole file, and rewrite every row against
+that.
+The block is always five columns in the same order, so the layout is
+written down once and read out by name.
+The text goes to the CSV reader as a stream rather than split into
+lines first, so that a line break inside a quoted answer reaches the
+reader as it was written.
+
+<<read the report by item title>>=
+BLOCK_WIDTH = 5
+BLOCK_TYPE, BLOCK_BODY, BLOCK_EARNED = 1, 2, 3
+SCORE_COLUMN = "score"
+
+
+def read_report(text, titles):
+    """Return the rows of a student-analysis report, keyed by title.
+
+    The student columns keep their names; each item block becomes one
+    column, the answer under the item's title; the points earned are
+    summed into a "score" column.
+    """
+    reader = csv.reader(io.StringIO(text, newline=""))
+    header = next(reader, None)
+    data = [values for values in reader if any(values)]
+    if not header or not data:
+        return []
+    <<locate the item blocks in the header>>
+    <<re-key each row by item title>>
+@
+
+The header is what says where the blocks are: [[ItemID]] opens every
+one of them and occurs nowhere else, so the columns each block spans
+follow from its first, and every column outside them is a student
+column that keeps the name Canvas gave it.
+
+<<locate the item blocks in the header>>=
+starts = [i for i, name in enumerate(header) if name == "ItemID"]
+student = [i for i in range(len(header))
+           if not any(start <= i < start + BLOCK_WIDTH
+                      for start in starts)]
+blocks = [(start, block_title(index, data[0][start + BLOCK_TYPE],
+                              header[start + BLOCK_BODY], titles))
+          for index, start in enumerate(starts)]
+@
+
+A row can be shorter than the header, since Canvas drops the trailing
+cells of a student who stopped answering, so it is padded before
+anything is read out of it---which is also what turns those items into
+the empty answers [[points]] expects rather than an index error.
+The points go under the name the score summary looks for, so the
+summary needs to know nothing about blocks.
+
+<<re-key each row by item title>>=
+rows = []
+for values in data:
+    values = values + [""] * (len(header) - len(values))
+    row = {header[i]: values[i] for i in student}
+    row[SCORE_COLUMN] = str(sum(points(values[start + BLOCK_EARNED])
+                                for start, _ in blocks))
+    for start, title in blocks:
+        row[title] = values[start + BLOCK_BODY]
+    rows.append(row)
+return rows
+@
+
 \subsubsection{Fetching the report from Canvas}
 
 Just as we create the quizzes with [[canvaslms]], we extract the results
@@ -1350,10 +1554,18 @@ the report machinery, so the program reuses them instead of
 reimplementing the Canvas API calls.
 The report is generated on demand by Canvas, so we request it, wait for
 it, and download the CSV it points to.
+Canvas serves the file as UTF-8 without declaring it, and [[requests]]
+then guesses Latin-1, which turns every Swedish letter in the students'
+answers into two wrong characters; decoding the bytes ourselves avoids
+the guess.
 
 <<fetch the results from Canvas>>=
-def fetch_results(which):
-    """Download and pool the student-analysis rows of all courses."""
+def fetch_results(which, titles):
+    """Download and pool the student-analysis rows of all courses.
+
+    Each course's rows are re-keyed by item title (see read_report) and
+    tagged with the course they come from.
+    """
     import appdirs
     import requests
     import canvaslms.cli
@@ -1403,10 +1615,10 @@ def fetch_results(which):
             sys.exit(f"Canvas did not produce the report for {course_code}")
         response = requests.get(url)
         response.raise_for_status()
-        course_rows = []
-        for row in csv.DictReader(response.text.splitlines()):
+        course_rows = read_report(response.content.decode("utf-8-sig"),
+                                  titles)
+        for row in course_rows:
             row[COURSE_COLUMN] = course_code
-            course_rows.append(row)
         <<attach the login IDs>>
         rows.extend(course_rows)
     return rows
@@ -1416,13 +1628,16 @@ The report does not carry the login ID, the identifier the rest of the
 analysis keys by ([[student_of]] above), so it is attached from the
 course roster.
 Names cannot identify a student---two students can share a name within
-one course---so a row is matched to the roster by the report's [[id]]
-column (the Canvas user id) where it has one, else by [[sis_id]], and
-only as a last resort by a name that is unambiguous in that course.
+one course---so a row is matched to the roster by the report's [[ID]]
+column (the Canvas user id) where it has one, else by an [[sis_id]]
+column should a report carry one, and only as a last resort by a
+[[Name]] that is unambiguous in that course.
+The columns are looked up without regard to case, since the report
+capitalises them and a report saved by other hands need not.
 An ambiguous name with no usable ID column is reported and left on the
-course-and-name fallback rather than silently mis-joined; whether the
-report carries the ID columns can only be confirmed once real
-submissions exist, so the chain covers every case.
+course-and-name fallback rather than silently mis-joined, and a report
+carrying neither ID column still joins by name, so the chain covers
+every case.
 
 <<attach the login IDs>>=
 by_id, by_sis, by_name = {}, {}, {}
@@ -1435,18 +1650,22 @@ for user in course.get_users(enrollment_type=["student"]):
     if sis:
         by_sis[str(sis)] = user_login
     by_name.setdefault(user.name, []).append(user_login)
+columns = course_rows[0] if course_rows else {}
+id_column = next((c for c in columns if c.strip().lower() == "id"), None)
+sis_column = next((c for c in columns
+                   if c.strip().lower() == "sis_id"), None)
 for row in course_rows:
     login = None
-    if row.get("id"):
-        login = by_id.get(str(row["id"]))
-    if login is None and row.get("sis_id"):
-        login = by_sis.get(str(row["sis_id"]))
+    if id_column and row.get(id_column):
+        login = by_id.get(str(row[id_column]).strip())
+    if login is None and sis_column and row.get(sis_column):
+        login = by_sis.get(str(row[sis_column]).strip())
     if login is None:
-        candidates = by_name.get(row[STUDENT], [])
+        candidates = by_name.get(row.get(STUDENT, ""), [])
         if len(candidates) == 1:
             login = candidates[0]
         elif len(candidates) > 1:
-            print(f"warning: ambiguous name {row[STUDENT]!r} in"
+            print(f"warning: ambiguous name {row.get(STUDENT)!r} in"
                   f" {course_code} and no usable ID column;"
                   f" falling back to course and name")
     if login:
@@ -1700,13 +1919,15 @@ one by one, the scores.
 With both quizzes it adds the paired gains, and it always writes the
 coding sheet for whatever accounts it has read.
 The quiz file defaults to the tangled end quiz next to the program,
-since that is the one that carries every item.
+since that is the one that carries every item; the titles that re-key
+each report come from the description of that same quiz, found next to
+the answer-key file.
 
 <<analysis main>>=
-def read_rows(path):
-    """Read a saved student-analysis report."""
-    with open(path, newline="") as infile:
-        return list(csv.DictReader(infile))
+def read_rows(path, titles):
+    """Read a saved student-analysis report, keyed by item title."""
+    with open(path, encoding="utf-8-sig", newline="") as infile:
+        return read_report(infile.read(), titles)
 
 
 def main():
@@ -1728,12 +1949,16 @@ def main():
     args = parser.parse_args()
 
     which = ["start", "end"] if args.quiz == "both" else [args.quiz]
+    directory = os.path.dirname(os.path.abspath(args.quiz_file))
+    titles = {quiz: item_titles(os.path.join(directory, QUIZ_FILES[quiz]))
+              for quiz in which}
     if args.results:
         if len(args.results) != len(which):
             sys.exit(f"expected {len(which)} results file(s) for {args.quiz}")
-        rows = dict(zip(which, map(read_rows, args.results)))
+        rows = {quiz: read_rows(path, titles[quiz])
+                for quiz, path in zip(which, args.results)}
     else:
-        rows = {quiz: fetch_results(quiz) for quiz in which}
+        rows = {quiz: fetch_results(quiz, titles[quiz]) for quiz in which}
     if not all(rows.values()):
         sys.exit("no responses")
     knowledge, stems = load_quiz(args.quiz_file)
