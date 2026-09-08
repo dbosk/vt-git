@@ -1,11 +1,14 @@
-# Ethics review application — datintro26 data collection (working draft)
+# Ethics assessment and data-protection documentation — datintro26 data collection (not subject to the Ethics Review Act)
 
-**Status:** draft, not filed. No reference number exists. Nothing here has been
-approved, and no research use is made of any collected data until the review is
-decided.
+**Status:** assessed 2026-09-01 — the collection is **not subject to the
+Ethics Review Act**, so no application is filed and no reference number will
+exist (§12). This document is the internal ethics self-assessment of the
+collection and the basis for the participant information
+(`participant-information-datintro26.md`, §11). It was drafted as a review
+application, which is why it keeps an application's structure.
 
-**Language:** English working draft; the filed version will be in Swedish
-(portal and form to be confirmed — see §12 and §13).
+**Language:** English; the participant information is in Swedish and
+English.
 
 **Covers the data collection behind:** the three companion papers
 [dbosk/vt-terminal](https://github.com/dbosk/vt-terminal),
@@ -16,7 +19,7 @@ decided.
 above. Edit one copy, propagate to the others in the same round, and verify:
 `md5sum ../vt-{terminal,git,latex}/ethics-application-datintro26.md`
 
-**Last synchronised:** 2026-08-29
+**Last synchronised:** 2026-09-08
 
 ---
 
@@ -29,15 +32,18 @@ above. Edit one copy, propagate to the others in the same round, and verify:
   (`dbosk@kth.se`). *School/department affiliation: [TO FILL].*
 - **Other personnel:** the course's teachers and teaching assistants, who
   administer the course as usual and, where they act as coders of research
-  data, do so under the PI's direction. *(Named list: [TO FILL before
-  filing].)*
+  data, do so under the PI's direction. *(Named list: [TO FILL].)*
 - **Data controller:** KTH Royal Institute of Technology.
 - **Funding:** none specific to the study; conducted within the PI's ordinary
-  teaching and research duties. *(Confirm before filing.)*
+  teaching and research duties. *(Confirm.)*
 - **Collection:** the "datintro26 data collection" — the autumn 2026 instance
   of KTH's introductory computing-introduction course (datintro26) and the
-  CS programme's parallel course running the same modules (2026 course code to
-  be confirmed; tracked as vt-git#9, vt-latex#6, vt-terminal#7).
+  CS programme's parallel course running the same modules. In Canvas
+  (2026-09-08) the terminal pre-/post-tests are deployed in DD1317 HT26
+  (prgi26) as well as in datintro26, and the Git and LaTeX ones in
+  datintro26 only; *[PI to confirm that DD1317 is the parallel course and
+  that it runs only the terminal module]* (tracked as vt-git#9, vt-latex#6,
+  vt-terminal#7).
 - **Period:** autumn term 2026; the course's grading (and hence assessment-trace
   accrual) runs the full academic year; interviews after each module.
 - **Papers fed:** the three companion papers above, each covering one module
@@ -52,7 +58,7 @@ document preparation with LaTeX. Each study first maps the misconceptions and
 difficulties the literature documents, derives from them the *critical
 aspects* a learner must discern, and constructs *patterns of variation* that
 can make those aspects discernible. The analytical part requires no human
-data. The data collection covered by this application serves the empirical
+data. The data collection covered by this document serves the empirical
 validation: measuring which of the derived aspects the course's students do
 and do not discern, and letting the students' own accounts correct the
 analysis.
@@ -138,7 +144,7 @@ language model drafts a suggested category per account in separate
 
 | Source | Content | Personal-data category | Identifiers | Pseudonymisation | Retention |
 |---|---|---|---|---|---|
-| Pre/post quizzes (closed items) | chosen alternatives, scores | ordinary (study performance) | platform name + login ID | analysis keys on login ID; name only in coding sheet | [TO FILL: KTH retention rule] |
+| Pre/post quizzes (closed items) | chosen alternatives, scores | ordinary (study performance) | platform name + login ID | analysis keys on login ID; name only in coding sheet | archived securely for at least 10 years (KTH's rule, in the wording of KTH's consent template) |
 | Pre/post quizzes (open items) | free-text accounts of the phenomenon | ordinary (student-written text) | as above | as above; quotes anonymised in publication | as above |
 | Assessment traces (all three) | grading check pass/fail per attempt, attempt timing | ordinary (study performance) | repository/account identity → login ID | login ID key | as above |
 | Git process data (vt-git only) | commit granularity and timing, commit messages, branch use from the students' course repositories | ordinary; commit messages are student-written text | repository identity → login ID | login ID key; messages quoted only anonymised | as above |
@@ -186,11 +192,16 @@ the next):
 - **Non-participation:** a non-consenting student's data is never extracted
   for research. The grading record remains the course's own administrative
   record, as for any course, and is not research data.
-- **Known limitation of the current wording:** the phrase "these quizzes, and
-  my submissions in the course" is narrower than a reader of this application
-  might expect for the assessment-trace and process-data sources. Proposed
-  improved wording, to be adopted once this application is decided (the papers
-  deliberately freeze the deployed wording until then):
+- **Deployed wording and its scope (decided 2026-09-08):** the phrase "these
+  quizzes, and my submissions in the course" is narrower than a reader of
+  this document might expect for the assessment-trace and process-data
+  sources. The wording stays as deployed for the HT26 cohort, who have
+  already answered it; what closes the gap for them is the participant
+  information sheet (§11), delivered at the end of the course (a Canvas page
+  in the course's closing module, linked from the post-tests) and by email
+  to everyone who answered Yes. The improved wording below is adopted for
+  the next cohort — and, for the parallel prgi26 collection, which had not
+  been deployed when the route was decided, from the start:
 
   > I consent to my answers in this module's quizzes, my course submissions
   > and the course's assessment record of them, and — if I separately agree to
@@ -199,8 +210,11 @@ the next):
   > grade, and I can withdraw at any time by contacting the responsible
   > researcher.
 
-- A **participant information sheet** (§11) will accompany the consent item
-  and spell out scope, storage, rights, and contacts.
+- The **participant information sheet** (§11,
+  `participant-information-datintro26.md`) spells out purpose, scope,
+  storage, rights and contacts. It is the GDPR information the students
+  receive (route above); from the next cohort it is linked from the consent
+  item itself.
 
 ## 7. Data management
 
@@ -211,8 +225,9 @@ the next):
   is accessed by the research team only.
 - **Pseudonym key:** the student's login ID (an institutional identifier). The
   coding sheet is the only artefact where name, login ID and data co-occur.
-- **Retention and deletion:** [TO FILL per KTH's rules for research data;
-  recordings deleted after verified transcription].
+- **Retention and deletion:** the data is archived securely for at least
+  10 years per KTH's rules (the wording of KTH's consent template);
+  recordings are deleted after verified transcription.
 - **Third-party processing:**
   - *Canvas* (the learning platform) hosts the quizzes and submissions as the
     course's ordinary platform; research extraction happens via its API.
@@ -221,23 +236,33 @@ the next):
     if Zoom, note KTH's agreement].
   - *Language-model pre-coding:* the analysis programs can send the open
     free-text answers to a large language model to draft suggested codes
-    (kept in separate columns, always human-verified). **[TO FILL: which
-    model/service, under what agreement, and whether submitted data is used
-    for training; alternative: a locally hosted model.]** Until this is
-    settled, pre-coding is not run on real student data.
+    (kept in separate columns, always human-verified). **Decided
+    2026-09-08:** the analysis program anonymises the text *before* the
+    model sees it — it strips the login ID and the name, applies the
+    redaction rule of §5(b), sends the text under an opaque index, and joins
+    the suggested codes back onto the pseudonymised rows itself. The model
+    thus sees only what could be published (§10), so no personal data is
+    disclosed and no processor agreement is needed. Until that pipeline is
+    implemented in the analysis programs, pre-coding is not run on real
+    student data.
 - No data leaves the EU/EES except as covered by the platform agreements
   above. *(Verify each.)*
 
-## 8. Legal basis (GDPR) — proposed, to be confirmed
+## 8. Legal basis (GDPR)
 
-Proposed, not asserted: processing is necessary for a task in the public
-interest (Art. 6(1)(e) — research at a state university), with the safeguards
-of Art. 89 and the Swedish supplementary provisions (lagen (2018:218) med
-kompletterande bestämmelser till EU:s dataskyddsförordning; forskningsdatalagen
-context). Consent per §6 is the *ethical* basis for participation; it is not
-necessarily the *legal* basis for the processing, and the two must not be
-conflated in the filed version. **Verify with KTH's data protection officer
-before filing.**
+Processing is necessary for a task in the public interest (Art. 6(1)(e) —
+research at a state university), with the safeguards of Art. 89 and the
+Swedish supplementary provisions (lagen (2018:218) med kompletterande
+bestämmelser till EU:s dataskyddsförordning). Consent per §6 is the
+*ethical* basis for participation; it is not the *legal* basis for the
+processing, and the two are not conflated in the participant information
+(which nevertheless keeps KTH's template wording on withdrawing consent).
+KTH is the data controller. The student data is processed on KTH's own
+learning platform (Canvas) as course data, which KTH already covers as a
+platform for student data; no separate notification of the processing to
+KTH's data protection officer is made (decision 2026-09-08). The
+participant information gives dataskyddsombud@kth.se as the contact for
+the data subjects' rights, as KTH's template does.
 
 ## 9. Risks and benefits
 
@@ -273,56 +298,102 @@ Overall assessment: low risk, with the mitigations listed.
 - No raw data is shared or deposited; [TO DECIDE: whether an anonymised,
   aggregated dataset is deposited, and where].
 
-## 11. Attachments (for the filed version)
+## 11. Accompanying documents
 
-1. Participant information sheet — **to be written** (tracked as a follow-up
-   issue in the paper repositories).
+1. Participant information sheet — `participant-information-datintro26.md`
+   (Swedish and English; a synchronised copy in the three repositories;
+   published as a Canvas page in the course and delivered per §6). Built to
+   KTH's recipe (§12): the purpose of the research plus the GDPR wording of
+   KTH's consent-form template.
 2. The consent item, verbatim (§6).
 3. The instruments: the papers' literate appendices are the authoritative
    instrument definitions (vt-terminal/vt-git/vt-latex `quiz.nw`, tangling the
    deployed quiz files).
-4. Data-management plan (expanded from §7).
+4. Data management: §7 stands in for a separate data-management plan.
 
-## 12. Does this collection require review under the Ethics Review Act? (open question)
+## 12. Assessment under the Ethics Review Act
 
-**Arguments that it does not:** the collection processes only ordinary
-personal data (no special categories are sought); there is no physical
-intervention; no method is used that aims to affect the participant physically
-or psychologically beyond the course's ordinary teaching, which is not
-manipulated for research; there is no obvious risk of harm.
-Under etikprövningslagen (2003:460) §§3–4, research requires review chiefly
-when it processes special-category personal data or data on legal offences, or
-involves physical or psychological intervention or obvious risk of harm — none
-of which appears to apply.
+**Checklist run (2026-09-08).** KTH's "Checklist for legally required ethics
+review" (Research Support Office; intranet page "Forskningsetik — stöd till
+forskare"), applied to this collection:
 
-**Arguments that it might:** free-text answers, commit messages and interview
-recordings can incidentally carry sensitive content, and audio recordings are
-identifiable by nature; a reviewer may take the position that instruments
-which *can* capture special-category data should be reviewed; institutional
-practice may call for review or an advisory statement for student-subject
-research regardless of the strict legal threshold.
+| Question | Answer |
+|---|---|
+| 1. Information about living persons collected or processed? | Yes |
+| 1.1 Traceable to a person through an identifier? | Yes — login ID; the name in the coding sheet |
+| 1.2 Traceable by combining pieces of information? | Yes — e.g. a free-text account with the course context |
+| 2. Processed for research purposes? | Yes |
+| 3.1–3.8 Ethnic background, religious or philosophical beliefs, political opinions, union membership, health, sexual life or orientation, genetic or biometric data, offences? | No — none is sought by any instrument (§5a). Interview audio is not biometric data in the GDPR sense, since it is not processed to identify a person; incidental sensitive content in free text or recordings is handled by the redaction rule (§5b). |
+| 4.1 Obvious risk of harm? | No (§9) |
+| 4.2 Physical procedures on human beings? | No |
+| 4.3 Method intended to affect participants physically or psychologically? | No — the teaching is the course's own and is not manipulated for research (§3) |
+| 4.4 Traceable biological samples? | No |
 
-**What must be verified, and by whom:** the PI verifies with KTH's
-research-ethics support and KTH's data protection officer whether (a) review
-by the Swedish Ethical Review Authority is required, (b) an advisory statement
-should be requested, or (c) an internal KTH assessment suffices.
+Result: personal data is processed, so the GDPR applies (§8) and the
+participants must be informed and access restricted (§7, §11); none of the
+criteria of §§3–4 of etikprövningslagen (2003:460) is met, so the Ethics
+Review Act does not apply and no approval from Etikprövningsmyndigheten is
+required. Per the checklist's appendix, the research ethics of such a
+project "are handled internally by the group performing the research".
 
-*This section states arguments, not a legal conclusion. No filing decision has
-been taken.*
+**Confirmation by KTH's research-ethics support.** On 2026-08-31 the PI put
+the collections to researchethics@kth.se (Research Support Office): quizzes
+that are course elements anyway, the consent item and its terms (voluntary,
+no effect on the grade, pseudonymised results), the submissions, and — for
+the parallel prgi26 collection — the voluntary school-background items and
+the code-writing logs, together with the checklist assessment above. KTH's
+research-ethics advisor answered on 2026-09-01:
 
-## 13. To do before filing
+> Nej, det låter inte som att du behöver ha etikgodkännande för den
+> forskningen. Försäkra dig bara om att du informerar studenterna på ett
+> sätt som gör GDPR nöjd. I sidfoten på samtyckesblankettmallen så ser du
+> ett exempel på en GDPR-formulering som är ok. Komplettera den med att
+> beskriva forskningens syfte för deltagarna så borde det vara
+> tillräckligt.
 
-- [ ] Confirm route and form (Ethical Review Authority via Ethix,
-      etikprovningsansokan.se — BankID-signed by the PI and an authorized
-      representative of KTH — or KTH
-      internal route) — depends on §12.
-- [ ] Translate to Swedish.
-- [ ] Write the participant information sheet (Swedish + English).
-- [ ] Fill all [TO FILL] placeholders: department, personnel, expected N,
-      storage systems, retention periods, recording tool.
-- [ ] Settle the language-model pre-coding: model/service, agreement, or local
-      hosting (§7).
-- [ ] Confirm the CS programme course's 2026 code (vt-git#9, vt-latex#6,
-      vt-terminal#7) and whether that course needs separate mention.
-- [ ] Verify GDPR legal basis with KTH's DPO (§8).
+(No, it does not sound as if you need ethics approval for that research.
+Just make sure you inform the students in a way that satisfies the GDPR:
+the footer of the consent-form template has a GDPR wording that is fine;
+supplement it with a description of the research purpose for the
+participants, and that should be sufficient.) The participant information
+(§11) follows that recipe.
+
+**Caveats recorded.**
+
+- (a) The description sent to RSO did not mention the interview recordings
+  (nor prgi26's think-aloud recordings and staff baseline). The checklist
+  assessment above covers them — audio is ordinary personal data — but the
+  advisor's answer should not be read as an assessment of the recordings
+  specifically (decision 2026-09-08: no follow-up query).
+- (b) The earlier draft's arguments that review *might* be required
+  (incidental sensitive content in free text or recordings; institutional
+  practice for student-subject research) were weighed and do not change
+  the outcome: incidental content is handled by the redaction rule (§5b),
+  and the institution's own research-ethics support answered the question
+  of institutional practice.
+- (c) KTH's Ethics Committee (Etikutskottet) offers advisory opinions on
+  research-ethically controversial projects; this collection is not one,
+  and no opinion is requested (decision 2026-09-08).
+
+*Decision trail: nytid #243 (Daniel Bosk's task list); the RSO email is
+kept in the PI's mailbox, not in the repository.*
+
+## 13. Remaining work
+
+- [x] Route: not subject to the Ethics Review Act (§12) — no filing, no
+      translation, no Etikutskottet opinion.
+- [x] Legal basis and data-protection officer: stated in §8; no separate
+      notification (decision 2026-09-08).
+- [x] Language-model pre-coding: anonymise-then-map-back in the analysis
+      program (§7); the implementation is tracked in nytid, and pre-coding
+      stays off until it lands.
+- [x] Participant information sheet written (§11).
+- [ ] Deliver the participant information to the HT26 cohort (§6): Canvas
+      page at the end of the course and email to the consenting students.
+- [ ] Fill the remaining [TO FILL] placeholders: department, personnel,
+      expected N, storage systems, recording tool.
+- [ ] Confirm the parallel course (DD1317, terminal module only?) (vt-git#9,
+      vt-latex#6, vt-terminal#7).
 - [ ] Decide data deposition (§10).
+- [ ] Adopt the improved consent wording (§6), linked to the information
+      sheet, for the next cohort.
