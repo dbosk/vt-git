@@ -138,9 +138,10 @@ assessment of the datintro26 data collection: assessed 2026-09-01 as
 number will ever exist), kept as the internal self-assessment and
 data-protection documentation. `participant-information-datintro26.md` is
 the participant information sheet (Swedish + English; YAML front matter
-for `canvaslms pages edit -f`), published as the Canvas page "Information
+for `canvaslms pages edit -f`), created as the Canvas page "Information
 om forskningsstudien" in datintro26 (and, retitled, in DD1317, which runs
-the terminal module). Both files are byte-identical synchronised copies
+the terminal module); the file carries no `published` key, so the page is
+created unpublished and the teacher publishes it in Canvas. Both files are byte-identical synchronised copies
 across vt-terminal, vt-git and vt-latex: edit one copy, propagate to the
 others in the same round, and verify with
 `md5sum ../vt-{terminal,git,latex}/{ethics-application,participant-information}-datintro26.md`.

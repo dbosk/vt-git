@@ -1,7 +1,6 @@
 ---
 title: Information om forskningsstudien
 regex: ^Information om forskningsstudien$
-published: true
 front_page: false
 editing_roles: teachers
 modules:
