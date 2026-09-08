@@ -14,7 +14,7 @@ modules:
 
 Kursens moduler om terminalen, versionshantering med Git och
 dokumentskrivning med LaTeX ingår i en forskningsstudie i
-datalogididaktik. Syftet är att ta reda på vilka missuppfattningar och
+datadidaktik. Syftet är att ta reda på vilka missuppfattningar och
 svårigheter studenter har med de här verktygen, vilka kritiska aspekter
 man behöver urskilja för att behärska dem, och hur undervisningen kan
 utformas så att de aspekterna blir tydliga. Resultaten används för att
