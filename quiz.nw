@@ -124,7 +124,7 @@ the one knowledge item the start quiz leaves out
   "quiz_type": "new",
   "settings": {
     "title": "Git quiz: what you know now",
-    "instructions": "<p>This quiz repeats the Git questions from the start-of-course quiz, so that we can see what you have learned during the course. Six questions ask you to write in your own words; there are no wrong answers there, and they carry no points. Afterwards you will see your score and, for each question, the correct answer. The score does not affect your grade. Please answer on your own, without preparation, help or tools.</p>",
+    "instructions": "<p>This quiz repeats the Git questions from the start-of-course quiz, so that we can see what you have learned during the course. Six questions ask you to write in your own words; there are no wrong answers there, and they carry no points. Afterwards you will see your score and, for each question, the correct answer. The score does not affect your grade. Please answer on your own, without preparation, help or tools. Information about the research study these quizzes belong to&mdash;what is collected, how it is handled, and your rights&mdash;is on the page &ldquo;Information om forskningsstudien&rdquo; in the course's Canvas.</p>",
     "points_possible": 12,
     <<end-quiz module>>
     <<scheduling settings>>
@@ -244,9 +244,12 @@ The item titles double as the keys under which Canvas reports the
 answers, so the analysis program (\cref{app:quiz-analysis}) refers to
 the items by these titles.
 
-% XXX(#6) The consent wording must follow the approved ethics application
-% for the datintro data collection; update it when the application is
-% decided.
+The wording below is the one the cohort of autumn 2026 answered.
+The ethics assessment (\cref{sec:ethics}) found no review required, and
+the fuller wording it proposes---naming the assessment record, the
+process data and the interviews, and linking the participant information
+page---is adopted from the next cohort on, identically across the three
+companion quizzes; a deployed item is not edited under a running cohort.
 
 <<start-quiz consent item>>=
 {
