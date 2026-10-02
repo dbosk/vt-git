@@ -1,0 +1,726 @@
+paper_id,title,llm_verdict,llm_confidence,human_decision,human_reason_tag
+doi:10.1007/s10664-022-10255-x,Automated test generation for Scratch programs,kept,0.95,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1187/cbe.17-04-0061,"Error-Discovery Learning Boosts Student Engagement and Performance, while Reducing Student Attrition in a Bioinformatics Course",discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1038/s41467-021-26558-4,"Understanding how Victoria, Australia gained control of its second COVID-19 wave",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.12688/f1000research.12037.3,A multi-disciplinary perspective on emergent and future innovations in peer review,discarded,0.98,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1002/tea.21904,The impact of Geospatial Inquiry lessons on student interest in science and technology careers,discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.1080/00221341.2020.1726991,WebGIS Implementation and Effectiveness in Secondary Education Using the Digital Atlas for Schools,discarded,0.83,discarded,unrelated-term-match-other-field
+hash:84bef96047fa8a65,Supporting conceptual modelling of dynamic systems: A knowledge engineering perspective on qualitative reasoning,discarded,0.74,discarded,unrelated-term-match-other-field
+hash:6fbfac9cdb04e050,I just don’t get it: Common Security Misconceptions,discarded,0.71,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.neuroimage.2022.119056,Good scientific practice in EEG and MEG research: Progress and perspectives,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.12688/f1000research.12037.1,A multi-disciplinary perspective on emergent and future innovations in peer review,discarded,0.99,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.3390/computers14050185,The Influence of Artificial Intelligence Tools on Learning Outcomes in Computer Programming: A Systematic Review and Meta-Analysis,kept,0.98,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.31222/osf.io/9e526,Teaching Open and Reproducible Scholarship: A Critical Review of the Evidence Base for Current Pedagogical Methods and their Outcomes,discarded,0.82,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1109/access.2019.2933472,Information Dashboards and Tailoring Capabilities - A Systematic Literature Review,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.3758/s13428-024-02455-8,A tutorial on open-source large language models for behavioral science,discarded,0.84,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3526113.3545667,Using Annotations for Sensemaking About Code,discarded,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.5070/t514154352,An educator’s perspective of the tidyverse,kept,0.77,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.5194/gmd-12-4955-2019,The Lagrangian particle dispersion model FLEXPART version 10.4,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1111/j.1360-0443.2006.01380.x,"Neurocognitive functions in pathological gambling: a comparison with alcohol dependence, Tourette syndrome and normal controls",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.5194/gmd-10-3189-2017,"eddy4R 0.2.0: a DevOps model for community-extensible processing and analysis of eddy-covariance data based on R, Git, Docker, and HDF5",discarded,0.9,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1093/neuonc/noz178,A pilot randomized controlled trial of exercise to improve cognitive performance in patients with stable glioma: a proof of concept,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.5194/gmd-2018-333,The Lagrangian particle dispersion model FLEXPART version 10.3,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1186/s40663-021-00280-5,National Forest Inventories capture the multifunctionality of managed forests in Germany,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.neubiorev.2010.07.001,The relationship between neurocognition and social cognition with functional outcomes in schizophrenia: A meta-analysis,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.5772/21602,The ECSIM Concept (Environmental Control System for Intestinal Microbiota) and Its Derivative Versions to Help Better Understand Human Gut Biology,discarded,0.99,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.csbj.2018.03.002,Current Perspectives of the Chicken Gastrointestinal Tract and Its Microbiome,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1080/17538947.2011.582276,Geographic information systems and science,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.35925/j.multi.2020.3.7,Comparison of version control system tools,discarded,0.8,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1109/jstars.2020.3021052,Google Earth Engine Cloud Computing Platform for Remote Sensing Big Data Applications: A Comprehensive Review,discarded,0.98,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.12681/mms.164,The freshwater ichthyofauna of Greece - an update based on a hydrographic basin survey,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.32859/era.25.21.1-23,"Ethnobotanical inventory and medicinal applications of plants used by the local people of Cholistan desert, Pakistan",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3389/fphar.2021.693426,"Drug Shortage: Causes, Impact, and Mitigation Strategies",discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.3758/s13428-021-01650-1,"Linking norms, ratings, and relations of words and concepts across multiple language varieties",discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1186/1471-2105-14-16,The taxonomic name resolution service: an online tool for automated standardization of plant names,discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.1007/s10489-023-04647-9,Automated market maker inventory management with deep reinforcement learning,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.5194/gmd-2016-318,"eddy4R: A community-extensible processing, analysis and modeling framework for eddy-covariance data based on R, Git, Docker and HDF5",discarded,0.9,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1016/j.rbc.2026.100080,Making sense of subcellular H2O2 in mammals,discarded,0.99,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.22038/ebcj.2026.89677.3174,Impact of a Follow-Up Care Model on the Lifestyle and Self-Care of Patients with Chronic Obstructive Pulmonary Disease: A Randomized Clinical Trial,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1002/mco2.70685,Unraveling Chronic Pain: From Mechanisms and Risks to Diagnosis and Treatment,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3390/medsci14010138,The Mental Health–Acute Coronary Syndrome Continuum: Bidirectional Pathophysiological Links and Clinical Implications,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3389/fpsyt.2025.1687987,Protocol for a cohort comparison treatment study evaluating the efficacy of a dimensional adaptation of GPM (GPM-extended) compared to a classic outpatient GPM treatment for patient fulfilling criteria for BPD: the EPSYLIA project,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1007/s13225-025-00554-1,A worldwide checklist and morpho-molecular systematics of fungi associated with pteridophytes,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.heliyon.2025.e42617,Social vulnerability: A driving force in amplifying the overall vulnerability of protected areas to natural hazards,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1093/oso/9780198832997.001.0001,Resilient forest management,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.3389/fpsyg.2025.1571572,Social impact of happiness on transformational leadership in students from Colombian universities,discarded,0.73,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-032-06339-7,Dissociation in Borderline Personality Disorder: Associations with Trauma and Neurobiology,discarded,0.98,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.5943/mycosphere/16/1/13,"Endophytic fungi associated with medicinal ferns in Guizhou Province, China Ⅰ: Morpho-molecular characterization of culturable endophytic fungi associated with Dicranopteris spp.",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1037/per0000697,Affective and Neural Mechanisms of How Identity Dysfunction in Borderline Personality Disorder May Interfere With Building Positive Relationships,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3390/clockssleep6010001,Primer on Reproducible Research in R: Enhancing Transparency and Scientific Rigor,kept,0.78,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1002/wps.21156,"Borderline personality disorder: a comprehensive review of diagnosis and clinical presentation, etiology, treatment, and current controversies",discarded,0.99,discarded,unrelated-term-match-other-field
+hash:bb2d211d391c3af6,Measuring the image of God: The God Image Inventory and the God image scales,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1186/1472-6920-13-152,Students’ perceptions of anatomy across the undergraduate problem-based learning medical curriculum: a phenomenographical study,discarded,0.8,discarded,phenomenography-other-domain
+doi:10.1002/jee.20478,Student conceptions of problem and project based learning in engineering education: A phenomenographic investigation,discarded,0.68,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1186/1471-2296-8-44,Views on sick-listing practice among Swedish General Practitioners – a phenomenographic study,discarded,0.95,discarded,phenomenography-other-domain
+doi:10.1186/s12909-021-02490-5,Factors affecting paramedicine students’ learning about evidence‐based practice: a phenomenographic study,discarded,0.84,discarded,phenomenography-other-domain
+doi:10.1016/j.compedu.2020.103819,Facilitating student engagement through the flipped learning approach in K-12: A systematic review,discarded,0.77,discarded,unrelated-term-match-other-field
+doi:10.1007/s10648-017-9414-6,A Learning Patterns Perspective on Student Learning in Higher Education: State of the Art and Moving Forward,discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1007/s10734-014-9715-3,"Knowledge, curriculum and student understanding in higher education",discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1186/s40594-015-0026-8,"The importance of context: an exploration of factors influencing the adoption of student-centered teaching among chemistry, biology, and physics faculty",discarded,0.74,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1186/s40561-021-00152-z,Science teachers’ experiences of inquiry-based learning through a serious game: a phenomenographic perspective,discarded,0.83,discarded,phenomenography-other-domain
+doi:10.1007/s10734-018-0349-8,How conceptualisations of curriculum in higher education influence student-staff co-creation in and of the curriculum,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1515/libri-2012-0012,Young People: A Phenomenographic Investigation into the Ways They Experience Information,discarded,0.92,discarded,phenomenography-other-domain
+doi:10.1186/s40468-021-00142-5,A phenomenographic study on language assessment literacy: hearing from Iranian university teachers,discarded,0.92,discarded,phenomenography-other-domain
+doi:10.1016/j.compedu.2021.104184,The mediating role of digital informal learning in the relationship between students' digital competence and their academic performance,discarded,0.76,discarded,unrelated-term-match-other-field
+doi:10.1186/s40594-018-0151-2,Teachers’ perception of STEM integration and education: a systematic literature review,discarded,0.8,discarded,unrelated-term-match-other-field
+doi:10.1186/s12912-023-01465-9,How nursing students learn infection control education through undergraduate nursing programs: a phenomenographic research study,discarded,0.92,discarded,phenomenography-other-domain
+doi:10.1155/2012/152747,Students' Persistence and Academic Success in a First-Year Professional Bachelor Program: The Influence of Students' Learning Strategies and Academic Motivation,discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.1111/0023-8333.00136,Effectiveness of L2 Instruction: A Research Synthesis and Quantitative Meta‐analysis,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1007/s10798-022-09742-5,A phenomenographic study of Chinese primary school students’ conceptions about technology,discarded,0.82,discarded,phenomenography-other-domain
+doi:10.1140/epjqt/s40507-025-00461-z,What makes a good quantum outreach video? An evaluation framework for a quantum video playlist,discarded,0.85,discarded,unrelated-term-match-other-field
+doi:10.1007/s44202-026-00671-1,Development and preliminary psychometric evaluation of the exercise behavioral intention scale for hemodialysis patients,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1016/j.ijnurstu.2026.105642,Delivering on person-centred fundamental care: how far have we (really) come? A 10-year retrospective,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1177/09721509221107965,A Proposed Model for Evaluating Quality of Technology Enabled Learning in Management Education Programmes,discarded,0.74,discarded,unrelated-term-match-other-field
+doi:10.1021/acs.jchemed.5c01507,Myths about Teaching and Learning Organic Chemistry,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1111/ejed.70397,"Teacher Interpersonal Behaviours, Communication Apprehension, Self-Efficacy and Academic Engagement in Technology-Mediated EFL Classrooms: A Cross-Sectional Study of Mongolian Trilingual Learners",discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.22034/ijlt.2025.494430.1399,"The Effect of Ipsative Assessment on EFL Learners’ Argumentative Writing Development: Complexity, Accuracy, and Fluency in Focus",discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.1002/jcal.70181,The Facilitating Role of Enjoyment and Anxiety in Shaping (AI-Mediated) Informal Language Learning and Confidence: An Explanatory Sequential Mixed-Methods Investigation,discarded,0.83,discarded,unrelated-term-match-other-field
+doi:10.1080/15700763.2026.2680696,The Performance of Power: Phenomenographic Insights into Narcissism in Principals’ Leadership Practices,discarded,0.93,discarded,phenomenography-other-domain
+doi:10.1002/sce.70079,Students' Emotional Responses to Mistakes: An Ecological Momentary Assessment Study in University Chemistry Laboratory,discarded,0.88,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1515/applirev-2024-0199,"Modeling the contribution of shame, boredom, and enjoyment to multilingual students’ willingness to communicate in a blended learning environment",discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1016/j.esp.2025.10.006,Cultivating critical thinking dispositions in EGAP courses: The importance of teaching materials selection,discarded,0.91,discarded,unrelated-term-match-other-field
+doi:10.1123/wspaj.2025-0096,It’s Not All About Distance: Exploring Perceptions of Women’s Golf Performance,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1080/13548506.2025.2519240,Exploring the meaning of life and perception of death: a phenomenological study of the psychological experiences of Chinese adolescent patients who attempted suicide,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-032-07781-3_3,A Psychological Perspective on Higher Education Research,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1080/02568543.2025.2581709,Exploring Hong Kong Kindergarten Teachers’ Use of Technology (GenAI) to Support the Needs of L1 and L2 Chinese Language Learners,discarded,0.81,discarded,unrelated-term-match-other-field
+doi:10.1080/07380569.2025.2602507,"Teachers’ perspectives on AI integration in K-12 education: challenges, opportunities, and preliminary assessment model–a systematic review",discarded,0.78,discarded,unrelated-term-match-other-field
+doi:10.4018/979-8-3693-7142-8,Bridging Theory and Application Through Practitioner Research in Higher Education,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1080/15325024.2025.2523499,"Self-Compassion, Prolonged Grief, and Post-Traumatic Growth in Bereaved Young Adults: Network Analysis",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.4018/979-8-3373-4397-6,Reshaping Language and Cognition in Education Through AI,discarded,0.72,discarded,unrelated-term-match-other-field
+doi:10.1145/3586183.3606719,Spellburst: A Node-based Interface for Exploratory Creative Coding with Natural Language Prompts,discarded,0.77,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/fi17090404,"The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures, Applications, Evaluation Metrics, and Challenges",discarded,0.96,discarded,unrelated-term-match-other-field
+hash:ae31a6c8ae7ab857,Aide à l'Intégration de Branches Grâce à la Réification des Changements,discarded,0.86,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.48550/arxiv.2404.02039,A Survey on Large Language Model-Based Game Agents,discarded,0.95,discarded,computing-education-or-software-engineering-not-version-control
+hash:8321c703c4de7d59,Gathering evidence: Model-driven software engineering in automated digital forensics,discarded,0.94,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.48550/arxiv.2406.08198,An Industry Interview Study of Software Signing for Supply Chain Security,discarded,0.95,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.48550/arxiv.2006.02370,Exploring Context-Aware Conversational Agents in Software Development,discarded,0.83,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.5151/proceedings-ecaadesigradi2019_397,‘GHShot’: a collaborative and distributed visual version control for Grasshopper parametric programming,discarded,0.78,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1007/s10664-026-10830-6,Understanding developer well-being: measuring mental health and productivity in software teams,discarded,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3313831.3376253,How Domain Experts Create Conceptual Diagrams and Implications for Tool Design,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+hash:194ce52fc4359747,Helping Students Make Better Contributions to Open-Source Software Projects.,kept,0.75,discarded,thesis-oss-contribution-not-vcs-understanding
+doi:10.1111/j.1365-2923.2008.03107.x,"Clinical skills education: outcomes of relationships between junior medical students, senior peers and simulated patients",discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1007/s40670-021-01436-2,Medical Students’ Opinions of Anatomy Teaching Resources and Their Role in Achieving Learning Outcomes,discarded,0.85,discarded,unrelated-term-match-other-field
+doi:10.1186/s12920-017-0250-9,"Basal-like breast cancer: molecular profiles, clinical features and survival outcomes",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3390/su14159625,Impacts on Student Learning and Skills and Implementation Challenges of Two Student-Centered Learning Methods Applied in Online Education,discarded,0.74,discarded,unrelated-term-match-other-field
+doi:10.3390/data9040060,Predicting Academic Success of College Students Using Machine Learning Techniques,discarded,0.8,discarded,unrelated-term-match-other-field
+doi:10.1007/s10270-023-01105-5,On the assessment of generative AI in modeling tasks: an experience report with ChatGPT and UML,discarded,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/access.2020.3024102,Analysis of Learning Behavior in an Automated Programming Assessment Environment: A Code Quality Perspective,kept,0.97,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1152/advan.00102.2018,How do students deal with difficult physiological knowledge?,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1016/j.heliyon.2023.e17307,Analyzing Perceived Psychological and Social Stress of University Students: A Machine Learning Approach,discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.1145/3631974,A Survey of Learning-based Automated Program Repair,discarded,0.96,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s40593-024-00429-7,An Extended Learning Analytics Framework Integrating Machine Learning and Pedagogical Approaches for Student Performance Prediction and Intervention,discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.2147/amep.s171328,The efficacy of self-directed learning versus problem-based learning for teaching and learning ophthalmology: a comparative study,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1093/biosci/bix025,Skills and Knowledge for Data-Intensive Environmental Research,kept,0.76,discarded,unrelated-term-match-other-field
+doi:10.15386/cjmed-768,Knowledge and Practices of Indian Dental Students Regarding the Prescription of Antibiotics and Analgesics,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1016/j.plas.2026.100233,Revisiting assessment in project management education: A systematic review of demandingness and competence alignment,discarded,0.71,discarded,unrelated-term-match-other-field
+doi:10.1186/s40359-026-04591-6,A new experimental approach to manipulate social identity and social norms about protective behaviors in a virtual social environment,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1016/j.caeai.2026.100653,"A scoping review of generative AI-powered agentic AI in education: Research landscape, agentic capabilities, and insights from the frontier agent paradigm, exemplified by OpenClaw",discarded,0.68,discarded,unrelated-term-match-other-field
+doi:10.5815/ijmecs.2026.04.07,Empowering Self-Learning: Automated Assistance and Grading Mechanisms in Android Application Development,kept,0.97,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.scs.2026.107267,Bridging environmental and social sustainability: A conceptual model of blue-green-red infrastructure (BGRI),discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1145/3772318.3790302,Robust Methods for Developer Screening in Rapidly Evolving AI Contexts,discarded,0.73,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1017/psy.2025.10056,Bayesian Selection Policies for Human-in-the-Loop Anomaly Detectors with Applications in Test Security,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1016/j.vas.2026.100588,Advancing climate-resilient livestock systems: Next-generation emission mitigation strategies and integrated technological innovations,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1515/icom-2026-0008,Research challenges and future perspectives for e-assessment technologies in higher education,discarded,0.78,discarded,unrelated-term-match-other-field
+doi:10.1155/hbe2/1618680,Transforming Requirement Elicitation Through Gamification—A Comprehensive Review,discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-032-08808-6,Cancer: An Integrative Approach: Principles and Strategies - from Precision Targeting to Process Oncology,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1007/s11412-025-09450-x,The CoMPAS Framework for Modeling Individual Participation in Collaborative Learning Processes: a Systematic Review,discarded,0.75,discarded,unrelated-term-match-other-field
+hash:3ec5fa13bfb9c78a,A Study of Introductory Exercise Problems for Novice Students in Java Programming Learning Assistant System,kept,0.72,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1177/00110000251352576,Influence of College STEM Program Participation on Persistence Among First-Generation Engineering Students,discarded,0.79,discarded,unrelated-term-match-other-field
+doi:10.1152/physrev.00002.2024,THE (DYS)REGULATION OF ENERGY STORAGE IN OBESITY,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.5209/rced.93803,Self-directed study in online teacher education with MetaDig: a digital tool for self-regulated learning,discarded,0.76,discarded,unrelated-term-match-other-field
+doi:10.1109/fie43999.2019.9028598,DevOps - Preparing Students for Professional Practice,kept,0.99,discarded,git-or-software-tooling-without-learner-understanding-findings
+hash:460284433e91cfba,Assessing students' conceptions of learning,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1046/j.0266-4909.2002.00223.x,Diagnosing students' alternative conceptions in science,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1186/s12909-016-0791-1,Factors associated to depression and anxiety in medical students: a multicenter study,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1016/j.learninstruc.2018.05.006,Student misbehavior and teacher well-being: Testing the mediating role of the teacher-student relationship,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.3389/fpsyg.2018.01539,All That Glitters Is Not Grit: Three Studies of Grit in University Students,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.1007/s11162-011-9247-y,"From Gatekeeping to Engagement: A Multicontextual, Mixed Method Study of Student Academic Engagement in Introductory STEM Courses",discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.1016/j.ecolecon.2026.109191,Willingness-to-pay for bacteriophage-treated rainbow trout: A comparative study of Denmark and Germany,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1108/ijmpb-10-2025-0429,Boundary objects and knowledge sharing in sustainability demonstration projects: insights from practitioner-driven codification strategies shaping project learning,discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.1007/s44202-026-00727-2,Emotional and psychological challenges faced by students in the operating room: a scoping review,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1038/s41598-025-34416-2,Enhancing creative writing through AI-powered co-creation with cognitive and emotional outcomes,discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.1186/s40359-026-04728-7,Social information processing and peer interaction in gifted preschool children,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1186/s12887-026-06900-9,Delivering safe sleep and breastfeeding education to pregnant and new mothers through private Facebook groups: study protocol for a 4-armed randomized controlled trial,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1186/s12917-026-05486-9,Moving through pets’ end of life: South Korean pet owners’ experiences and implications for veterinary practices,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1186/s41155-026-00390-5,School-based interventions for sexual education and sexual violence prevention in adolescence: systematic review,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1186/s40337-026-01531-y,Emotion regulation and body image across the eating disorder symptom severity spectrum: a comparative analysis of young and middle-aged women,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.compedu.2026.105659,From building robots to cultivating robotics literacy? A systematic review of educational robotics research and its future directions,discarded,0.71,discarded,unrelated-term-match-other-field
+doi:10.1002/jclp.70157,Assessing the Czech Version of the Inventory of Personality Organization in Relation to Borderline Personality Disorder in the ICD-11,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1111/papt.70066,Contributors to co-occurring chronic loneliness and depression and anxiety and the role of adverse childhood experiences,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1111/lcrp.70018,"The role of defendant race, expert testimony and interrogation coerciveness on Canadian mock jurors' perceptions of recanted confessions",discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1002/widm.70125,The Role of Interactive New-Media Arts Applications in Managing Knowledge in the Public Domain,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1016/j.learninstruc.2026.102386,Latent motivational-emotional profiles and their effects on strategy use and performance in online multimodal reading tasks: A mixed-methods investigation,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1016/j.nedt.2026.107089,Wearing multiple “hats”: Daily identity transitions among nursing and allied health clinician-educators: A qualitative study,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1002/brb3.71609,"A Substance Abuse, Violence and Unhealthy Alcohol Use Syndemic Predicts Depression: A Longitudinal Study of Black Women Living With HIV in Four US Cities",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.tate.2026.105528,"How conception of students’ intelligence, need satisfaction and frustration relate to teaching practices and self-efficacy in special education teachers",discarded,0.88,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.14260/jemds/2015/733,A STUDY TO ASSESS KNOWLEDGE AND AWARENESS ABOUT THE HEPATITIS B AND C AMONG NURSING COLLEGE STUDENTS OF CENTRAL INDIA,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1145/3502870.3506565,Teaching through a Global Pandemic,kept,0.8,discarded,unrelated-term-match-other-field
+doi:10.1098/rsos.221255,Teaching open and reproducible scholarship: a critical review of the evidence base for current pedagogical methods and their outcomes,discarded,0.82,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.18335/region.v7i1.282,Teaching on Jupyter,kept,0.91,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/2858796.2858797,Challenges and Recommendations for the Design and Conduct of Global Software Engineering Courses,kept,0.97,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/access.2019.2962368,Comprehensive Survey on Big Data Privacy Protection,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1080/26939169.2023.2165988,Framework for Accessible and Inclusive Teaching Materials for Statistics and Data Science Courses,kept,0.82,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.3390/data6020018,The State of the Art in Methodologies of Course Recommender Systems—A Review of Recent Research,discarded,0.8,discarded,unrelated-term-match-other-field
+doi:10.1002/14651858.cd001872.pub2,Interventions for treating obesity in children,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.62273/dyli2468,Teaching Case Teaching Business Students Logistic Regression in R With the Aid of ChatGPT,kept,0.93,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1016/j.compedu.2018.09.021,Analyzing students' perceptions to improve the design of an automated assessment tool in online distributed programming,kept,0.98,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/make5020033,Systematic Review of Recommendation Systems for Course Selection,discarded,0.83,discarded,unrelated-term-match-other-field
+doi:10.2147/amep.s209123,Impact of Social Media Integration in Teaching Methods on Exam Outcomes,discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.1016/j.sciaf.2022.e01240,A review on effective approach to teaching computer programming to undergraduates in developing countries,kept,0.98,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1002/j.2168-9830.2002.tb00681.x,Use of Student Management Teams (SMTs) as a Course Evaluation Tool,discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1145/2839509.2844590,Hackathons as an Informal Learning Platform,kept,0.96,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.3109/01421590903193588,"Using a structured clinical coaching program to improve clinical skills training and assessment, as well as teachers’ and students’ satisfaction",discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.18355/xl.2024.17.01.05,AI in teaching English as a foreign language: Effectiveness and prospects in Kazakh higher education,discarded,0.81,discarded,unrelated-term-match-other-field
+doi:10.1088/1742-6596/1840/1/012056,PhD student training: principles and implementation,discarded,0.71,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1145/3770762.3772618,Assessing Student Proficiency in Foundational Developer Tools Through Live Checkoffs,kept,0.99,kept,cited
+doi:10.7551/mitpress/14810.001.0001,Experimentology: An open science approach to experimental psychology methods,discarded,0.79,discarded,unrelated-term-match-other-field
+doi:10.1109/fie63693.2025.11328146,Applying Just-In-Time Learning Strategies to Equip Students with Project Management Tools and Knowledge,kept,0.99,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003360254,Formative Assessment and Feedback in Post-Digital Learning Environments: Disciplinary Case Studies in Higher Education,discarded,0.77,discarded,unrelated-term-match-other-field
+doi:10.1201/9781003476177,Design for Humanity: Creating Products That Matter,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.4018/9798369330739,Educational innovation to address complex societal challenges,discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.19083/ridu.2024.1801,Leadership skills development in medical student education: systematic review,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.3934/fods.2022003,FACILITATING TEAM-BASED DATA SCIENCE: LESSONS LEARNED from the DSC-WAV PROJECT,kept,0.94,discarded,unrelated-term-match-other-field
+doi:10.1109/icse-seet58685.2023.00030,Improving Grading Outcomes in Software Engineering Projects Through Automated Contributions Summaries,kept,0.98,discarded,repository-metrics-grading-tool-not-understanding
+doi:10.1201/9781003229407,Telling Stories with Data: With Applications in R,kept,0.8,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1371/journal.pone.0276943,Multi-Layer Perception model with Elastic Grey Wolf Optimization to predict student achievement,discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.3310/wpng1013,Developing programme theories of leadership for integrated health and social care teams and systems: a realist synthesis,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1145/3368089.3409762,Reducing implicit gender biases in software development: Does intergroup contact theory work?,kept,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/su11184925,Opinions of preschool teachers and pre-service teachers on environmental education and environmental awareness for sustainable development in the preschool period,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.3138/jvme.0717-094r1,Evidence-based clinical skills teaching and learning: What do we really know?,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1017/9781108649841,An introduction to the advanced theory and practice of nonparametric econometrics: A replicable approach using R,kept,0.79,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1201/9781420039016,"Circadian Physiology, Second Edition",discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1109/access.2018.2874767,Performance Analysis of Google Colaboratory as a Tool for Accelerating Deep Learning Applications,discarded,0.91,discarded,unrelated-term-match-other-field
+doi:10.3390/info11020108,Fastai: A Layered API for Deep Learning,discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.1145/268084.268091,Using student-built algorithm animations as learning aids,kept,0.97,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.3390/app11125467,Artificial Intelligence for Student Assessment: A Systematic Review,discarded,0.77,discarded,unrelated-term-match-other-field
+doi:10.1186/s12859-017-1934-z,ImageJ2: ImageJ for the next generation of scientific image data,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1006/ijhc.2000.0409,Rethinking the evaluation of algorithm animations as learning aids: an observational study,kept,0.96,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3847/1538-3881/aabc4f,The Astropy Project: Building an Open-science Project and Status of the v2.0 Core Package *,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.3390/bdcc7010048,Real-Time Attention Monitoring System for Classroom: A Deep Learning Approach for Student’s Behavior Recognition,discarded,0.76,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.compedu.2011.09.016,Exploring the relation between visualizer–verbalizer cognitive styles and performance with visual or verbal learning material,discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.3390/s21103569,Evaluating the Single-Shot MultiBox Detector and YOLO Deep Learning Models for the Detection of Tomatoes in a Greenhouse,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1101/142760,Opportunities and obstacles for deep learning in biology and medicine,discarded,0.97,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.3390/diagnostics12040942,Deep Learning Based Detection Tool for Impacted Mandibular Third Molar Teeth,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1109/clei52000.2020.00068,Measuring students' contributions in software development projects using Git metrics,kept,0.98,discarded,superseded-by-journal-version-already-cited
+doi:10.1007/s10664-019-09772-z,How different are different diff algorithms in Git?,discarded,0.9,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.3389/fninf.2014.00008,"Dipy, a library for the analysis of diffusion MRI data",discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1109/access.2021.3124270,Predicting and Interpreting Student Performance Using Ensemble Models and Shapley Additive Explanations,discarded,0.85,discarded,unrelated-term-match-other-field
+doi:10.1016/j.osnem.2021.100135,"EMOCOV: Machine learning for emotion detection, analysis and visualization using COVID-19 tweets",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1680/jbibn.16.00010,Biomimetics and its tools,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.1007/s10639-024-12923-5,Evaluating the student performance prediction and action framework through a learning analytics intervention study,discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.1016/j.ijgeop.2026.100303,Does digital transformation drive innovation in UNESCO Global Geoparks? Evidence from a global survey on the role of digital tools,discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1016/j.eswa.2025.130839,ViTextVQA: A large-scale visual question answering dataset and a novel multimodal feature fusion method for Vietnamese text comprehension in images,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1145/3772318.3791065,"""do i Really Need This?"": Illuminating Challenges in Integrating Computational Training Tools in Esports Coaching",discarded,0.93,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3772318.3791597,Linting Style and Substance in READMEs,discarded,0.84,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1002/col.70055,Blending Designer Insights With Predicted Crowd-Based Color Compatibility in Interior Color Design,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1145/3786600,Graph2text or Graph2token: A Perspective of Large Language Models for Graph Learning,discarded,0.97,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3760545.3783973,"Fairness in Student Group Formation: Perspectives, Priorities, Compromises, Mechanisms, and Tooling",discarded,0.67,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.is.2025.102627,Process-driven visual analysis of cybersecurity capture the flag exercises,discarded,0.74,discarded,unrelated-term-match-other-field
+doi:10.1080/03098265.2025.2563343,Effect of hybrid teaching approaches on students’ learning and engagement with key geographic information science content knowledge,discarded,0.75,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003589792,"The Digital Humanities Coursebook: Applied Concepts and Critical Approaches, Second Edition",discarded,0.81,discarded,unrelated-term-match-other-field
+doi:10.7717/peerj-cs.3560,TGMF-pose: text-guided multi-view 3D pose estimation and fusion network for online sports instruction,discarded,0.97,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.4324/9781003745655,"Stagecraft Rewired: AI, Authorship, and the Future of Performance",discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1016/c2022-0-02042-0,Computer Animation,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1201/9781003302377,"Circadian Physiology, Fourth Edition",discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1145/3756681.3756955,Unveiling Ruby: Insights from Stack Overflow and Developer Survey,discarded,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.compbiolchem.2025.108579,DSMT-Net: Dual-student mean teacher network with pixel-level pseudo-label optimization for semi-supervised medical image segmentation,discarded,0.99,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1038/s41598-025-22202-z,Adaptive multi-omics integration framework for breast cancer survival analysis,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1145/3748606,Player-Centric Data Visualization for Metroidvania Games: Insights and Use Cases: The Case of Hollow Knight,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.1145/3641554.3701798,Exploring the Adaptability and Usefulness of Git-Truck for Assessing Software Capstone Project Development,kept,0.98,discarded,repository-metrics-grading-tool-not-understanding
+doi:10.3847/1538-4365/ab06fc,Bilby: A User-friendly Bayesian Inference Library for Gravitational-wave Astronomy,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1145/3660788,Beyond Code Generation: An Observational Study of ChatGPT Usage in Software Engineering Practice,discarded,0.89,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/371578.371593,Extracting usability information from user interface events,discarded,0.97,discarded,method-paper-not-about-version-control
+doi:10.1007/s00464-023-10214-7,Acquisition and usage of robotic surgical data for machine learning analysis,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1016/j.cmpb.2018.01.025,NiftyNet: a deep-learning platform for medical imaging,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.12688/f1000research.20843.1,Creating and sharing reproducible research code the workflowr way,kept,0.86,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3332165.3347944,Bespoke: Interactively Synthesizing Custom GUIs from Command-Line Applications By Demonstration,discarded,0.91,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1038/s41596-021-00593-3,A metabolic modeling platform for the computation of microbial ecosystems in time and space (COMETS),discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.1177/02783649231201196,Dynamic movement primitives in robotics: A tutorial survey,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.3758/s13428-018-1176-7,childes-db: A flexible and reproducible interface to the child language data exchange system,discarded,0.88,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3641539,Bug Analysis in Jupyter Notebook Projects: An Empirical Study,discarded,0.84,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1016/j.scico.2024.103217,An exploratory study on the usage of quantum programming languages,discarded,0.85,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.5194/hess-23-2939-2019,Using R in hydrology: a review of recent developments and future directions,kept,0.8,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.3390/info15040191,A Study of Learning Environment for Initiating Flutter App Development Using Docker,kept,0.96,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1023/a:1011144232235,Adaptive Techniques for Universal Access,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.1145/3664191,Computer Science Curricula 2023,kept,0.88,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/tale66047.2025.11346747,Bridging Syntax and Problem Solving: Educators' Perspectives on Pattern-oriented Intelligent Programming Tutor,kept,0.97,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1142/s0218194023500274,Understanding the Role of Stack Overflow in Supporting Software Development Tasks: A Research Perspective,discarded,0.88,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3571785.3574129,Stop Reinventing the Wheel! Promoting Community Software in Computing Education,kept,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1145/2509578.2509584,What's wrong with git?,discarded,0.88,discarded,superseded-by-2016-article-already-cited
+doi:10.1007/s10664-021-09961-9,Understanding and improving the quality and reproducibility of Jupyter notebooks,discarded,0.83,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3626252.3630785,Attribution of Work in Programming Teams with Git Reporter,kept,0.99,discarded,repository-metrics-grading-tool-not-understanding
+doi:10.1371/journal.pbio.1001745,Best Practices for Scientific Computing,kept,0.81,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1371/journal.pcbi.1005510,Good enough practices in scientific computing.,kept,0.82,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.48550/arxiv.1904.06584,"Got: Git, but for Objects",discarded,0.89,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3545945.3569880,Understanding and Measuring Incremental Development in CS1,kept,0.98,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1145/3544548.3581394,Understanding Version Control as Material Interaction with Quickpose,discarded,0.78,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3239571,Anserini,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.1587/transinf.2015edp7282,Slicing Fine-Grained Code Change History,discarded,0.91,discarded,computing-education-or-software-engineering-not-version-control
+hash:b657ee7a94557012,Software Heritage: Why and How to Preserve Software Source Code,discarded,0.91,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1371/journal.pone.0095978,Measuring Large-Scale Social Networks with High Resolution,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1145/3236024.3236062,Ecosystem-level determinants of sustained activity in open-source projects: a case study of the PyPI ecosystem,discarded,0.88,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1016/j.jss.2022.111263,Estimating the potential of program repair search spaces with commit analysis,discarded,0.9,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3059009.3059050,DevEventTracker,kept,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1145/3025453.3025626,Variolite,discarded,0.84,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3767321,A Systematic Literature Review of Inter-Commit Fine-Grained Source Code Changes: Assessing Readiness for Large-Scale Data Collection,discarded,0.86,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1007/s10664-020-09834-7,Standing on shoulders or feet? An extended study on the usage of the MSR data papers,discarded,0.87,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/msr.2019.00085,Standing on shoulders or feet? The usage of the MSR data papers,discarded,0.87,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.5742/mewfm.2022.952509,Positive and negative acute phase reactants in sickle cell diseases,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.48550/arxiv.2403.05334,WatChat: Explaining perplexing programs by debugging mental models,discarded,0.83,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.5772/intechopen.73848,Essentials of Abdominal Ultrasound,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1007/978-1-4302-6838-3,Intel Galileo and Intel Galileo Gen 2: API Features and Arduino Projects for Linux Programmers,discarded,0.76,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.36227/techrxiv.174681482.27435614/v1,"A Review on Vibe Coding: Fundamentals, State-of-the-art, Challenges and Future Directions",discarded,0.88,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3998/mpub.19503,Boundaries of the Text,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.5772/63659,Highlights on Several Underestimated Topics in Palliative Care,discarded,0.99,discarded,unrelated-term-match-other-field
+hash:79988d5f52eb68eb,Arts of Existence: The Construction of Subjectivity in Older White Southern Women,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.22152/programming-journal.org/2023/7/13,Technical Dimensions of Programming Systems,discarded,0.83,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1136/bjsports-2024-109185,"Diagnostic domains, differential diagnosis and conditions requiring further medical attention that are considered important in the assessment for Achilles tendinopathy: a Delphi consensus study",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.5040/9781472515452,The Theatre of Tennessee Williams,discarded,0.99,discarded,unrelated-term-match-other-field
+hash:d7bf8e2060f7d3f2,"Staging Civil Rights: African American Literature, Performance, and innovation",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.5742/mewfm.2022.9525010,An Overview of Biological Warfare and SARS-CoV-2 as a Potential Biological Agent,discarded,0.99,discarded,unrelated-term-match-other-field
+hash:188a7f0d133c4ecf,Predictors of Flourishing in University Students,discarded,0.92,discarded,unrelated-term-match-other-field
+hash:ec30ca6e1d17fc63,Byznys plán eForce FEE Prague Formula 2018,discarded,0.85,discarded,unrelated-term-match-other-field
+hash:23cbb15dbc9f9338,"Frank Zappa, Captain Beefheart and the Secret History of Maximalism",discarded,0.99,discarded,git-or-software-tooling-without-learner-understanding-findings
+hash:ede45fd23dc30375,Dibuixar un arbre / Drawing a Tree,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-031-26727-7,"Pediatric Overweight and Obesity: Comorbidities, Trajectories, Prevention and Treatments",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1201/9781351253765,"McDonald’s Blood Flow in Arteries: Theoretical, Experimental and Clinical Principles: Seventh Edition",discarded,0.99,discarded,unrelated-term-match-other-field
+hash:7a3f001915a888f5,"Meyler’s Side Effects of Drugs: The International Encyclopedia of Adverse Drug Reactions and Interactions, Sixteenth Edition",discarded,0.99,discarded,unrelated-term-match-other-field
+hash:7ba91ca14bd3e806,Meyler’s side effects of drugs: The international encyclopedia of adverse drug reactions and interactions,discarded,0.99,discarded,unrelated-term-match-other-field
+hash:4bcba09ace57beae,Evaluating the Gap Between the Skills and Abilities of Senior Undergraduate Computer Science Students and the Expectations of Industry,kept,0.96,discarded,git-or-software-tooling-without-learner-understanding-findings
+hash:3a7bea650528a776,Improving Student Engagement Through Visualization of Course Activities,discarded,0.77,discarded,unrelated-term-match-other-field
+doi:10.1145/3551902.3551972,Supporting ICT-students to make the most out of their projects,kept,0.75,discarded,unrelated-term-match-other-field
+doi:10.1145/3689187.3709615,Introducing Code Quality at CS1 Level: Examples and Activities,kept,0.96,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.jss.2024.112279,Developing and sustaining a student-driven software solutions center—An experience report,kept,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3230012,Exploring and Expanding GSE Education with Open Source Software Development,kept,0.97,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1186/s13174-019-0105-z,"Managing to release early, often and on time in the OpenStack software ecosystem",discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s10664-021-09998-w,Measuring affective states from technical debt,discarded,0.88,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/sym16020221,Digital Twin Prototypes for Supporting Automated Integration Testing of Smart Farming Applications,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1002/spe.2844,Sensei: Enforcing secure coding guidelines in the integrated development environment,discarded,0.87,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s10664-026-10837-z,Less is more: usefulness of data flow diagrams and large language models for security threat validation,discarded,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s43681-024-00425-6,Formalizing ethical principles within AI systems: experts’ opinions on why (not) and how to do it,discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.1145/3528231,Proceedings of the 4th International Workshop on Software Engineering Education for the Next Generation,kept,0.76,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.18653/v1/2023.americasnlp-1,Proceedings of the Workshop on Natural Language Processing for Indigenous Languages of the Americas (AmericasNLP),discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.37099/mtu.dc.etdr/1962,Examining Student and Faculty Perspectives on Hidden Curriculum in Computing Education,kept,0.93,discarded,hidden-curriculum-thesis-proposal-no-vcs-findings
+hash:9faaf4f8dfdb2681,"Android Hypovisors: Securing Mobile Devices through High-Performance, Light-Weight, Subsystem Isolation with Integrity Checking and Auditing Capabilities",discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.48550/arxiv.2411.10890,An Empirical Investigation on the Challenges in Scientific Workflow Systems Development,discarded,0.82,discarded,unrelated-term-match-other-field
+hash:d3d9b74afbb68d02,"Four Great Religions: Four Lectures Delivered on the Twenty-First Anniversary of the Theosophical Society, at Adyar, Madras",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.48550/arxiv.2502.14653,Gender Influence on Student Teams' Online Communication in Software Engineering Education,kept,0.93,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/2983990.2984018,"Purposes, concepts, misfits, and a redesign of git",discarded,0.89,kept,already-cited
+doi:10.3847/1538-3881/ab2634,Marvin: A Tool Kit for Streamlined Access and Visualization of the SDSS-IV MaNGA Data Set,discarded,0.93,discarded,unrelated-term-match-other-field
+hash:982ee37b4492d126,,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1145/3626252.3630864,GitKit: Learning Free and Open Source Collaboration in Context,kept,0.99,kept,already-cited
+doi:10.62273/btkm5634,Teaching Tip Rethinking How We Teach Git: Pedagogical Recommendations and Practical Strategies for the Information Systems Curriculum,kept,0.98,kept,already-cited
+doi:10.1145/3772318.3791254,Git Takes Two: Split-View Awareness for Collaborative Learning of Distributed Workflows in Git,kept,0.98,kept,already-cited
+doi:10.36227/techrxiv.174495492.22752319/v1,"A Survey on Model Context Protocol: Architecture, State-of-the-art, Challenges and Future Directions",discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.17706/jsw.12.4.274-291,Open Source Software Hosting Platforms: A Collaborative Perspective’s Review,discarded,0.86,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1007/s10664-021-10109-y,Why secret detection tools are not enough: It’s not just about false positives - An industrial case study,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.fsisyn.2022.100313,Interpol review of digital evidence for 2019–2022,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.31234/osf.io/w8trm,"Managing, storing, and sharing long-form recordings and their annotations",discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.31356/dpb015,Failing Gloriously and Other Essays,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1596/978-1-4648-1694-9,Development Research in Practice: The DIME Analytics Data Handbook,discarded,0.8,discarded,unrelated-term-match-other-field
+hash:d5473449da9f6e26,Improving Software Development with Platform-as-a-Service Product – Using Heroku in Web Application Project,discarded,0.92,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.4233/uuid:b2946104-2092-42bb-a1ee-3b085d110466,An Empirical Evaluation of Feedback-Driven Software Development,discarded,0.88,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1523/jneurosci.0381-24.2024,A Perspective on Neuroscience Data Standardization with Neurodata Without Borders,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1038/s44271-025-00236-3,"Ten principles for reliable, efficient, and adaptable coding in psychology and cognitive neuroscience",kept,0.78,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.18573/book3,Human Computer Interaction and Emerging Technologies,discarded,0.94,discarded,unrelated-term-match-other-field
+hash:cbe5cfdf7c2118a9,,discarded,0.5,discarded,unrelated-term-match-other-field
+doi:10.1111/jocn.14307,The voice of nurses: Novice nurses’ first experiences in a clinical setting. A longitudinal diary study,discarded,0.95,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.26530/oapen_595042,The Conflict of the Faculties. Perspectives on Artistic Research and Academia,discarded,0.91,discarded,unrelated-term-match-other-field
+doi:10.1007/s11846-022-00588-8,Literature reviews as independent studies: guidelines for academic practice,discarded,0.79,discarded,unrelated-term-match-other-field
+doi:10.1152/jn.00758.2015,Long-term training modifies the modular structure and organization of walking balance control,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1186/s41239-019-0171-0,Systematic review of research on artificial intelligence applications in higher education – where are the educators?,discarded,0.72,discarded,unrelated-term-match-other-field
+doi:10.1002/per.2053,Are Perfectionism Dimensions Vulnerability Factors for Depressive Symptoms after Controlling for Neuroticism? A Meta–analysis of 10 Longitudinal Studies,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1145/2872521,Heuristic Evaluation for Novice Programming Systems,kept,0.94,discarded,computing-education-or-software-engineering-not-version-control
+hash:6d0c5b158c9ce806,Difficulties that a Novice Online Instructor Faced: A Case Study.,discarded,0.8,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/su13063512,Emergence of the Online-Merge-Offline (OMO) Learning Wave in the Post-COVID-19 Era: A Pilot Study,discarded,0.78,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3555756,Towards Creative Version Control,discarded,0.79,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.4135/9781452270142,"Researching Interpersonal Relationships: Qualitative Methods, Studies, and Analysis",discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.3389/frobt.2020.590681,Variable Impedance Control and Learning—A Review,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1007/s40279-019-01237-z,Is Motorized Treadmill Running Biomechanically Comparable to Overground Running? A Systematic Review and Meta-Analysis of Cross-Over Studies,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1145/3613904.3642377,Learning Agent-based Modeling with LLM Companions: Experiences of Novices and Experts Using ChatGPT & NetLogo Chat,kept,0.88,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3389/fpsyg.2017.00422,A Review of Self-regulated Learning: Six Models and Four Directions for Research,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1186/1748-5908-4-11,Evolution of Wenger's concept of community of practice,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1016/j.infsof.2012.06.013,Reasoning with contextual requirements: Detecting inconsistency and conflicts,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s10816-015-9272-9,Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation,discarded,0.77,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1007/s00464-021-08939-4,Merged virtual reality teaching of the fundamentals of laparoscopic surgery: a randomized controlled trial,discarded,0.88,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1016/c2023-0-51437-5,Highway Safety Analytics and Modeling,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.trf.2025.03.020,Interferences between driver safety perception and driving behaviour: Hybrid attitudinal survey and driving simulator study for hazard scenarios on urban expressway,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.trip.2025.101368,"Empirical research on car-following and lane-changing: Recent developments, emerging vehicle technologies’ impact, and future research needs",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.inffus.2024.102910,Intervention and regulatory mechanism of multimodal fusion natural interactions on AR embodied cognition,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1016/j.jss.2024.112276,Awareness support in collaborative programming tools: An evaluation based on programmer's perception and eye tracking,discarded,0.82,discarded,method-paper-not-about-version-control
+doi:10.3758/s13428-024-02529-7,The fundamentals of eye tracking part 4: Tools for conducting an eye tracking study,discarded,0.93,discarded,method-paper-not-about-version-control
+doi:10.4324/9781003564195,Operational Psychology and National Security: An Ethics Casebook,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.4018/979-8-3693-0762-5,Humanizing online teaching and learning in higher education,discarded,0.77,discarded,unrelated-term-match-other-field
+doi:10.1002/cl2.1367,Effectiveness of road safety interventions: An evidence and gap map,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.62527/joiv.8.3.1848,Enhancing Novice Developer Efficacy through UX Journey: Integrating User Experience and User Requirement to Develop Developer Skills,discarded,0.74,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.amar.2022.100221,A Bayesian correlated grouped random parameters duration model with heterogeneity in the means for understanding braking behaviour in a connected environment,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1007/s00500-021-06516-4,A bee colony optimization (BCO) and type-2 fuzzy approach to measuring the impact of speed perception on motor vehicle crash involvement,discarded,0.99,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/su14084620,Risk Identification and Conflict Prediction from Videos Based on TTC-ML of a Multi-Lane Weaving Area,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1080/26939169.2022.2082602,Collaborative Writing Workflows in the Data-Driven Classroom: A Conversation Starter,kept,0.92,discarded,workflow-proposal-no-learner-findings
+hash:f8a67415ae648c84,Interactive Media and Society,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1016/j.trf.2020.10.004,"Reducing uncertainty by anticipation in traffic – The effect of situational characteristics and criticality on behavioral, subjective, and psychophysiological parameters",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1061/9780784479896.149,Left-Turn Phasing - State-of-the-Art Review and the Outlook for Future Improvements,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-662-49291-8,Conceptual Exploration,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.5445/ksp/1000036460,Technology entrepreneurship: A treatise on entrepreneurs and entrepreneurship for and in technology ventures,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1109/tse.2011.64,Palantír: Early detection of development conflicts arising from parallel code changes,discarded,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1080/09500693.2012.680618,"A Three-Tier Diagnostic Test to Assess Pre-Service Teachers’ Misconceptions about Global Warming, Greenhouse Effect, Ozone Layer Depletion, and Acid Rain",discarded,0.96,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1002/tea.3660320106,Development and application of a two‐tier diagnostic test measuring college biology students' understanding of diffusion and osmosis after a course of instruction,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.12973/eurasia.2015.1369a,A Review and Comparison of Diagnostic Instruments to Identify Students’ Misconceptions in Science,discarded,0.95,kept,cited
+doi:10.24269/silogisme.v7i2.5456,DEVELOPMENT OF A TWO-TIER MULTIPLE-CHOICE (TTMC) DIAGNOSTIC TEST FOR GEOMETRY MATERIALS TO IDENTIFY MISCONCEPTIONS OF MIDDLE SCHOOL STUDENTS,discarded,0.96,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s10763-004-6484-y,Development and Application of a Two-Tier Diagnostic Test for High School Students’ Understanding of Flowering Plant Growth and Development,discarded,0.94,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1080/02635143.2015.1124409,Development and use of a three-tier diagnostic test to assess high school students’ misconceptions about the photoelectric effect,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1080/02635143.2017.1310094,Development and application of a four-tier test to assess pre-service physics teachers’ misconceptions about geometrical optics,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.12973/eurasia.2014.1128a,Using Three-Tier Diagnostic Test to Assess Students’ Misconceptions of States of Matter,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s11165-016-9602-2,The Use of Cronbach’s Alpha When Developing and Reporting Research Instruments in Science Education,discarded,0.84,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1088/1742-6596/1157/4/042033,Development of computer based two-tier multiple choice diagnostic test to identify misconceptions on chemical bonding,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1080/00219266.2012.688849,Development and application of a two-tier multiple-choice diagnostic test for high school students’ understanding of cell division and reproduction,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.22146/ijc.39218,Development and Validation of a Four-Tier Diagnostic Instrument for Chemical Kinetics (FTDICK),discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.15294/jpii.v8i2.18649,A Review of Students’ Common Misconceptions in Science and Their Diagnostic Assessment Tools,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.29333/iji.2019.12194a,The Misconception Diagnosis on Ionic and Covalent Bonds Concepts with Three Tier Diagnostic Test,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1080/00219266.2019.1643765,Cell Biology Diagnostic Test (CBD-Test) portrays pre-service teacher misconceptions about biology cell,discarded,0.94,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:62e1f06689a48d24,Development of two-tier diagnostic instrument and assess students' understanding in chemistry,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1063/1.4983967,The transformation of two-tier test into four-tier test on Newton’s laws concepts,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1088/1742-6596/1521/2/022020,The development of five-tier diagnostic test to identify misconceptions and causes of students’ misconceptions in waves and optics materials,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1080/09500693.2015.1105398,Development and Application of a Novel Rasch-based Methodology for Evaluating Multi-Tiered Assessment Instruments: Validation and utilization of an undergraduate diagnostic test of the water cycle,discarded,0.94,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.sbspro.2011.03.147,Development of a three-tier test to assess high school students’ understanding of acids and bases,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.ssaho.2026.103216,Diagnosing misconceptions in static electricity among junior high school students using a refined four – Tier test,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:27958f5bba7617f0,Scientific Conceptual Understanding in Physics through Momentum and Material-Dependent Collisions Using the Dual Situated Learning Model: A Mixed Methods Action Research Study,discarded,0.9,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1038/s41598-026-46091-y,Students’ knowledge of plant anatomy and physiology as a reflection of interest in the teaching profession,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.1007/s44322-026-00059-y,Impact of a philosophical didactic approach on the development of critical thinking: qualitative evidence from the teaching of quantum physics,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1103/q4n2-d2w3,Nature of heat inventory: Assessing students’ understanding of thermal processes in kinetic molecular terms,discarded,0.95,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.12973/eu-jer.15.3.941,"A Comparative Analysis of Mental Models in Floating, Suspending, and Sinking Phenomena: Evidence from Students and Large Language Models (ChatGPT and DeepSeek)",discarded,0.89,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/educsci16071128,Evaluating Person-Parameter Estimation Methods in Cognitive-Diagnostic Models with Testlet Effects,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.1063/5.0330185,Analysis of students' conceptions and conceptional changes of chemical equilibrium materials on the temperature factor in physical chemistry study,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1088/1361-6552/ae62e9,"Effect of e-readiness skills, self-efficacy, and physics literacy on pre-service teachers’ misconceptions",discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1111/ejed.70696,Developing an Artificial Intelligence Model to Determine Misconceptions About Cell Division of Secondary School Students,discarded,0.85,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s11191-025-00680-x,Assessing Chemistry Teachers’ Understanding of Electrochemistry,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s10956-025-10277-2,The Effects of Cooperative Learning in Synchronous Online and Classroom Environments on Thirteen-Year-old Students’ Understanding of Dissolution at the Submicroscopic Level,discarded,0.88,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s40753-025-00275-5,Investigating the Change in Pre-Service Teachers’ Understanding of the Logical Structure of Proof: A Longitudinal Study,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.ssaho.2026.102599,Effectiveness of integrated STEM and problem-based learning in improving students’ conceptual understanding in science,discarded,0.84,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.compedu.2025.105519,Exploring the regulation of learning within mobile mixed-reality environments: Insights from dynamic engagement transitions,discarded,0.8,discarded,unrelated-term-match-other-field
+doi:10.58524/oler.v6i1.1218,Mapping Students’ Cognitive Profiles on Newtonian Mechanics: A Rasch-Based Analysis via Four-Tier Digital Diagnostic Assessment,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1515/cti-2024-0062,Assessing conceptual understanding in high school chemistry: particulate nature of gas concept test (PNGCT) with Rasch modeling,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.tsc.2025.102046,Adding one more dimension into the instructional analogy: what does the participatory analogy contribute?,discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.29333/iejme/17700,Investigating learners' misconceptions on division of whole numbers to identify a goal of research lesson-a case of lesson study,discarded,0.93,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1088/1361-6552/ae28aa,Identifying and comparing misconceptions about atoms and molecules among students and student teachers,discarded,0.93,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.33407/itlt.v113i3.6546,TECHNOLOGY-SUPPORTED 3D MODELING AND PRINTING IN CHEMISTRY TEACHER EDUCATION,discarded,0.82,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s11191-026-00747-3,A New Perspective on the Evaluation of Pupils' Inquiry Skills Using Four-tier Test,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1080/03055698.2026.2660681,Development of a four-tier number sense test for sixth-grade students: cross-regional validity evidence in Hong Kong and Taiwan,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.32890/mjli2026.23.1.9,Development of a Two-Tier Cognitive Diagnostic Test to Identify Misconceptions of Basic Operations of Algebraic Expression,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1103/mf6b-5xcs,Development and validation of a two-tier test instrument on simple electric circuits,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:b438cae5c37d2362,DEVELOPMENT AND APPLICATION OF A TWO-TIER ACID-BASE MISCONCEPTION DIAGNOSTIC TEST BASED ON PICTORIAL TO IDENTIFYING STUDENT MISCONCEPTIONS IN CHEMISTRY,discarded,0.93,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.heliyon.2022.e10720,Exploring Indonesian student misconceptions in science concepts,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.51865/jesp.2022.1.05,The development and implementation of a two-tier multiple choice test related to the concepts of oxidation-reduction reactions and galvanic cells,discarded,0.93,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1063/5.0000613,Development of Concept Maps Diagnostic Test for Identification of Students' Misconceptions,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s10649-018-9874-8,Development of a three-tier number sense test for fifth-grade students,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1103/physrevphyseducres.14.020104,Multilevel Rasch modeling of two-tier multiple choice test: A case study using Lawson's classroom test of scientific reasoning,discarded,0.89,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1088/1742-6596/812/1/012117,Development of <i>Two</i>-<i>Tier</i> Diagnostic Test Pictorial-Based for Identifying High School Students Misconceptions on the Mole Concept,discarded,0.93,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s10956-016-9609-5,Development and Evaluation of the Diagnostic Power for a Computer-Based Two-Tier Assessment,discarded,0.83,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:8f109dbf406b5b7e,HELPING PRE-SERVICE SCIENCE TEACHERS TO UNDERSTAND ATOMISM THROUGH OBSERVATIONS AND EXPERIMENTS,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1186/1477-7525-5-63,The Warwick-Edinburgh Mental Well-being Scale (WEMWBS): development and UK validation,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1016/j.intmar.2013.12.002,"Consumer Brand Engagement in Social Media: Conceptualization, Scale Development and Validation",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3389/fpubh.2018.00149,"Best Practices for Developing and Validating Scales for Health, Social, and Behavioral Research: A Primer",discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1002/tea.10053,Development and evaluation of the conceptual inventory of natural selection,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.1016/j.beth.2013.09.001,The Development and Initial Validation of the Cognitive Fusion Questionnaire,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1162/105474601300343612,A Cross-Media Presence Questionnaire: The ITC-Sense of Presence Inventory,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1080/0950069032000032199,Attitudes towards science: A review of the literature and its implications,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.ijhcs.2019.102370,Development and validation of the player experience inventory: A scale to measure player experiences at the level of functional and psychosocial consequences,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1016/s0140-6736(15)60160-x,"Global Surgery 2030: evidence and solutions for achieving health, welfare, and economic development",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1007/s12369-008-0001-3,"Measurement Instruments for the Anthropomorphism, Animacy, Likeability, Perceived Intelligence, and Perceived Safety of Robots",discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1128/jmbe.v18i3.1320,"Development, Validation, and Application of the Microbiology Concept Inventory",discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.3390/ijerph17249495,"Burnout Assessment Tool (BAT)—Development, Validity, and Reliability",discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.3998/tia.17063888.0011.014,"Not Another Inventory, Rather a Catalyst for Reflection",discarded,0.88,discarded,unrelated-term-match-other-field
+doi:10.1371/journal.pone.0103469,Development and Validation of the Single Item Narcissism Scale (SINS),discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1103/physrevphyseducres.15.010135,Quantifying critical thinking: Development and validation of the physics lab inventory of critical thinking,discarded,0.9,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/s0887-6177(01)00168-8,Validity of the behavior rating inventory of executive function in children with ADHD and/or Tourette syndrome,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1080/23752696.2018.1433546,Using concept inventories to measure understanding,discarded,0.85,kept,concept-inventory-corroboration
+doi:10.1093/forestscience/26.3.435,Adaptive Environmental Assessment and Management,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.18260/1-2--12983,Preliminary Results From The Development Of A Concept Inventory In Thermal And Transport Science,discarded,0.86,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1186/s40359-026-04595-2,Psychological characteristics of metacognitive strategy use and vocabulary development paths among vocational university students in a personalized english teaching environment,discarded,0.85,discarded,unrelated-term-match-other-field
+doi:10.1186/s12982-026-02359-2,Psychometric assessment of the short version of the Zarit Burden Inventory among Iranian family caregivers of individuals with chronic psychiatric disorders,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1038/s41598-026-65768-y,Development and validation of a self-report questionnaire to assess executive functions in healthy adults: the executive functions in healthy adults questionnaire (EFHAQ),discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1038/s41598-025-30701-2,Design and psychometric properties of the academic vitality scale in nursing students,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1057/s41599-025-06371-w,Academic medical postgraduates: a competence iceberg model and measurement development,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1016/j.hfh.2026.100142,Evaluating the pulse of exercise programs: Developing and validating the intervention usability scale for exercise (IUSE) to enhance implementation and adherence,discarded,0.97,discarded,method-paper-not-about-version-control
+doi:10.1186/s41687-026-01038-9,Perceptions of the Values and Outcomes to Improve Cancer Experiences (VOICE) tool: a digital values-clarification instrument and tailored summary report for older adults with advanced cancer,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1186/s41155-026-00380-7,Validation of the Turkish version of the Phobic Stimuli Response Scales,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1186/s12978-026-02362-5,Developing and evaluating the effectiveness of a web-based application to improve the mental health of infertile women: a multi-phase study protocol,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1186/s12888-026-08212-9,Investigation of phubbing behavior in attention deficit hyperactivity disorder and cognitive disengagement syndrome: a case-control study in adolescent,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1186/s40359-026-04738-5,The long road to routine care: piloting the digital mental health intervention for PTSD “Radius Grow” in a psychiatric residential setting,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1186/s40337-025-01518-1,Development and evaluation of a web-based toolkit to inform mental health professionals about digital mental health interventions for eating disorders,discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.1186/s12984-025-01861-z,Tools and methods for assessing the usability and related aspects of usability of extended reality and telerehabilitation technologies in stroke rehabilitation: a scoping review,discarded,0.95,discarded,method-paper-not-about-version-control
+doi:10.1186/s40359-026-04424-6,How academic motivation and self-efficacy predict learning burnout: an empirical study of senior English majors in Chinese independent colleges,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1186/s12909-026-09258-9,Psychological readiness for AI in health professions education: the role of innovativeness and cognitive flexibility among Turkish students,discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.1016/j.abrep.2026.100720,Seeking pleasure or seeking compensation: a dual-pathway model of problematic social networks use,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1186/s12909-025-08351-9,Evaluating training and competency assessment in public and community psychiatry: a narrative review,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1038/s41598-026-39261-5,Mixed-methods analysis on psychedelic-augmented meditation experiences from a randomized controlled mindfulness retreat,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1007/s10648-026-10133-8,Enhancing School Students’ Self-Regulated Learning through Generative AI Support: A Randomized Controlled Trial,discarded,0.78,discarded,unrelated-term-match-other-field
+doi:10.1007/s40429-026-00717-3,Evaluation and Treatment of Compulsive Sexual Behavior Disorder and Co-Morbid Addictive Disorders: A Narrative Review,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1080/08993408.2014.970782,Developing and validating test items for first-year computer science courses,kept,0.96,kept,cited
+doi:10.1007/s11251-011-9191-4,"Learning study: helping teachers to use theory, develop professionally, and produce new knowledge to be shared",discarded,0.87,kept,learning-study-corroboration
+doi:10.1007/s11251-005-2811-0,Learning Theory as Teaching Resource: Enhancing Students’ Understanding of Economic Concepts,discarded,0.9,kept,cited
+doi:10.1007/s11858-017-0858-4,What is made possible to learn when using the variation theory of learning in teaching mathematics?,discarded,0.9,kept,cited
+doi:10.1007/s11251-013-9272-7,Interaction between the learners’ initial grasp of the object of learning and the learning resource afforded,discarded,0.9,kept,learning-study-corroboration
+doi:10.14786/flr.v1i1.16,"Meanings are acquired from experiencing differences against a background of sameness, rather than from experiencing sameness against a background of difference: Putting a conjecture to the test by embedding it in a pedagogical tool",discarded,0.86,kept,learning-study-corroboration
+doi:10.1108/ijlls-09-2017-0041,Improving teacher learning: variation in conceptions of learning study,discarded,0.88,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1108/ijlls-07-2019-093,The Learning study: recent trends and developments,discarded,0.85,kept,learning-study-corroboration
+doi:10.1016/j.phrs.2016.03.023,Modulation of learning and memory by natural polyamines,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1007/s11251-018-9469-x,What matters for students’ learning in the laboratory? Do not neglect the role of experimental equipment!,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1007/s11858-016-0797-5,ICME international survey on teachers working and learning through collaboration: June 2016,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1007/s11858-011-0350-5,A teacher’s learning process in dual design research: learning to scaffold language in a multilingual mathematics classroom,discarded,0.9,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.13140/rg.2.2.17823.76967,What is taught and what is learned. Professional insights gained and shared by teachers of mathematics.,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1109/access.2021.3114399,A Comprehensive Review on 3D Object Detection and 6D Pose Estimation With Deep Learning,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1080/19415257.2019.1689522,Teachers learning to apply neuroscience to classroom instruction: case of professional development in British Columbia,discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.1007/s10857-020-09456-2,Critical stance within a community of inquiry in an advanced mathematics course for pre-service teachers,discarded,0.89,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/s11251-025-09721-y,Testing the use of variation theory in teaching critical thinking—a field experimental study,discarded,0.86,discarded,learning-study-or-variation-theory-other-domain
+doi:10.1101/cshperspect.a021733,"The Corticohippocampal Circuit, Synaptic Plasticity, and Memory",discarded,0.99,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1007/978-3-030-04031-4,Theory and Practice of Lesson Study in Mathematics,discarded,0.9,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.4000/educationdidactique.1762,Learning studies in hong kong schools : a summary evaluation report on the ‘variation for the improvement of teaching and learning’ (VITAL) project.,discarded,0.87,kept,learning-study-corroboration
+hash:f72f5bccf52444a8,A threshold concepts focus to curriculum design: supporting student learning through application of variation theory,discarded,0.85,discarded,learning-study-or-variation-theory-other-domain
+doi:10.1093/eurheartj/ehae177,2024 ESC Guidelines for the management of chronic coronary syndromes,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1714/4375.43725,"2024 ESC Guidelines for the management of chronic coronary syndromes, developed by the Task Force for the Management of Chronic Coronary Syndromes of the European Society of Cardiology (ESC) under the auspices of the European Association for Cardio-Thoracic Surgery (EACTS)",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1007/s11165-022-10047-9,Teaching About Electricity in Primary School Multimodality and Variation Theory as Analytical Lenses,discarded,0.85,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:70c232e0107275bf,Exploring students' conceptions of vectors: A phenomenographic study,discarded,0.83,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1108/ijlls-09-2018-0065,Enhancing the generative learning of young people in the domain of financial literacy through learning study,discarded,0.88,discarded,learning-study-or-variation-theory-other-domain
+doi:10.5220/0004960303090316,The image of images as an aid to improve learning: An eye-tracking experiment studying the effect of contrasts in computer-based learning material,discarded,0.86,discarded,method-paper-not-about-version-control
+doi:10.1108/ijlls-01-2013-0005,Teaching democracy – a complex object of learning,discarded,0.9,kept,learning-study-corroboration
+hash:25898b80ad40fa14,Variation theory - A tool to achieve pre-school curricula learning goals in mathematics,discarded,0.9,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1207/s15326985ep3702_4,Academic Emotions in Students' Self-Regulated Learning and Achievement: A Program of Qualitative and Quantitative Research,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.14507/epaa.v8n1.2000,Teacher Quality and Student Achievement,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.1002/tea.10034,Views of nature of science questionnaire: Toward valid and meaningful assessment of learners' conceptions of nature of science,discarded,0.92,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.5040/9781472545244,What is Qualitative Interviewing?,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.5860/choice.30-3945,Student engagement and achievement in American secondary schools,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1007/s10803-015-2422-9,Changing College Students’ Conceptions of Autism: An Online Training to Increase Knowledge and Decrease Stigma,discarded,0.88,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.2307/800797,Talking and Listening from Women's Standpoint: Feminist Strategies for Interviewing and Analysis,discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.4324/9781410608628-4,Academic Emotions in Students' Self-Regulated Learning and Achievement: A Program of Qualitative and Quantitative Research,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1007/s10803-016-2872-8,The Experiences of Late-diagnosed Women with Autism Spectrum Conditions: An Investigation of the Female Autism Phenotype,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1002/tea.20191,The influence of core teaching conceptions on teachers' use of inquiry teaching practices,discarded,0.83,discarded,unrelated-term-match-other-field
+doi:10.7275/959j-ky83,Mixing interview and questionnaire methods: Practical problems in aligning data,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.59656/el-sb5787.001,How Leadership Influences Student Learning,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.1002/tea.1033,Promoting understanding of chemical representations: Students' use of a visualization tool in the classroom,discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1111/area.12070,Talking on the move: place‐based interviewing with undergraduate students,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.3389/feduc.2021.638470,Faculty’s and Students’ Perceptions of Online Learning During COVID-19,discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.1016/j.eurpsy.2018.08.006,Burnout in medical students before residency: A systematic review and meta-analysis,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1145/3408877.3432513,Developing Middle School Students' AI Literacy,discarded,0.76,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.63301/tme.v17i2.1915,"Student Attitudes, Conceptions, and Achievement in Introductory Undergraduate College Statistics",discarded,0.73,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:e3634ca2afc154e1,Re-Imagining Science Education: Engaging Students in Science for Australia's Future,discarded,0.94,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1177/2158244019861457,A Phenomenographic Research Study of Students’ Conceptions of Mobile Learning: An Example From Higher Education,discarded,0.8,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/j.jaac.2025.07.006,Predicting the First Onset of Suicidal Thoughts and Behaviors in Adolescents Using Multimodal Risk Factors: A 4-Year Longitudinal Study,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1016/j.ijosm.2026.100859,Beyond manual technique: an integrated epistemological framework for the essential functions of osteopathic touch,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1016/j.jenvp.2025.102894,Eco-emotions in children and adolescents: A rapid review of the qualitative literature,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.1080/00313831.2025.2468183,Teacher conceptions of assessment and feedback predicting formative feedback practices: helping students to not ignore improvement-oriented feedback,discarded,0.9,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.6209/jories.202603_71(1).0011,The Moderating Effect of Creative Transformation on the Relationship Between Community College Teachers’ Savoring Traits and Flourishing Life,discarded,0.93,discarded,unrelated-term-match-other-field
+doi:10.4018/979-8-3693-9541-7,Vocational Rehabilitation for Students with Developmental Disabilities: Transition from Education to Employment,discarded,0.96,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003496083,Interpersonal Communication: Putting Theory into Practice,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003095026,"Understanding Popular Music Culture, Sixth edition",discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003671169,THE CULTURAL THERAPIST: Papers on Culture and Therapy,discarded,0.91,discarded,unrelated-term-match-other-field
+doi:10.4018/979-8-3373-4427-0,"Rethinking Mobility, Access, and Belonging in International Higher Education",discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003661511,"Research Methods for Criminal Justice and Criminology: A Text and Reader, Second Edition",discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.7551/mitpress/14621.001.0001,Value Sensitive Design: Shaping Technology with Moral Imagination,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003667087,ETHICS AND LITERARY WORLDMAKING: Imaginative Discourse in Oral and Early Scribal Cultures,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003463351,Family-Based Treatment for Transition-Aged Youth with Anorexia Nervosa: A Framework for Working with Young People and Their Families,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3138/9781049801681,"Women and Gendered Violence in Canada: An Intersectional Approach, Second Edition",discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003710226,"Keynes and macroeconomics: An alternative theory of employment, finance and sustainability",discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1007/s44202-025-00517-2,"The ""Stela Effect"" of bright and dark narcissism on educational innovation in higher education: exploratory psychometric validation",discarded,0.99,discarded,unrelated-term-match-other-field
+hash:a8740a9f6a4d1494,Death by Design: PRODUCING RACIAL HEALTH INEQUALITY IN THE SHADOW OF THE CAPITOL,discarded,0.98,discarded,unrelated-term-match-other-field
+doi:10.1093/oxfordhb/9780192869203.001.0001,The Oxford Handbook of Language and Prejudice,discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.1145/2786805.2786843,"When, how, and why developers (do not) test in their IDEs",discarded,0.84,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3180155.3180238,Context-aware conversational developer assistants,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.scico.2012.08.003,Studying software evolution using topic models,discarded,0.87,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3581641.3584037,The Programmer’s Assistant: Conversational Interaction with a Large Language Model for Software Development,discarded,0.98,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.18174/sesmo.2020a16226,Eight grand challenges in socio-environmental systems modeling,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1016/j.infsof.2015.01.010,Performance Alignment Work: How software developers experience the continuous adaptation of team performance in Lean and Agile environments,discarded,0.84,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3332165.3347908,Unakite: Scaffolding Developers' Decision-Making Using the Web,discarded,0.86,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/2675133.2675177,Supporting Developers' Coordination in the IDE,discarded,0.87,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3387111,Unveiling Elite Developers’ Activities in Open Source Projects,kept,0.97,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1007/978-3-319-13206-8_9,Challenges and Confusions in Learning Version Control with Git,discarded,0.89,kept,already-cited
+doi:10.1007/s10664-022-10156-z,A qualitative study of developers’ discussions of their problems and joys during the early COVID-19 months,discarded,0.8,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.24251/hicss.2021.872,A Behavioral Approach to Understanding the Git Experience,kept,0.95,discarded,scope-academic-researchers-not-students
+doi:10.1063/5.0004635,TURBOMOLE: Modular program suite for ab initio quantum-chemical and condensed-matter simulations,discarded,0.98,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1016/b978-0-12-803678-5.00271-x,Measurement and Modeling of Health-Related Quality of Life,discarded,0.83,discarded,unrelated-term-match-other-field
+doi:10.1145/3729342,Prompts Are Programs Too! Understanding How Developers Build Software Containing Prompts,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s10664-019-09781-y,How bugs are born: a model to identify how bugs are introduced in software components,discarded,0.89,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/tse.2020.3040554,How Software Developers Mitigate Their Errors When Developing Code,discarded,0.87,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.esr.2017.12.010,"Energy system modeling: Public transparency, scientific reproducibility, and open development",discarded,0.96,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1186/s12967-020-02540-4,Credible practice of modeling and simulation in healthcare: ten rules from a multidisciplinary perspective,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1007/s10664-020-09909-5,An exploratory study on confusion in code reviews,discarded,0.89,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s10664-024-10600-2,Enhanced code reviews using pull request based change impact analysis,discarded,0.95,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3711073,Still an Uphill Journey: Women’s Difficulties in Collaborative Gaming Events,discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1109/icpc66645.2025.00068,Code Review Comprehension: Reviewing Strategies Seen Through Code Comprehension Theories,discarded,0.99,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/c2024-0-04118-5,Environmental Greenness and Cardiovascular Health,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/c2024-0-04218-x,Marine Ecosystem-Based Management,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1145/3675094.3678493,SOFTMENT: Detecting Mental Health and Wellbeing of Women in the Software Sector,discarded,0.89,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.jss.2024.112101,Do code reviews lead to fewer code smells?,discarded,0.94,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3643834.3660700,Navigating the Virtuality-Reality Clash: Reflection and Design Paterns for Industrial Mixed Reality Applications,discarded,0.95,discarded,unrelated-term-match-other-field
+doi:10.1145/3613904.3642643,Damage Optimization in Video Games: A Player-Driven Co-Creative Approach,discarded,0.84,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/computers13020033,Integrated Visual Software Analytics on the GitHub Platform,discarded,0.87,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3611643.3616282,"Matching Skills, Past Collaboration, and Limited Competition: Modeling When Open-Source Projects Attract Contributors",discarded,0.95,discarded,git-or-software-tooling-without-learner-understanding-findings
+hash:81ee115300ad531e,Dashboard design,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1109/tse.2023.3265962,Detecting and Characterizing Propagation of Security Weaknesses in Puppet-Based Infrastructure Management,discarded,0.69,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3548606.3560569,Understanding the How and the Why: Exploring Secure Development Practices through a Course Competition,discarded,0.8,discarded,unrelated-term-match-other-field
+doi:10.1109/icse-seis55304.2022.9794024,Perceptions of the State of D&I and D&I Initiative in the ASF,discarded,0.87,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/saner53432.2022.00129,Analyzing Offline Social Engagements: An Empirical Study of Meetup Events Related to Software Development,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.33166/aetic.2021.05.008,Human competency assessment for software configuration management,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.28945/4595,An exploratory study on the devops it alignment model,discarded,0.88,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1007/s10664-018-9659-9,Discovering community patterns in open-source: a systematic approach and its evaluation,discarded,0.82,discarded,git-or-software-tooling-without-learner-understanding-findings
+hash:ddca342f30095d6b,The think aloud method: a practical approach to modelling cognitive processes,discarded,0.92,discarded,method-paper-not-about-version-control
+doi:10.1007/s11251-016-9367-z,Teacher vision: expert and novice teachers’ perception of problematic classroom management scenes,discarded,0.91,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3173574.3173618,Rethinking Thinking Aloud,kept,0.99,discarded,method-paper-not-about-version-control
+doi:10.1145/3589004,A Think-Aloud Study of Novice Debugging,discarded,0.8,discarded,method-paper-not-about-version-control
+doi:10.1145/3313831.3376739,Novice-AI Music Co-Creation via AI-Steering Tools for Deep Generative Models,kept,0.99,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3105726.3106169,On Novices' Interaction with Compiler Error Messages,discarded,0.98,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1111/j.1540-6520.2011.00476.x,The Role of Mixed Emotions in the Risk Perception of Novice and Serial Entrepreneurs,discarded,0.96,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1197/jamia.m3154,Usability Testing Finds Problems for Novice Users of Pediatric Portals,discarded,0.96,discarded,method-paper-not-about-version-control
+doi:10.3389/fpsyg.2015.01083,Examination of the suitability of collecting in event cognitive processes using Think Aloud protocol in golf,discarded,0.91,discarded,method-paper-not-about-version-control
+doi:10.1016/j.ijhcs.2005.11.001,Methods for inclusion: Employing think aloud protocols in software usability studies with individuals who are deaf,discarded,0.97,discarded,method-paper-not-about-version-control
+doi:10.1016/j.psychsport.2016.07.008,Cognitive mediation of putting: Use of a think-aloud measure and implications for studies of golf-putting in the laboratory,discarded,0.95,discarded,method-paper-not-about-version-control
+doi:10.1080/15230406.2013.860255,Study of the attentive behavior of novice and expert map users using eye tracking,discarded,0.97,discarded,method-paper-not-about-version-control
+doi:10.1016/j.psychsport.2017.10.001,"Investigating the relationship between cognitions, pacing strategies and performance in 16.1 km cycling time trials using a think aloud protocol",discarded,0.88,discarded,method-paper-not-about-version-control
+doi:10.1080/1743727x.2016.1238891,Think aloud: using cognitive interviewing to validate the PISA assessment of student self-efficacy in mathematics,discarded,0.91,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:2521e855fa6a18d1,To intervene or not to intervene: An investigation of three think-aloud protocols in usability testing,kept,0.99,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.22024/unikent/01.02.86458,An exploration of novice compilation behaviour in BlueJ,discarded,0.93,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3166.3170,Designing for usability---key principles and what designers think,discarded,0.84,discarded,method-paper-not-about-version-control
+doi:10.1145/3491102.3517582,AI Chains: Transparent and Controllable Human-AI Interaction by Chaining Large Language Model Prompts,kept,0.99,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3631802.3631806,How Novices Use LLM-based Code Generators to Solve CS1 Coding Tasks in a Self-Paced Learning Environment,discarded,0.83,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1186/s40814-015-0033-z,The person-based approach to enhancing the acceptability and feasibility of interventions,discarded,0.82,discarded,unrelated-term-match-other-field
+doi:10.1002/jcal.70305,"A Study on the Role of Midjourney, A Generative Artificial Intelligence Tool, in Enhancing Student Creativity in Illustration Design Classes",discarded,0.76,discarded,unrelated-term-match-other-field
+doi:10.1016/j.tsc.2026.102193,Impact of Coding as Another Language-KIBO kindergarten curriculum on preschool children’s computational thinking skills in programming and non-programming contexts,discarded,0.85,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3772318.3790953,Intelligent Reasoning Cues: A Framework and Case Study of the Roles of AI Information in Complex Decisions,discarded,0.94,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3772318.3791721,Continuous Measurement Methods for Transient Physiological Discomfort in VR Locomotion,discarded,0.83,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1016/j.learninstruc.2025.102309,Mechanisms to prepare for future learning: A think-aloud study,discarded,0.97,discarded,method-paper-not-about-version-control
+doi:10.1371/journal.pone.0335358,Cultural adaptation and content validation of the WHO BeSD framework for HPV vaccination in Pakistan: A two-phase Delphi and cognitive interview study,discarded,0.97,discarded,method-paper-not-about-version-control
+doi:10.1002/brb3.71153,Expertise Related Changes in Resting-State Functional Connectivity Patterns Following a Clinical Reasoning and Decision-Making Task,discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.1080/10447318.2025.2531283,The Impact of Interface Visual Complexity on the Visual Behavior of Elderly Users in Mobile Audiobook Application Recommendation Interfaces,discarded,0.97,discarded,unrelated-term-match-other-field
+doi:10.1007/978-981-95-5491-1,New Developments in Cognitive Translation and Interpreting Studies,discarded,0.83,discarded,unrelated-term-match-other-field
+doi:10.1075/task.00041.gil,A qualitative and quantitative preliminary analysis of a task design web-based tool and its applications for teacher education,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.1016/j.ijnsa.2025.100393,Decision support strategies for bedside nursing clinical reasoning: A scoping review,discarded,0.92,discarded,unrelated-term-match-other-field
+doi:10.1186/s12912-025-04006-8,Core competencies and training needs of specialist-nurse clinical educators: a latent profile analysis,discarded,0.9,discarded,unrelated-term-match-other-field
+doi:10.1007/s10209-023-01083-x,Eye tracking-based evaluation of accessible and usable interactive systems: tool set of guidelines and methodological issues,discarded,0.9,discarded,method-paper-not-about-version-control
+doi:10.1016/j.learninstruc.2025.102170,Straight from the teacher's mouth: The value of own-perspective gaze-elicited think-aloud for understanding culture-specific teacher expertise,discarded,0.98,discarded,method-paper-not-about-version-control
+doi:10.1136/bmjoq-2025-003495,"Translation, cross-cultural adaptation and psychometric validation of the Chinese version of Facial Clinimetric Evaluation Scale (FaCE) and Facial Disability Index (FDI)",kept,0.95,discarded,unrelated-term-match-other-field
+doi:10.1177/21582440251377986,Generative Artificial Intelligence Supported Programming Learning: Learning Effectiveness and Core Competence,discarded,0.95,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3758/s13428-025-02777-1,Fabla: A voice-based ecological assessment method for securely collecting spoken responses to researcher questions,discarded,0.8,discarded,unrelated-term-match-other-field
+doi:10.1145/3715336.3735785,Exploring the Potential of Metacognitive Support Agents for Human-AI Co-Creation,discarded,0.94,discarded,unrelated-term-match-other-field
+doi:10.1145/3715336.3735710,Bridging Context and Culture: Designing Cross-Cultural Solutions for Type 2 Diabetes Care in Nigeria,discarded,0.88,discarded,unrelated-term-match-other-field
+hash:fbdf3f6bd314508e,My Science Tutor (MyST)-A Large Corpus of Children's Conversational Speech,kept,0.98,discarded,unrelated-term-match-other-field
+doi:10.1109/ase51524.2021.9678837,End-to-End Automation of Feedback on Student Assembly Programs,discarded,0.82,discarded,computing-education-or-software-engineering-not-version-control
+hash:5165e9949c82dcc9,A Behavioral Approach to Understanding the Git Experience,kept,0.82,discarded,scope-academic-researchers-not-students
+hash:f483482974750ba9,'GHShot': a collaborative and distributed visual version control for Grasshopper parametric programming,kept,0.9,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.3389/fnins.2018.00727,Teaching Computational Reproducibility for Neuroimaging,discarded,0.74,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1002/cae.21679,Knowledge Transfer of Software Tool Development for Functional Requirements Analysis,kept,0.96,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/2591062.2591163,Introduction of Continuous Delivery in Multi-Customer Project Courses,discarded,0.99,discarded,teaching-workflow-report-no-vcs-understanding-findings
+hash:0d0ba2582538cae1,Unstable IGRA conversions and reversions in a high-incidence setting: preliminary results,kept,0.9,discarded,unrelated-term-match-other-field
+doi:10.1145/3770762.3772667,Understanding Software Engineering Practices and Tools in Undergraduate Mechanical Engineering Students,discarded,0.88,discarded,septs-adoption-mechanical-engineering-not-vcs-understanding
+doi:10.16965/ijar.2025.255,Enhancing understanding of Embryology through POGIL: An Innovative Approach,discarded,0.84,discarded,unrelated-term-match-other-field
+doi:10.3390/su16135482,"Australian Geotourism Discovery Platform: A Sustainable and User-Friendly Platform for Accessible Exploration of Geosites, Geotrails, Cultural, and Mining Heritage Sites",kept,0.93,discarded,unrelated-term-match-other-field
+doi:10.1109/fie61694.2024.10893315,"A Statistical Study of Female Students in a Software Engineering Class: Preparedness, Performance, and Contribution",discarded,0.88,discarded,computing-education-or-software-engineering-not-version-control
+hash:b6bdc1a4ed6426e7,My Science Tutor (MyST)-A Large Corpus of Children's Conversational Speech,kept,0.99,discarded,unrelated-term-match-other-field
+doi:10.3389/fendo.2024.1436580,Profiling bitter taste receptors (TAS2R) along the gastrointestinal tract and their influence on enterohormone secretion. Gender- and age-related effects in the colon,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.compbiolchem.2023.107853,ECAmyloid: An amyloid predictor based on ensemble learning and comprehensive sequence-derived features,kept,0.85,discarded,diagnostic-test-or-misconception-study-other-domain
+hash:3124e9a2dcedcbde,Integrating DevOps to Enhance Student Experience in an Undergraduate Research Project,discarded,0.82,discarded,git-or-software-tooling-without-learner-understanding-findings
+hash:4200f052d65ac26e,A behavioral approach to understanding the git experience,kept,0.95,discarded,scope-academic-researchers-not-students
+doi:10.1007/978-3-030-68198-2_65,Challenges of Teaching Programming in StackOverflow Era,discarded,0.95,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1108/itp-11-2017-0384,Explaining normative behavior in information technology use,discarded,0.8,discarded,unrelated-term-match-other-field
+hash:c042acf69b257370,Interview findings on middle schoolers' collaboration in self-organizing game design teams,discarded,0.94,discarded,unrelated-term-match-other-field
+hash:edb28e7e83705703,"Proceedings - 2012 16th European Conference on Software Maintenance and Reengineering, CSMR 2012",discarded,0.99,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/tcsvt.2026.3681595,FGCLIP-Based Augmented Language-Driven Contrastive Clustering Network for Fine-Grained Image Clustering,discarded,0.99,discarded,unrelated-term-match-other-field
+hash:db6fe590cafbad9a,DAPrompt: Dual Alignment Prompt of Structure and Semantics for Few-shot Graph Learning,discarded,0.74,discarded,unrelated-term-match-other-field
+hash:1b31d52594b94024,Sound-AI: A Pedagogical Tool for Exploring AI in Audio and Bioacoustic Research,kept,0.97,discarded,unrelated-term-match-other-field
+doi:10.1145/3770761.3777301,What Happens When Students Leave Office Hours? Measuring Post-Interaction Code Progress in CS2 Projects,kept,0.9,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1145/3770761.3777125,Diverse Claire: An AI-Powered UDL Approach Bridging Educational Experience Gaps in CS1,kept,0.97,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1145/3770761.3777115,Free Interactive Textbooks for Teaching Parallel and Distributed Computing Across the Computer Science Curriculum,discarded,0.99,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1109/tim.2026.3670598,JL1-CD: A New Benchmark and a Robust Multiteacher Knowledge Distillation Framework for Remote Sensing Change Detection,kept,0.9,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-031-73229-4_16,Semi-supervised Segmentation of Histopathology Images with Noise-Aware Topological Consistency,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1109/tgrs.2026.3680315,Toward Stable Semi-Supervised Remote Sensing Segmentation via Co-Guidance and Co-Fusion,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1109/tip.2026.3671649,Prompt-Driven Knowledge Distillation for Remote Sensing Object Detection,discarded,0.99,discarded,unrelated-term-match-other-field
+hash:201800d78f394666,Bridging Layout and RTL: Knowledge Distillation based Timing Prediction,discarded,0.99,discarded,unrelated-term-match-other-field
+hash:4727f663a17bf605,ClutterDexGrasp: A Sim-to-Real System for General Dexterous Grasping in Cluttered Scenes,discarded,0.73,discarded,unrelated-term-match-other-field
+doi:10.1109/kse68178.2025.11309428,Enhancing Personalized Learning With Real-Time Data Warehousing and Linked Open Data Integration For Open Knowledge Domain,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.patcog.2026.113176,Dual-teacher fusion with augmented branch for semi-supervised object detection,discarded,0.99,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1007/s00530-025-02117-5,Dynamic curriculum knowledge distillation: optimizing knowledge transfer through temporal adaptation,discarded,0.82,discarded,unrelated-term-match-other-field
+hash:8fcd3d26830a450c,VisCGEC: Benchmarking the Visual Chinese Grammatical Error Correction,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.eswa.2026.133869,CoreKD: Adaptive core-aware knowledge distillation for tiny object detection in remote sensing imagery,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1016/j.patcog.2026.113516,Image signal process with dynamic class-rebalanced and IoU-threshold for unsupervised domain adaptive dark object detection,discarded,0.86,discarded,unrelated-term-match-other-field
+doi:10.1111/2041-210x.70342,Forking anatomy: How MorphoDepot applies the open-source development model to 3D digital morphology,discarded,0.88,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.12688/f1000research.176328.1,MorphoCloud: Democratizing Access to High-Performance Computing for Morphological Data Analysis,discarded,0.9,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.18653/v1/2025.naacl-long.261,VisCGEC: Benchmarking the Visual Chinese Grammatical Error Correction,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1109/tgrs.2025.3600098,Dual-Stream Spectral Decoupling Distillation for Remote Sensing Object Detection,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1109/bibm66473.2025.11357187,REACT-KD: Region-Aware Cross-Modal Topological Knowledge Distillation for Interpretable Medical Image Classification,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1109/tgrs.2024.3519173,Dual Teacher: Improving the Reliability of Pseudo Labels for Semi-Supervised Oriented Object Detection,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.1109/tgrs.2025.3529028,Unsupervised Domain Adaptation Semantic Segmentation of Remote Sensing Images With Mask Enhancement and Balanced Sampling,kept,0.95,discarded,unrelated-term-match-other-field
+doi:10.1145/3626252.3630836,DOJO: Applied Cybersecurity Education in the Browser,discarded,0.99,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1109/tgrs.2023.3347329,Few-Shot Object Detection in Remote Sensing: Lifting the Curse of Incompletely Annotated Novel Objects,discarded,0.99,discarded,unrelated-term-match-other-field
+doi:10.3233/faia230382,DTBS: Dual-Teacher Bi-Directional Self-Training for Domain Adaptation in Nighttime Semantic Segmentation,discarded,0.87,discarded,unrelated-term-match-other-field
+doi:10.1145/3530785,On Wasted Contributions: Understanding the Dynamics of Contributor-Abandoned Pull Requests-A Mixed-Methods Study of 10 Large Open-Source Projects,kept,0.94,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3422392.3422480,Teaching Development of Distributed Software during COVID-19: An experience report in Brazil,discarded,0.74,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1002/tea.20409,The implementation of a geospatial information technology (GIT)-supported land use change curriculum with urban middle school learners to promote spatial thinking,kept,0.99,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3803401.3811998,Student Misconceptions and Strategies in Git/GitHub Processes.,kept,0.97,kept,already-cited
+doi:10.1145/3641555.3704766,GitKit: Learn Git and GitHub/GitLab Workflow in an Authentic Context (and How to Teach It to Your Students).,discarded,0.7,discarded,gitkit-tutorial-abstract-redundant-with-braught2024
+doi:10.1109/gem59776.2023.10390128,The Digital Comic as a Study Tool for Caribbean Computer Science Students: A Pilot Study.,kept,0.98,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3478432.3499053,Do students Git it?: A Lightweight Intervention to Increase Usage of Advanced Git Features.,kept,0.91,kept,cited
+hash:724bcadfb03afb18,Collaborative Learning Using Git with GitLab in Students of the Engineering Programming Course.,kept,0.94,discarded,experience-report-no-abstract-no-learner-findings-retrievable
+doi:10.48550/arxiv.2604.10747,Engineering Students&apos; Usage and Perceptions of GitHub Copilot in Open-Source Projects.,kept,0.99,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3702652.3744219,"The Effects of GitHub Copilot on Computing Students&apos; Programming Effectiveness, Efficiency, and Processes in Brownfield Coding Tasks.",kept,0.98,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3641554.3701800,Students&apos; Use of GitHub Copilot for Working with Large Code Bases.,kept,0.95,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.48550/arxiv.2506.10051,"The Effects of GitHub Copilot on Computing Students&apos; Programming Effectiveness, Efficiency, and Processes in Brownfield Programming Tasks.",kept,0.98,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1002/cae.22775,The impact of GitHub on students&apos; learning and engagement in a software engineering course.,kept,0.95,kept,cited
+doi:10.1142/s0218194024500335,Assessing the Use of GitHub Copilot on Students of Engineering of Information Systems.,kept,0.89,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1109/mipro60963.2024.10569744,&apos;Gitting&apos; Their Feet Wet - A Classroom Intervention Exploring Students&apos; Learning Experience When Maintaining an Unknown Codebase.,kept,0.92,discarded,intervention-evaluated-by-reflections-on-project-work-not-vcs-understanding
+doi:10.1109/fie58773.2023.10343357,Predicting Students&apos; Software Engineering Class Performance with Machine Learning and Pre-Class GitHub Metrics.,kept,0.99,discarded,repository-metrics-performance-prediction-not-understanding
+doi:10.1145/3568813.3600138,From &quot;Ban It Till We Understand It&quot; to &quot;Resistance is Futile&quot;: How University Programming Instructors Plan to Adapt as More Students Use AI Code Generation and Explanation Tools such as ChatGPT and GitHub Copilot.,kept,0.97,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.1145/3587102.3588799,Correlating Students&apos; Class Performance Based on GitHub Metrics: A Statistical Study.,discarded,0.91,discarded,repository-metrics-performance-prediction-not-understanding
+doi:10.3991/ijoe.v18i08.31965,"The Impact of Online Learning toward the Independence of Primary School Students During the Pandemic in Jakarta, Indonesia.",kept,0.94,discarded,unrelated-term-match-other-field
+doi:10.1145/3511430.3511454,How Students Are Using GitHub? A Survey.,kept,0.98,kept,cited
+doi:10.1145/3502717.3532164,Standardizing Students&apos; Programming Environments with Docker Containers: Using Visual Studio Code in the Cloud with GitHub Codespaces.,kept,0.98,discarded,git-or-software-tooling-without-learner-understanding-findings
+doi:10.19153/cleiej.24.2.8,Using git metrics to measure students&apos; and teams&apos; code contributions in software development projects.,kept,0.86,kept,already-cited
+doi:10.1109/respect51740.2021.9620585,Making a Case for Studying the Effects of Using GitHub on HBCU Students&apos; Computational Thinking Skills.,kept,0.99,discarded,position-paper-no-learner-findings
+doi:10.1145/3372356.3372364,Errors and Poor Practices of Software Engineering Students in Using Git.,not classified (added after the model pass),,kept,cited
+doi:10.1145/2686612.2686660,Perceived and objective usability and visual appeal in a website domain with a less developed mental model.,not classified (added after the model pass),,discarded,method-paper-not-about-version-control
+doi:10.21437/interspeech.2006-534,Dynamic help generation by estimating user²s mental model in spoken dialogue systems.,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1145/3796506,The Effects of Starter Template Scaffoldings on Coding Anxiety in Introductory Programming Courses,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1088/2516-1091/ae7863,Beyond the lab: a review on neurophysiological mental states assessment in real-world settings,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1007/s10664-025-10721-2,The Effect of Comments on Program Comprehension: An Eye-tracking Study,not classified (added after the model pass),,discarded,method-paper-not-about-version-control
+doi:10.1016/j.cogdev.2026.101736,How to learn computer versus human languages: A scoping review of behavioral and neural evidence,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.4230/lipics.ecoop.2026.22,Meaningful Human-in-the-Loop Checking of GenAI Synthesis for Restricted Languages,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.1145/3777904,Programming Challenges and Perceptions: A Study of Separate Groups before and after the Release of ChatGPT,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3808344,Navigating AND–OR Graph Modifications to Debug Failing Proof Search,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s10664-026-10818-2,Tracing vs. comprehension: On different levels of understanding Boolean expressions,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s11423-026-10684-1,Bridging strategy gaps in programming: the role of visual scaffolding for learners with low cognitive ability,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1109/mi-sta68962.2026.11511253,Assessing the Impact of the LearnOOP Tool on Enhancing the Understanding of Object-Oriented Programming-An Experimental Study Across Three Semesters,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s12671-026-02931-6,The Effect of Mindfulness Training and Cognitive Restructuring Techniques in Reducing Music Performance Anxiety and Enhancing Music Performance Quality Among Undergraduate Music Majors,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1109/access.2026.3680395,Immersive Technologies (AR/VR) for Computer Science and Computational Thinking Education: A Systematic Literature Review of Trends and Gaps,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/978-3-032-11748-9,"The AI Competency Paradox: Why AI Doesn’t Replace Jobs, but Reshapes Organizational Competence",not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1002/rev3.70110,Emotions matter—Targeting adult learners' achievement emotions in online instructional settings: Systematic literature review,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1111/bjet.13609,Effects of AI-generated adaptive feedback on statistical skills and interest in statistics: A field experiment in higher education,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1016/j.caeai.2025.100403,Artificial intelligence in computer programming education: A systematic literature review,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1111/bjet.13571,Scaffolding middle school mathematics curricula with large language models,not classified (added after the model pass),,discarded,diagnostic-test-or-misconception-study-other-domain
+doi:10.1002/cae.70029,AABC: A Tool for Assessing Arduino Basic Coding Skills,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1145/3706598.3713472,"Slowness, Politics, and Joy: Values That Guide Technology Choices in Creative Coding Classrooms",not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.3390/electronics11030389,Understanding Coding Behavior: An Incremental Process Mining Approach,not classified (added after the model pass),,kept,already-cited
+doi:10.1145/3772318.3791873,CodeStream: Augmenting Timelines with Code Annotation for Navigating Large Coding Histories,not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.1007/s10329-026-01239-2,"Species literacy on the Philippine tarsier (Carlito syrichta) in Biliran, Philippines",not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+hash:8b460e4daaa9d990,The Strategic Use of Fidelity in Romantic Relationships: Defensive Monogamy and Self-Protection,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1109/access.2026.3685720,LLM-Driven Feature Inference for Analyzing Student Git Collaboration,discarded,0.99,discarded,repository-mining-llm-labels-not-understanding
+doi:10.1615/jwomenminorscieneng.2025053092,"GENDER DIFFERENCES IN AFRICULTURAL COPING, PSYCHOLOGICAL DISTRESS, AND INTENTIONS TO PERSIST IN STEM AMONG BLACK STUDENTS AT HBCUS",not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1080/17440572.2025.2604738,Exploring cybercrime and traditional crime on Telegram in the Netherlands,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1177/00111287261466993,Trajectories of Deviant Peer Association During Late Childhood Through Middle Adolescence: A Case for Extending the Dual Systems Model to Childhood,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003465713,Cyber Law and Ethics: Regulation of the Connected World,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.4018/979-8-3373-5525-2,Promoting Sustainable Consumption in Fashion With AI,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.3390/info17010073,"Foundation Models in Software Engineering: A Taxonomy, Systematic Review, and In-Depth Analysis of Testing Support",not classified (added after the model pass),,discarded,computing-education-or-software-engineering-not-version-control
+doi:10.4324/9781003625124,"Disinformation, Marginalization, and Complicit News Media",not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-031-98505-8,"Why We Must Work: Economic Freedom, Fulfilling Work, and Workplace Democracy",not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1093/oso/9780197683705.001.0001,Treating and Preventing Adolescent Mental Health Disorders: What We Know and What We Dont Know,discarded,0.89,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003034834,PLATFORM CRIMINALITY AND POST-CRIME: How Cybercrime (and Everything Else) Changed,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-032-04718-2,Gamified Education: Innovating Learning Through Play and Technology,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1007/978-3-032-14238-2,"Gang Networks and the Evolving Security Threat Landscape, Volume 1: Gang Variability, Gang Transformation and the Threat Multiplier of Gang Networks",not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1017/9781009718127,Ethnic Stereotypes and the Letters of Paul: History and Reception,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.4324/9781003039853,Terrorism as Moralistic Violence: An Integrated Theory of Terrorism’s Lethal Nature,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+hash:5a139b4fba99cfb4,Inspiring Criminal Jurisprudence: Festschrift Essays,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1016/j.accinf.2025.100733,The increased role of advanced technology and automation in audit: A delphi study,not classified (added after the model pass),,discarded,unrelated-term-match-other-field
+doi:10.1080/08993408.2014.970779,Computer science concept inventories: past and future,not classified (added after the model pass),,kept,cited
+doi:10.1145/2538862.2538886,Developing a pre- And post-course concept inventory to gauge operating systems learning,not classified (added after the model pass),,kept,cited
+doi:10.1109/access.2024.3442440,An Approach to Discover Students' Conceptions in Online Computing Education: A Case Study of Students' Understanding of Virtual Memory,not classified (added after the model pass),,kept,cited
+doi:10.1080/10691898.2020.1848485,Implementing Version Control With Git and GitHub as a Learning Objective in Statistics and Data Science Courses,not classified (added after the model pass),,kept,cited
+doi:10.1145/2889160.2889195,Student experiences using GitHub in software engineering courses: A case study,not classified (added after the model pass),,kept,cited
+hash:aedc26f26503a6aa,An Interactive Approach to Teaching Git Version Control System,not classified (added after the model pass),,kept,cited
+hash:90d9f58ca860fbc0,A case of computational thinking: The subtle effect of hidden dependencies on the user experience of version control.,not classified (added after the model pass),,kept,cited

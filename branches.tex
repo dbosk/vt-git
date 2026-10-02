@@ -19,6 +19,12 @@ branches explicitly as pointers into the commit history
 In variation-theory terms: lacking Git's notional machine, the learner
 substitutes the file-system model they already master (cf.\ the companion
 paper on the terminal \autocite{VTTerminal}).
+The directory picture need not even be a substitution: in Subversion a
+branch \emph{is} a directory in the repository, conventionally under
+\texttt{branches/} \autocite[Ch.~4]{SVNBook}, so a learner who has met
+that system carries over a model that was correct there; the open
+accounts of \cref{sec:method-instruments} are where the two origins can
+be told apart.
 
 \mode<presentation>{%
 \begin{frame}
@@ -36,15 +42,44 @@ paper on the terminal \autocite{VTTerminal}).
 }
 
 \subsection{Candidate critical aspects}
+\label{sec:branches-aspects}
 
-% XXX Preliminary.
-\begin{itemize}
-  \item \emph{A branch is a pointer, not a place}: switching branches
-    changes what the working tree shows \emph{in place}.
-  \item \emph{The graph outlives the pointers}: commits exist regardless
-    of which branch points at them.
-  \item \emph{Merging joins histories}, it does not copy directories.
-\end{itemize}
+The branch-as-directory conception is the one misconception of Git the
+literature reports from learners directly, so the first candidate rests
+on it; the other two are our decomposition of what the pointer model
+requires.
+
+\begin{description}
+  \item[A branch is a pointer, not a place]
+    The project exists in several concurrent versions; a branch names
+    one of them, and switching changes which version the one working
+    tree shows, in place.
+    The essence is the concurrent versions, not the pointer mechanism:
+    a learner who has discerned that the same project is there several
+    times over has discerned the aspect, whatever word they use.
+    Read off the documented attempt to \texttt{cd} into a branch
+    \autocite{IsomottonenCochez2014}, and off the hidden dependency of
+    the files on disk on the current branch
+    \autocite{Church2014HiddenDependencies}: a learner who has not
+    discerned that the place stays and the contents change must look for
+    the branch somewhere.
+    Tested by the item \emph{seeing another branch}
+    (\cref{app:knowledge-items}) and its open twin \emph{the branch
+    called feature} (\cref{app:open-items}).
+  \item[The graph outlives the pointers]
+    Commits exist regardless of which branch points at them; deleting a
+    name deletes no history.
+    Posited from the object of learning, as the consequence of the
+    first aspect that the directory picture gets wrong in the other
+    direction (a deleted folder takes its contents with it).
+    Tested by the item \emph{deleting a branch}.
+  \item[Merging joins histories]
+    A merge makes a commit with two parents; it does not copy
+    directories.
+    Posited from the object of learning.
+    Tested by the item \emph{what merging does}; the open item
+    \emph{explaining a history} puts a merge in front of the student.
+\end{description}
 
 \subsection{Patterns of variation}
 
@@ -52,6 +87,9 @@ paper on the terminal \autocite{VTTerminal}).
   \item Contrast (branch varies, location invariant): switch branches and
     observe \texttt{pwd} unchanged while \texttt{ls} and file contents
     change---the direct refutation of branch-as-directory.
+  \item Contrast (pointer varies, graph invariant): delete a merged
+    branch and show \texttt{git log --graph} unchanged---the name is gone,
+    the commits are not.
   \item Contrast (view varies, state invariant): the same repository state
     in \texttt{git log --graph} and in a graphical history viewer.
   \item Fusion: create, switch, commit, merge---while narrating the

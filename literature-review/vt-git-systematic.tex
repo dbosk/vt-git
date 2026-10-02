@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{vt-git-systematic.bib}
+
+\title{Literature Review Report}
+\date{2026-07-19}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Field-tagged systematic round for the vt-git paper: version-control misconceptions, repository-data studies of student Git usage. Same screening rule. The search covered scopus, wos and yielded 3 papers (2 kept, 1 discarded, 0 pending).
+\end{abstract}
+\clearpage
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Research Context}
+Field-tagged systematic round for the vt-git paper: version-control
+misconceptions, repository-data studies of student Git usage. Same
+screening rule.
+
+\section{Search Parameters}
+
+\begin{description}
+\item[Base query] TS=(("version control" OR git OR github) AND (student* OR novice*) AND (misconception* OR difficult* OR confus* OR barrier*))
+\item[Providers] scopus, wos
+\end{description}
+
+\subsection{Provider-specific queries}
+\begin{longtable}{lp{10cm}}
+\toprule
+Provider & Query \\
+\midrule
+wos & TS=(("version control" OR git OR github) AND (student* OR novice*) AND (misconception* OR difficult* OR confus* OR barrier*)) \\
+scopus & TITLE-ABS-KEY(("version control" OR git) AND (student OR novice) AND (misconception OR difficulty OR confusion)) \\
+\bottomrule
+\end{longtable}
+
+\begin{description}
+\item[Date] 2026-07-19 09:30
+\item[Total Papers] 3
+\end{description}
+
+\section{Summary}
+\begin{description}
+\item[Kept] 2
+\item[Discarded] 1
+\item[Pending] 0
+\end{description}
+
+\section{Summary Tables}
+
+\subsection{Kept Papers Overview}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.55\textwidth}c>{\raggedright\arraybackslash}p{0.25\textwidth}}
+\toprule
+\textbf{Title} & \textbf{Year} & \textbf{Themes} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\citetitle{p2022_0} & 2022 & vcs-log-mining-method \\
+\citetitle{s2021_1} & 2021 & git-repository-data \\
+\end{longtable}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.4\textwidth}cc}
+\toprule
+\textbf{Title} & \rotatebox{90}{git-repository-data} & \rotatebox{90}{vcs-log-mining-method} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\citetitle{p2022_0} &  & $\checkmark$ \\
+\citetitle{s2021_1} & $\checkmark$ &  \\
+\end{longtable}
+
+\subsection{Discarded Papers Overview}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.55\textwidth}c>{\raggedright\arraybackslash}p{0.25\textwidth}}
+\toprule
+\textbf{Title} & \textbf{Year} & \textbf{Motivations} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\citetitle{s2020_2} & 2020 & superseded by journal version 10.19153/cleiej.24.2.8 \\
+\end{longtable}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.4\textwidth}c}
+\toprule
+\textbf{Title} & \rotatebox{90}{superseded by journal version 10.19153/cleiej.24.2.8} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+\citetitle{s2020_2} & $\checkmark$ \\
+\end{longtable}
+
+\section{Kept Papers}
+\subsection{git-repository-data}
+\begin{enumerate}
+\item \fullcite{s2021_1}
+\end{enumerate}
+
+\subsection{vcs-log-mining-method}
+\begin{enumerate}
+\item \fullcite{p2022_0}
+\end{enumerate}
+
+\section{Discarded Papers}
+\subsection{superseded by journal version 10.19153/cleiej.24.2.8}
+\begin{enumerate}
+\item \fullcite{s2020_2}
+\end{enumerate}
+
+\end{document}

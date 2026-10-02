@@ -89,6 +89,11 @@
 % margin, Palatino fonts, footnotes-in-margin, side-captions, \ltnote margin
 % notes -- and footnote citations.
 \usepackage[marginparmargin=right]{didactic}
+% didactic places every \autocite in the margin as a float; a
+% citation-dense paragraph next to a table float exhausts the kernel's
+% default float registers ("Too many unprocessed floats"), so give it
+% more.
+\extrafloats{200}
 
 % A semantic hypothesis environment in the style of didactic's question:
 % numbered theorem in the article, block in the slides.  The translations must
