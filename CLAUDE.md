@@ -128,3 +128,25 @@ report's `id`, else `sis_id`, else an unambiguous name — ambiguity is
 warned about, never silently resolved), with (course, name) as the
 fallback for saved reports without the column. Activate the
 `literate-programming` skill before editing `quiz.nw`.
+
+## Ethics
+
+The method section ends with `\subsection{Ethics}` (`method.tex`).
+`ethics-application-datintro26.md` in the repo root is the ethics
+assessment of the datintro26 data collection: assessed 2026-09-01 as
+**not subject to the Ethics Review Act** (nothing is filed; no reference
+number will ever exist), kept as the internal self-assessment and
+data-protection documentation. `participant-information-datintro26.md` is
+the participant information sheet (Swedish + English; YAML front matter
+for `canvaslms pages edit -f`), created as the Canvas page "Information
+om forskningsstudien" in datintro26 (and, retitled, in DD1317, which runs
+the terminal module); the file carries no `published` key, so the page is
+created unpublished and the teacher publishes it in Canvas. Both files are byte-identical synchronised copies
+across vt-terminal, vt-git and vt-latex: edit one copy, propagate to the
+others in the same round, and verify with
+`md5sum ../vt-{terminal,git,latex}/{ethics-application,participant-information}-datintro26.md`.
+The consent item wording in `quiz.nw` is deliberately identical across the
+three companion quizzes — never edit it in one repo alone. The deployed
+wording stays frozen for the running HT26 cohort, who answered it before
+the information sheet existed; the fuller wording proposed in §6 of the
+assessment (linking the sheet) is adopted for the next cohort.

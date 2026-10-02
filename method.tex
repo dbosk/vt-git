@@ -244,7 +244,54 @@ The two sources are kept methodologically separate to avoid
 circularity: misconception codes derived from the assessment traces are
 never correlated with those same traces; the pre/post-test is the
 independent measure of discernment.
-Participation is opt-in through the consent item of the pre-test, which
-covers course submissions, the end-of-module quiz and the interviews;
-grading runs for all students regardless, and research extraction
-filters by consent afterwards.
+
+\subsection{Ethics}
+\label{sec:ethics}
+
+Participation in the study is opt-in and requires informed consent; the
+students' grades are unaffected by participation, and the data is
+collected and analysed pseudonymously.
+The consent item opens the pre-test (\cref{app:quiz}), in the same
+wording as the course's other diagnostics, so a student who has answered
+one recognises the next.
+The consent covers the two quizzes---the closed items and the written
+accounts alike---the course's own assessment record for the lab, which
+is the per-repository check results the grading pipeline produces
+anyway, the process data the pushed histories carry (commit granularity
+and timing, message content, branch use), and being asked about the
+interviews.
+The interviews themselves are asked for separately and recorded only
+with explicit consent; the transcripts are pseudonymised at
+transcription, and quotations---commit messages included---are published
+only anonymised.
+The parallel course runs the same module with the quizzes---consent item
+included---copied over, so its students consent the same way, and the
+analysis keeps the cohorts separable by course (\cref{app:quiz-analysis}).
+Grading runs for all students regardless of consent; research extraction
+happens afterwards and filters by consent (\cref{app:quiz-analysis}), so
+no teacher sees during the course who consented.
+The analysis identifies students by login ID rather than by name
+(\cref{app:quiz-analysis}); the coding sheet, where a human codes the
+accounts, is the only place the name and the pseudonymised data meet.
+The accounts are pre-coded by a language model into columns of their
+own before a human coder verifies them (\cref{app:quiz-analysis}); the
+model sees only anonymised text---the analysis program strips the
+identifiers and redacts incidental sensitive content before the call and
+joins the suggested codes back itself---and no account is sent to a
+model before that step is in place.
+The collection was assessed against the Swedish Ethics Review Act
+\autocite{Etikprovningslagen} with the institution's checklist: it
+processes only ordinary personal data, the teaching is not manipulated
+for research, and there is neither an intervention nor an obvious risk
+of harm, so the act does not apply and no approval from the Ethics
+Review Authority is required; the institution's research-ethics advisor
+confirmed the assessment on 2026-09-01.
+The personal data is processed under the GDPR with the institution as
+controller: the students receive written information on the purpose,
+the data, its handling and their rights, consent is opt-in and can be
+withdrawn at any time, and the analysis uses pseudonymised data only.
+The cohort of autumn 2026 answered the consent item before the written
+information existed; it is delivered to them at the end of the course
+and by email, and from the next cohort it accompanies the consent item.
+The assessment accompanies this paper's source as
+\texttt{ethics-application-datintro26.md}.
